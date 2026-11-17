@@ -1,0 +1,18 @@
+{
+  "app_version": "0.3.1",
+  "version_code": 6,
+  "package": "eg.sbs.benchmark",
+  "source_branch": "codex/smart-decision-layer",
+  "apk_file": "dist/SBS-YOLO-Benchmark-v0.3.1-room-description-debug.apk",
+  "apk_bytes": 94186483,
+  "apk_sha256": "08709062378fdd645f2d6367a2dfc8f0dbd8e21a21b021475617d16d7043d0a4",
+  "android_debug_build": "passed",
+  "lint_errors": 0,
+  "lint_warnings": 20,
+  "bundled_speech_assets": 244,
+  "movement_and_cane_prefixes_packaged": false,
+  "installed_on_galaxy_a35": true,
+  "v0_3_0_user_report": "audible but interrupted",
+  "v0_3_1_acoustic_retest": "passed_user_confirmed_clear_complete_sentences",
+  "phone_validation_record": "galaxy-a35-v0.3.1-room-smoke.json"
+}

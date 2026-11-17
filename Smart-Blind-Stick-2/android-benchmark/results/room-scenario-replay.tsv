@@ -1,0 +1,35 @@
+scenario	now_ms	class_id	direction	level	reason	action	eligible_announcement
+peripheral_room_description	1000				NONE		NONE
+peripheral_room_description	1100				NONE		NONE
+peripheral_room_description	1200	56	0	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+ordinary_forward_description	1000				NONE		NONE
+ordinary_forward_description	1100				NONE		NONE
+ordinary_forward_description	1200	0	1	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+near_foreground_overrides_target	1000				NONE		NONE
+near_foreground_overrides_target	1100				NONE		NONE
+near_foreground_overrides_target	1200	2	1	CAUTION	VISUALLY_NEAR_CENTER	PAY_ATTENTION	VISUALLY_NEAR_CENTER
+find_requested_chair	1000				NONE		NONE
+find_requested_chair	1100				NONE		NONE
+find_requested_chair	1200	56	0	INFO	SEARCH_TARGET	LOCATE_TARGET	SEARCH_TARGET
+legacy_peripheral_description	1000				NONE		NONE
+legacy_peripheral_description	1100				NONE		NONE
+legacy_peripheral_description	1200	56	0	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+empty_scene	1000				NONE		NONE
+empty_scene	1100				NONE		NONE
+empty_scene	1200				NONE		NONE
+recent_then_stale	1000				NONE		NONE
+recent_then_stale	1100				NONE		NONE
+recent_then_stale	1200	0	1	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+recent_then_stale	1400				NONE		NONE
+recent_then_stale	1500				NONE		NONE
+small_motion_is_description	1000				NONE		NONE
+small_motion_is_description	1200				NONE		NONE
+small_motion_is_description	1400	0	0	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+small_motion_is_description	1600	0	0	INFO	DESCRIPTION	DESCRIBE	NONE
+moderate_expansion_is_description	1000				NONE		NONE
+moderate_expansion_is_description	1200				NONE		NONE
+moderate_expansion_is_description	1400	0	1	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+moderate_expansion_is_description	1600	0	1	INFO	DESCRIPTION	DESCRIBE	NONE
+ordinary_vehicle_no_warning	1000				NONE		NONE
+ordinary_vehicle_no_warning	1100				NONE		NONE
+ordinary_vehicle_no_warning	1200	2	1	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION

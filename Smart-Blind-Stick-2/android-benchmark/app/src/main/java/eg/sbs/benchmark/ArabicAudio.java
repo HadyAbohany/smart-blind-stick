@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import java.io.IOException;
 import java.util.function.Consumer;
+import java.util.List;
 
 /** One short bundled Arabic phrase at a time, with no queued stale announcements. */
 final class ArabicAudio implements AutoCloseable {
@@ -39,7 +40,17 @@ final class ArabicAudio implements AutoCloseable {
     }
 
     boolean play(String asset, java.util.function.BooleanSupplier valid, Runnable started) {
+        return play(List.of(asset), valid, started);
+    }
+
+    boolean play(List<String> assets, java.util.function.BooleanSupplier valid, Runnable started) {
+        return play(assets, valid, valid, started, () -> {});
+    }
+
+    boolean play(List<String> assets, java.util.function.BooleanSupplier mayStart,
+                 java.util.function.BooleanSupplier mayContinue, Runnable started, Runnable completed) {
         if (!enabled || player != null) return false;
+        if (assets.isEmpty()) return false;
         long token = ++generation;
         focus = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
                 .setAudioAttributes(attributes)
@@ -51,6 +62,12 @@ final class ArabicAudio implements AutoCloseable {
             status.accept("الصوت مشغول بتطبيق آخر");
             return false;
         }
+        return prepare(List.copyOf(assets), 0, token, new SpeechPlan(mayStart, mayContinue), started, completed);
+    }
+
+    private boolean prepare(List<String> assets, int index, long token,
+                            SpeechPlan plan, Runnable started, Runnable completed) {
+        String asset = assets.get(index);
         try {
             MediaPlayer candidate = new MediaPlayer();
             player = candidate;
@@ -60,14 +77,17 @@ final class ArabicAudio implements AutoCloseable {
             }
             candidate.setOnPreparedListener(ready -> {
                 if (token != generation || ready != player) return;
-                if (!valid.getAsBoolean()) {
+                if (!plan.valid(android.os.SystemClock.elapsedRealtime())) {
                     stop();
                     return;
                 }
                 try {
                     ready.start();
                     android.util.Log.i("SbsAudio", "Started " + asset);
-                    started.run();
+                    if (index == 0) {
+                        plan.started(android.os.SystemClock.elapsedRealtime());
+                        started.run();
+                    }
                     status.accept(manager.getStreamVolume(AudioManager.STREAM_MUSIC) == 0
                             ? "ارفع صوت الوسائط لسماع التنبيه" : "الصوت العربي يعمل");
                 } catch (IllegalStateException error) {
@@ -78,7 +98,17 @@ final class ArabicAudio implements AutoCloseable {
             candidate.setOnCompletionListener(done -> {
                 if (token == generation) {
                     android.util.Log.i("SbsAudio", "Completed " + asset);
-                    stop();
+                    if (index + 1 == assets.size()) {
+                        completed.run();
+                        status.accept("اكتمل الوصف الصوتي");
+                        stop();
+                    } else if (plan.valid(android.os.SystemClock.elapsedRealtime())) {
+                        player = null;
+                        done.release();
+                        prepare(assets, index + 1, token, plan, started, completed);
+                    } else {
+                        stop();
+                    }
                 }
             });
             candidate.setOnErrorListener((failed, what, extra) -> {

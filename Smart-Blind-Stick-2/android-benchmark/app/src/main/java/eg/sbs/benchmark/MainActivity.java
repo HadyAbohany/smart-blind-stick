@@ -46,16 +46,31 @@ public final class MainActivity extends Activity {
     private TextView status, confidence, guidance, audioStatus;
     private ArabicAudio audio;
     private String[] arabicLabels;
-    private AlertPolicy.Selection lastSelection;
-    private long lastSelectionAt;
+    private DecisionEngine.Decision lastDecision, playingDecision;
+    private List<DecisionEngine.Decision> lastScene = List.of();
+    private boolean smartDecisions = true;
+    private int targetClass = -1;
+    private Switch decisionToggle;
+    private Spinner targetPicker;
+    private TextView decisionReason;
     private boolean haptics;
-    private final Runnable stalledCameraAudio = () -> {
+    private final Runnable stalledCameraAudio = this::stopStalledSpeech;
+
+    private void stopStalledSpeech() {
         if (audio != null) audio.stop();
-    };
-    private final Runnable staleSpeech = () -> {
-        lastSelection = null;
+        playingDecision = null;
+    }
+    private final Runnable staleSpeech = this::expireGuidance;
+
+    private void expireGuidance() {
+        lastDecision = null;
+        lastScene = List.of();
+        if (active != null) active.policy.invalidate();
+        if (preview != null) preview.select(null);
         if (guidance != null) guidance.setText("الصورة متأخرة، في انتظار تحديث");
-    };
+        if (decisionReason != null) decisionReason.setText("في انتظار صورة حديثة لوصف الموجود");
+        if (active != null) active.report.recordDecision(YoloEngine.now() - active.report.created, null, "STALE_FRAME");
+    }
     private DetectionView preview;
     private Button startButton, pickButton;
     private SeekBar confidenceBar;
@@ -70,18 +85,26 @@ public final class MainActivity extends Activity {
     private static final class ActiveRun {
         final BenchmarkRun report;
         final AtomicBoolean inFlight = new AtomicBoolean();
-        final AlertPolicy policy = new AlertPolicy();
+        final DecisionEngine policy;
         volatile boolean running = true;
         YoloEngine engine; // Accessed only by the inference worker.
         RearJpegCamera camera;
         long lastFrame;
+        long lastFreshFrame = -1;
 
-        ActiveRun(BenchmarkRun report) { this.report = report; }
+        ActiveRun(BenchmarkRun report, boolean smart, int target) {
+            this.report = report;
+            policy = new DecisionEngine(smart ? DecisionEngine.Mode.SMART : DecisionEngine.Mode.LEGACY,
+                    report.threshold, target);
+            report.decisionMode = policy.mode().name();
+            report.searchClass = target;
+        }
     }
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        smartDecisions = getPreferences(MODE_PRIVATE).getBoolean("smart_decisions", true);
         try (var reader = new BufferedReader(new InputStreamReader(
                 getAssets().open("coco-ar.txt"), StandardCharsets.UTF_8))) {
             var labels = new java.util.ArrayList<String>();
@@ -102,7 +125,7 @@ public final class MainActivity extends Activity {
         audio.stop();
         main.removeCallbacks(staleSpeech);
         main.removeCallbacks(stalledCameraAudio);
-        lastSelection = null;
+        lastDecision = playingDecision = null;
         tab = selectedTab;
         var scroll = new ScrollView(this);
         scroll.setFillViewport(true);
@@ -164,6 +187,50 @@ public final class MainActivity extends Activity {
         });
         root.addView(confidenceBar, new LinearLayout.LayoutParams(-1, dp(40)));
 
+        decisionToggle = new Switch(this);
+        decisionToggle.setText("الوصف الذكي للأوضة");
+        decisionToggle.setMinHeight(dp(48));
+        decisionToggle.setChecked(smartDecisions);
+        decisionToggle.setOnCheckedChangeListener((view, enabled) -> {
+            smartDecisions = enabled;
+            getPreferences(MODE_PRIVATE).edit().putBoolean("smart_decisions", enabled).apply();
+            targetPicker.setEnabled(enabled);
+            audio.stop();
+            lastDecision = playingDecision = null;
+            preview.select(null);
+            guidance.setText("في انتظار نتيجة مؤكدة");
+            decisionReason.setText(enabled ? "وصف الموجود واتجاهه حسب الصورة"
+                    : "القرار القديم: اسم الجسم واتجاهه");
+        });
+        root.addView(decisionToggle);
+        root.addView(text("ابحث عن جسم · التنبيهات المهمة لها الأولوية", 14, Color.WHITE));
+        targetPicker = new Spinner(this);
+        targetPicker.setContentDescription("هدف البحث");
+        String[] targets = new String[81];
+        targets[0] = "بدون بحث";
+        System.arraycopy(arabicLabels, 0, targets, 1, 80);
+        targetPicker.setAdapter(new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, targets));
+        targetPicker.setSelection(targetClass + 1);
+        targetPicker.setEnabled(smartDecisions);
+        targetPicker.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override public void onItemSelected(android.widget.AdapterView<?> parent, View view, int position, long id) {
+                int target = position - 1;
+                if (target == targetClass) return;
+                targetClass = target;
+                audio.stop();
+                lastDecision = playingDecision = null;
+                preview.select(null);
+                guidance.setText("في انتظار نتيجة مؤكدة");
+                if (active != null) {
+                    active.policy.setTargetClass(target);
+                    active.report.searchClass = target;
+                }
+            }
+            @Override public void onNothingSelected(android.widget.AdapterView<?> parent) {}
+        });
+        root.addView(targetPicker, new LinearLayout.LayoutParams(-1, dp(48)));
+
         if (tab == IMAGE) {
             pickButton = button("Choose JPEG", this::pickImage);
             root.addView(pickButton);
@@ -179,6 +246,9 @@ public final class MainActivity extends Activity {
         guidance = text("في انتظار نتيجة مؤكدة", 18, ACCENT);
         guidance.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_NONE);
         root.addView(guidance);
+        decisionReason = text(smartDecisions ? "وصف الموجود واتجاهه حسب الصورة"
+                : "القرار القديم: اسم الجسم واتجاهه", 14, Color.WHITE);
+        root.addView(decisionReason);
         preview = new DetectionView(this);
         var previewLayout = new LinearLayout.LayoutParams(-1, dp(230));
         previewLayout.topMargin = dp(8);
@@ -200,6 +270,7 @@ public final class MainActivity extends Activity {
         var voiceActions = new LinearLayout(this);
         voiceActions.addView(button("اختبار الصوت", () -> {
             audio.stop();
+            playingDecision = null;
             audio.play("test", () -> true, () -> {});
         }), new LinearLayout.LayoutParams(0, dp(52), 1));
         voiceActions.addView(button("وصف الآن", this::describeNow),
@@ -229,10 +300,11 @@ public final class MainActivity extends Activity {
     private void start(boolean live) {
         if (active != null) return;
         int size = modelPicker.getSelectedItemPosition() == 0 ? 640 : 320;
-        var run = new ActiveRun(new BenchmarkRun(size, threshold, live, live ? "Rear camera" : filename));
+        var run = new ActiveRun(new BenchmarkRun(size, threshold, live, live ? "Rear camera" : filename),
+                smartDecisions, targetClass);
         active = run;
         audio.stop();
-        lastSelection = null;
+        lastDecision = playingDecision = null;
         main.removeCallbacks(staleSpeech);
         main.removeCallbacks(stalledCameraAudio);
         preview.show(null);
@@ -241,6 +313,7 @@ public final class MainActivity extends Activity {
         startButton.setText("Stop test");
         modelPicker.setEnabled(false);
         confidenceBar.setEnabled(false);
+        decisionToggle.setEnabled(false);
         if (pickButton != null) pickButton.setEnabled(false);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         run.report.sampleDevice(this);
@@ -435,85 +508,120 @@ public final class MainActivity extends Activity {
                                 long nowNs, long sourceNs, boolean still) {
         long start = YoloEngine.now();
         long now = nowNs / 1_000_000;
-        long age = Math.max(0, nowNs - sourceNs) / 1_000_000;
+        long age = sourceNs > 0 && nowNs >= sourceNs ? (nowNs - sourceNs) / 1_000_000 : -1;
         List<AlertPolicy.Box> boxes = prediction.boxes().stream()
                 .map(box -> new AlertPolicy.Box(box.classId(), box.score(),
                         box.x1(), box.y1(), box.x2(), box.y2()))
                 .collect(java.util.stream.Collectors.toList());
-        var selected = run.policy.update(boxes, now, age);
-        if (still) {
-            // Repeated benchmark passes over one JPEG do not prove temporal tracking.
-            var best = boxes.stream().filter(box -> box.score() >= .45f && box.area() >= .003f)
-                    .max(java.util.Comparator.comparingDouble(box ->
-                            (box.center() >= .33f && box.center() <= .67f ? 2 : 0)
-                                    + box.area() + .3 * box.score())).orElse(null);
-            selected = best == null ? null : new AlertPolicy.Selection(0, best.classId(),
-                    best.center() < .33f ? 0 : best.center() > .67f ? 2 : 1, best.score());
-        }
-        lastSelection = selected;
-        lastSelectionAt = still ? now : sourceNs / 1_000_000;
-        preview.select(selected);
-        if (selected == null) {
-            guidance.setText(age > AlertPolicy.MAX_FRAME_AGE_MS
-                    ? "الصورة متأخرة، في انتظار تحديث" : "في انتظار كشف ثابت بثقة ٤٥٪ أو أعلى");
+        run.report.recordReplay(now, age, run.policy.targetClass(), still, boxes);
+        var decision = still ? run.policy.describeStill(boxes) : run.policy.update(boxes, now, age);
+        lastScene = still ? run.policy.describeStillScene(boxes) : run.policy.describeScene(now);
+        lastDecision = decision;
+        preview.select(decision == null ? null : decision.selection());
+        boolean stale = age < 0 || age > SceneTracker.MAX_AGE_MS;
+        if (decision == null) {
+            guidance.setText(stale && !still ? "الصورة متأخرة، في انتظار تحديث"
+                    : "مش شايف جسم واضح حاليًا");
+            decisionReason.setText(run.policy.targetClass() >= 0
+                    ? "البحث مستمر عن: " + arabicLabels[run.policy.targetClass()]
+                    : "في انتظار جسم واضح لوصفه");
         } else {
-            guidance.setText(phrase(selected) + (still ? " · صورة ثابتة" : " · #" + selected.trackId()));
+            guidance.setText(DecisionSpeech.phrase(decision, arabicLabels)
+                    + (still ? " · صورة ثابتة" : ""));
+            decisionReason.setText(still ? "وصف صورة فقط؛ لا يتم استنتاج حركة أو خطورة"
+                    : DecisionSpeech.explanation(decision));
         }
         main.removeCallbacks(staleSpeech);
-        main.removeCallbacks(stalledCameraAudio);
-        if (!still) {
-            main.postDelayed(staleSpeech, Math.max(1, AlertPolicy.MAX_FRAME_AGE_MS - age));
-            // A short accepted phrase may finish while the next fresh frame is arriving.
-            main.postDelayed(stalledCameraAudio, 1_500);
+        if (!still && !stale) {
+            run.lastFreshFrame = sourceNs / 1_000_000;
+            main.removeCallbacks(stalledCameraAudio);
+            main.postDelayed(staleSpeech, Math.max(1, SceneTracker.MAX_AGE_MS - age));
+            main.postDelayed(stalledCameraAudio, Math.max(1, SpeechPlan.CAMERA_TIMEOUT_MS - age));
         }
+        run.report.recordDecision(nowNs - run.report.created, decision,
+                stale && !still ? "STALE_FRAME" : decision == null ? "NO_CONFIRMED_OBJECT" : "CONFIRMED");
         run.report.decisionNanos += YoloEngine.now() - start;
         run.report.decisionFrames++;
-        var announcement = still ? selected : run.policy.announcement(now);
-        if (announcement != null && !audio.isBusy()) announce(run, announcement, still);
+        var announcement = still ? decision : run.policy.announcement(now);
+        if (announcement != null) {
+            if (audio.isBusy() && run.policy.canInterrupt(announcement, playingDecision)) {
+                audio.stop();
+                playingDecision = null;
+            }
+            if (!audio.isBusy()) announce(run, announcement, still);
+        }
     }
 
-    private void announce(ActiveRun run, AlertPolicy.Selection selection, boolean still) {
-        audio.play(selection.classId() + "_" + selection.direction(),
-                () -> still || (active == run && lastSelection != null
-                        && lastSelection.trackId() == selection.trackId()
-                        && lastSelection.direction() == selection.direction()
-                        && android.os.SystemClock.elapsedRealtime() - lastSelectionAt <= AlertPolicy.MAX_FRAME_AGE_MS),
+    private void announce(ActiveRun run, DecisionEngine.Decision decision, boolean still) {
+        int target = run.policy.targetClass();
+        String spokenText = DecisionSpeech.phrase(decision, arabicLabels);
+        boolean accepted = audio.play(DecisionSpeech.assets(decision),
+                () -> still ? tab == IMAGE && active == null && lastDecision == decision
+                        : active == run && run.policy.isValid(decision, android.os.SystemClock.elapsedRealtime()),
+                () -> still ? tab == IMAGE && active == null && lastDecision == decision
+                        : speechSessionActive(run, target),
                 () -> {
             long now = android.os.SystemClock.elapsedRealtime();
-            if (!still) run.policy.announced(selection, now);
+            if (!still) run.policy.announced(decision, now);
             run.report.alerts.add(new BenchmarkRun.AlertEvent(now * 1_000_000 - run.report.created,
-                    selection.trackId(), selection.classId(), selection.direction(), phrase(selection), still));
+                    decision, spokenText, target));
             if (haptics) {
                 var vibrator = getSystemService(VibratorManager.class).getDefaultVibrator();
-                if (vibrator.hasVibrator()) vibrator.vibrate(VibrationEffect.createOneShot(
-                        90, VibrationEffect.DEFAULT_AMPLITUDE));
+                if (vibrator.hasVibrator()) {
+                    if (decision.level() == DecisionEngine.Level.CAUTION) {
+                        vibrator.vibrate(VibrationEffect.createWaveform(new long[]{0, 100, 80, 100}, -1));
+                    } else {
+                        vibrator.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE));
+                    }
+                }
             }
-        });
-    }
-
-    private String phrase(AlertPolicy.Selection selection) {
-        String direction = switch (selection.direction()) {
-            case 0 -> "على اليسار";
-            case 2 -> "على اليمين";
-            default -> "في المنتصف";
-        };
-        return arabicLabels[selection.classId()] + " " + direction;
+        }, () -> run.report.completedSpeech.add(new BenchmarkRun.AlertEvent(
+                android.os.SystemClock.elapsedRealtime() * 1_000_000 - run.report.created,
+                decision, spokenText, target)));
+        if (accepted) playingDecision = decision;
     }
 
     private void describeNow() {
         boolean still = tab == IMAGE && active == null;
-        if (lastSelection == null || (!still && android.os.SystemClock.elapsedRealtime()
-                - lastSelectionAt > AlertPolicy.MAX_FRAME_AGE_MS)) {
+        long now = android.os.SystemClock.elapsedRealtime();
+        if (lastDecision == null || lastScene.isEmpty() || (!still && (active == null
+                || !active.policy.isValid(lastDecision, now)))) {
             audioStatus.setText("في انتظار نتيجة حديثة ومؤكدة");
             return;
         }
         audio.stop();
-        var selection = lastSelection;
-        audio.play(selection.classId() + "_" + selection.direction(),
-                () -> still || (lastSelection != null && lastSelection.trackId() == selection.trackId()
-                        && lastSelection.direction() == selection.direction()
-                        && android.os.SystemClock.elapsedRealtime() - lastSelectionAt <= AlertPolicy.MAX_FRAME_AGE_MS),
-                () -> {});
+        var decision = lastDecision;
+        var scene = lastScene;
+        var run = active;
+        int target = run == null ? targetClass : run.policy.targetClass();
+        var assets = scene.stream().map(d -> d.classId() + "_" + d.direction())
+                .collect(java.util.stream.Collectors.toList());
+        String spokenText = scene.stream().map(d -> DecisionSpeech.objectPhrase(d, arabicLabels))
+                .collect(java.util.stream.Collectors.joining("، "));
+        boolean accepted = audio.play(assets,
+                () -> still ? tab == IMAGE && active == null && lastDecision == decision
+                        : active == run && run != null
+                                && run.policy.isValid(decision, android.os.SystemClock.elapsedRealtime()),
+                () -> still ? tab == IMAGE && active == null && lastScene == scene
+                        : run != null && speechSessionActive(run, target),
+                () -> {
+                    long at = android.os.SystemClock.elapsedRealtime();
+                    if (run != null) {
+                        for (var described : scene) run.policy.announced(described, at);
+                        run.report.alerts.add(new BenchmarkRun.AlertEvent(at * 1_000_000 - run.report.created,
+                                decision, spokenText, target));
+                    }
+                }, () -> {
+                    if (run != null) run.report.completedSpeech.add(new BenchmarkRun.AlertEvent(
+                            android.os.SystemClock.elapsedRealtime() * 1_000_000 - run.report.created,
+                            decision, spokenText, target));
+                });
+        if (accepted) playingDecision = decision;
+    }
+
+    private boolean speechSessionActive(ActiveRun run, int target) {
+        return active == run && run.running && run.policy.targetClass() == target
+                && SpeechPlan.recentCamera(android.os.SystemClock.elapsedRealtime(), run.lastFreshFrame);
     }
 
     private void reportError(ActiveRun run, Throwable error) {
@@ -526,7 +634,7 @@ public final class MainActivity extends Activity {
         active = null;
         run.running = false;
         audio.stop();
-        lastSelection = null;
+        lastDecision = playingDecision = null;
         main.removeCallbacks(staleSpeech);
         main.removeCallbacks(stalledCameraAudio);
         if (run.report.measuredUntil == 0) run.report.measuredUntil = YoloEngine.now();
@@ -546,6 +654,7 @@ public final class MainActivity extends Activity {
         startButton.setText(tab == LIVE ? "Start live test" : "Run 60 iterations");
         modelPicker.setEnabled(true);
         confidenceBar.setEnabled(true);
+        decisionToggle.setEnabled(true);
         if (pickButton != null) pickButton.setEnabled(true);
         status.setText(reason + BenchmarkRun.format("\n%d frames · %.2f average FPS · See Report",
                 run.report.samples.size(), run.report.averageFps()));
@@ -569,6 +678,9 @@ public final class MainActivity extends Activity {
         if (result != RESULT_OK || data == null || data.getData() == null) return;
         Uri uri = data.getData();
         if (request == PICK_JPEG && tab == IMAGE) {
+            audio.stop();
+            lastDecision = playingDecision = null;
+            preview.select(null);
             selected = uri;
             filename = displayName(uri);
             status.setText(filename);
@@ -611,7 +723,7 @@ public final class MainActivity extends Activity {
     @Override protected void onPause() {
         if (active != null) finish(active, "Stopped when the benchmark left the foreground");
         audio.stop();
-        lastSelection = null;
+        lastDecision = playingDecision = null;
         main.removeCallbacks(staleSpeech);
         main.removeCallbacks(stalledCameraAudio);
         super.onPause();
