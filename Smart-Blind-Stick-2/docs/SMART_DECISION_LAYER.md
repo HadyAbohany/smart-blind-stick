@@ -64,6 +64,8 @@ Desktop checks run the production policy and `SpeechPlan` directly using Java 17
 
 `results/room-desktop-validation.json` and `results/room-scenario-replay.tsv` contain the current results. `tools/verify_speech_assets.py` verifies manifest/wording consistency, all 244 files, and decodes both attention/search prefixes to reject silent audio. Android debug assembly and lint passed. The earlier `decision-*` result files refer to v0.3.0 and are retained as historical evidence.
 
-Version 0.3.1 is installed on the connected Galaxy A35. Completion of the live listening/scene test is recorded separately; installation and desktop checks alone do not establish that the observed audio interruption is fixed acoustically. Camera accuracy, accessibility, haptics, and sustained thermal performance require physical trials. Phone screenshots and raw local test evidence are kept outside Git.
+Version 0.3.1 was installed and trialed on Galaxy A35 (Android 15). The user confirmed that speech was clear and sentences completed. The on-device report recorded 1,617 frames over about 151.8 seconds, 10.65 average processed FPS, 70.4 ms p95 processing, 340.2 ms p95 sensor-to-UI latency, and 1.22 ms mean decision cost. Thermal status rose from light to moderate during this short trial. The session ended when the app left the foreground, and further QA was stopped at the user’s request.
+
+`results/galaxy-a35-v0.3.1-room-smoke.json` records rounded screen readings and the listening confirmation. JSON export was canceled when the user requested stopping; a completed-plan count is not asserted. The manual three-object summary, full fifteen-minute run, detector accuracy, accessibility, and haptics were not physically validated in this trial. Phone screenshots and raw local test evidence remain outside Git.
 
 The source and original APK are preserved before changes. See [rollback instructions](../../ROLLBACK.md). The separate BLE/ESP32 `mobile-app` and firmware are unchanged.

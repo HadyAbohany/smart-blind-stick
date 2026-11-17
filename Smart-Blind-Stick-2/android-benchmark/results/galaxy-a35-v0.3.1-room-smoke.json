@@ -1,0 +1,54 @@
+{
+  "app_version": "0.3.1",
+  "validation_date_local": "2026-11-17",
+  "timezone": "Africa/Cairo",
+  "device_model": "Samsung Galaxy A35 (SM-A356E)",
+  "android_version": "15",
+  "android_api": 35,
+  "evidence": "On-device Report screen, app-only SbsAudio logs, and explicit user listening feedback",
+  "scope": "Handheld camera and speech smoke test; ended at user request",
+  "measured_frames": 1617,
+  "measured_duration_sec_rounded": 151.8,
+  "average_processed_fps_rounded": 10.65,
+  "model_input_size": 320,
+  "camera_jpeg_size": [
+    640,
+    480
+  ],
+  "detector_confidence_threshold": 0.25,
+  "total_processing_ms_rounded": {
+    "median": 66.2,
+    "p95": 70.4
+  },
+  "inference_ms_rounded": {
+    "median": 54.2,
+    "p95": 57.6
+  },
+  "camera_callback_to_ui_ms_rounded": {
+    "median": 69.5,
+    "p95": 83.6
+  },
+  "camera_sensor_to_ui_ms_rounded": {
+    "median": 225.3,
+    "p95": 340.2
+  },
+  "decision_average_ms_rounded": 1.22,
+  "started_speech_plans_reported": 19,
+  "completed_speech_plan_count": null,
+  "audio_clip_completion_seen_in_app_logs": true,
+  "user_confirmed_clear_complete_sentences": true,
+  "user_feedback_ar": "واضحة وبتكمل",
+  "app_run_finish_reason": "Stopped when the benchmark left the foreground",
+  "thermal_report": {
+    "start": "light",
+    "end": "moderate",
+    "peak": "moderate"
+  },
+  "raw_json_exported": false,
+  "export_canceled_at_user_stop_request": true,
+  "manual_three_object_summary_phone_test_completed": false,
+  "full_15_minute_run_completed": false,
+  "detector_accuracy_validated": false,
+  "haptics_and_accessibility_validated": false,
+  "images_and_raw_phone_evidence_uploaded": false
+}

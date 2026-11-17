@@ -9,7 +9,7 @@ Offline Android vision and Arabic alerts, ESP32 cane and camera firmware, and ha
 
 `main` and the immutable `v0.2.1-baseline` tag preserve the original project. Development of the new offline decision layer is on `codex/smart-decision-layer`. The ONNX models and Arabic speech assets are included so a fresh clone can build the camera application.
 
-The v0.3.1 room-description engine has desktop regression, speech-continuity, and synthetic replay coverage. Version 0.3.0 was trialed on Galaxy A35 and led to the current speech fix; v0.3.1 live listening validation is tracked separately. Camera accuracy, Android audio timing, haptics, and thermal performance still require a physical-phone trial. The camera-only application does not measure distance, verify walkable ground, or authorize road crossings.
+The v0.3.1 room-description engine has desktop regression, speech-continuity, and synthetic replay coverage. A Galaxy A35 camera/audio smoke test recorded 10.65 average processed FPS over about 152 seconds; the user confirmed clear, complete speech. Detailed detector accuracy, haptics, accessibility, and sustained thermal performance remain unvalidated. The camera-only application does not measure distance, verify walkable ground, or authorize road crossings.
 
 ## Checks without a phone
 
