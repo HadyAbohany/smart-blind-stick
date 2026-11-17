@@ -20,8 +20,14 @@ final class BenchmarkRun {
     record Sample(long at, long prep, long inference, long post, long camera, long sensor) {
         long processing() { return prep + inference + post; }
     }
-    record AlertEvent(long elapsed, int trackId, int classId, int direction, String phrase, boolean still) {}
+    record AlertEvent(long elapsed, DecisionEngine.Decision decision, String phrase, int targetClass) {}
+    record DecisionEvent(long elapsed, DecisionEngine.Decision decision, String state) {}
+    record ReplayFrame(long nowMs, long ageMs, int targetClass, boolean still, List<AlertPolicy.Box> boxes) {}
     final List<AlertEvent> alerts = new ArrayList<>();
+    final List<DecisionEvent> decisions = new ArrayList<>();
+    final List<ReplayFrame> replayFrames = new ArrayList<>();
+    String decisionMode = "SMART", lastDecisionKey;
+    int searchClass = -1, droppedDecisionEvents, droppedReplayFrames;
     long decisionNanos;
     int decisionFrames;
     record Telemetry(long time, long pssKiB, int thermal) {}
@@ -45,6 +51,27 @@ final class BenchmarkRun {
         this.threshold = threshold;
         this.live = live;
         this.source = source;
+    }
+
+    void recordDecision(long elapsed, DecisionEngine.Decision decision, String state) {
+        String key = state + (decision == null ? "" : ":" + decision.trackId() + ":" + decision.classId()
+                + ":" + decision.direction() + ":" + decision.level() + ":" + decision.reason()
+                + ":" + decision.target());
+        if (key.equals(lastDecisionKey)) return;
+        lastDecisionKey = key;
+        if (decisions.size() == 2_000) {
+            droppedDecisionEvents++;
+            return;
+        }
+        decisions.add(new DecisionEvent(elapsed, decision, state));
+    }
+
+    void recordReplay(long nowMs, long ageMs, int target, boolean still, List<AlertPolicy.Box> boxes) {
+        if (replayFrames.size() == 2_000) {
+            droppedReplayFrames++;
+            return;
+        }
+        replayFrames.add(new ReplayFrame(nowMs, ageMs, target, still, SceneTracker.clean(boxes, threshold)));
     }
 
     void sampleDevice(Context context) {
@@ -119,7 +146,9 @@ final class BenchmarkRun {
                     .append(latency("Camera sensor → UI", Sample::sensor))
                     .append("Last frame detections ").append(lastBoxes.size()).append('\n');
         }
-        text.append(format("\nSpoken alerts %d · decision layer %.2f ms average\n",
+        text.append("\nDecision mode ").append(decisionMode)
+                .append(" · engine ").append(DecisionEngine.VERSION).append('\n');
+        text.append(format("Spoken alerts %d · decision layer %.2f ms average\n",
                 alerts.size(), decisionFrames == 0 ? 0 : ms(decisionNanos) / decisionFrames));
         if (!telemetry.isEmpty()) {
             Telemetry first = telemetry.get(0), last = telemetry.get(telemetry.size() - 1);
@@ -201,17 +230,49 @@ final class BenchmarkRun {
         report.put("last_frame_width", imageWidth);
         report.put("last_frame_height", imageHeight);
         report.put("last_frame_detections", boxes);
-        report.put("app_version", "0.2.1");
+        report.put("app_version", BuildConfig.VERSION_NAME);
+        report.put("decision_engine_version", DecisionEngine.VERSION);
+        report.put("decision_mode", decisionMode);
+        report.put("final_search_class_id", searchClass < 0 ? JSONObject.NULL : searchClass);
+        report.put("metric_distance_available", false);
         report.put("decision_average_ms", decisionFrames == 0 ? 0 : ms(decisionNanos) / decisionFrames);
         var spoken = new JSONArray();
         for (AlertEvent event : alerts) {
-            spoken.put(new JSONObject().put("elapsed_since_start_ms", ms(event.elapsed()))
-                    .put("track_id", event.trackId()).put("class_id", event.classId())
-                    .put("image_direction", event.direction()).put("phrase_ar", event.phrase())
-                    .put("still_image", event.still()));
+            spoken.put(decisionJson(event.decision())
+                    .put("elapsed_since_start_ms", ms(event.elapsed())).put("phrase_ar", event.phrase())
+                    .put("speech_status", "started")
+                    .put("search_class_id", event.targetClass() < 0 ? JSONObject.NULL : event.targetClass()));
         }
         report.put("spoken_alerts", spoken);
+        var timeline = new JSONArray();
+        for (var event : decisions) {
+            var entry = event.decision() == null ? new JSONObject() : decisionJson(event.decision());
+            timeline.put(entry.put("elapsed_since_start_ms", ms(event.elapsed())).put("state", event.state()));
+        }
+        report.put("decision_events", timeline);
+        report.put("dropped_decision_events", droppedDecisionEvents);
+        var replay = new JSONArray();
+        for (var frame : replayFrames) {
+            var input = new JSONArray();
+            for (var box : frame.boxes()) {
+                input.put(new JSONArray(List.of(box.classId(), box.score(), box.x1(), box.y1(), box.x2(), box.y2())));
+            }
+            replay.put(new JSONObject().put("now_ms", frame.nowMs()).put("age_ms", frame.ageMs())
+                    .put("target_class", frame.targetClass()).put("still_image", frame.still()).put("boxes", input));
+        }
+        report.put("decision_replay", replay);
+        report.put("dropped_replay_frames", droppedReplayFrames);
         return report;
+    }
+
+    private static JSONObject decisionJson(DecisionEngine.Decision d) throws JSONException {
+        return new JSONObject().put("track_id", d.trackId()).put("class_id", d.classId())
+                .put("image_direction", d.direction()).put("confidence", d.confidence())
+                .put("level", d.level().name()).put("reason", d.reason().name())
+                .put("suggested_action", d.action().name())
+                .put("priority", d.priority()).put("search_target", d.target()).put("still_image", d.still())
+                .put("image_box_area", d.area()).put("image_area_ratio", d.imageGrowth())
+                .put("image_horizontal_velocity_per_sec", d.imageVelocity());
     }
 
     private void addLatency(JSONObject report, String key, ToLongFunction<Sample> metric) throws JSONException {

@@ -1,0 +1,20 @@
+{
+  "app_version": "0.3.0",
+  "version_code": 5,
+  "package": "eg.sbs.benchmark",
+  "source_branch": "codex/smart-decision-layer",
+  "baseline_tag": "v0.2.1-baseline",
+  "apk_file": "dist/SBS-YOLO-Benchmark-v0.3.0-smart-decisions-debug.apk",
+  "apk_bytes": 94417675,
+  "apk_sha256": "38abe8d6b7e4001b71d9841f1b70a309559fbf0fafdb6ca42755e10061de72e7",
+  "android_debug_build": "passed",
+  "lint_errors": 0,
+  "lint_warnings": 20,
+  "signature_verified": true,
+  "matches_original_debug_signing_certificate": true,
+  "bundled_arabic_speech_assets": 248,
+  "new_audio_prefixes_decoded": 6,
+  "physical_phone_tested": false,
+  "camera_accuracy_tested": false,
+  "android_audio_timing_tested": false
+}

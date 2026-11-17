@@ -1,0 +1,32 @@
+scenario	now_ms	class_id	direction	level	reason	action	eligible_announcement
+peripheral_is_quiet	1000				NONE		NONE
+peripheral_is_quiet	1100				NONE		NONE
+peripheral_is_quiet	1200	56	0	INFO	DESCRIPTION	DESCRIBE	NONE
+forward_person	1000				NONE		NONE
+forward_person	1100				NONE		NONE
+forward_person	1200	0	1	NOTICE	CENTER_OBJECT	PAY_ATTENTION	CENTER_OBJECT
+vehicle_overrides_target	1000				NONE		NONE
+vehicle_overrides_target	1100				NONE		NONE
+vehicle_overrides_target	1200	2	1	CAUTION	CENTER_VEHICLE	SLOW_AND_CHECK	CENTER_VEHICLE
+find_requested_chair	1000				NONE		NONE
+find_requested_chair	1100				NONE		NONE
+find_requested_chair	1200	56	0	INFO	SEARCH_TARGET	LOCATE_TARGET	SEARCH_TARGET
+legacy_peripheral_description	1000				NONE		NONE
+legacy_peripheral_description	1100				NONE		NONE
+legacy_peripheral_description	1200	56	0	INFO	DESCRIPTION	DESCRIBE	DESCRIPTION
+empty_is_unknown	1000				NONE		NONE
+empty_is_unknown	1100				NONE		NONE
+empty_is_unknown	1200				NONE		NONE
+recent_then_stale	1000				NONE		NONE
+recent_then_stale	1100				NONE		NONE
+recent_then_stale	1200	0	1	NOTICE	CENTER_OBJECT	PAY_ATTENTION	CENTER_OBJECT
+recent_then_stale	1400				NONE		NONE
+recent_then_stale	1500				NONE		NONE
+motion_towards_center	1000				NONE		NONE
+motion_towards_center	1200				NONE		NONE
+motion_towards_center	1400	0	0	INFO	DESCRIPTION	DESCRIBE	NONE
+motion_towards_center	1600	0	0	CAUTION	ENTERING_CENTER	SLOW_AND_CHECK	ENTERING_CENTER
+sustained_image_expansion	1000				NONE		NONE
+sustained_image_expansion	1200				NONE		NONE
+sustained_image_expansion	1400	0	1	NOTICE	CENTER_OBJECT	PAY_ATTENTION	CENTER_OBJECT
+sustained_image_expansion	1600	0	1	CAUTION	IMAGE_EXPANSION	SLOW_AND_CHECK	NONE

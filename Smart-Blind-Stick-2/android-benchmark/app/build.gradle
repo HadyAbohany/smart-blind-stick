@@ -8,10 +8,11 @@ android {
         applicationId 'eg.sbs.benchmark'
         minSdk 31
         targetSdk 34
-        versionCode 4
-        versionName '0.2.1'
+        versionCode 5
+        versionName '0.3.0'
     }
     androidResources { noCompress += "m4a" }
+    buildFeatures { buildConfig true }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -33,3 +34,18 @@ tasks.register('checkBundledModels') {
     }
 }
 tasks.named('preBuild').configure { dependsOn 'checkBundledModels' }
+
+tasks.register('checkBundledSpeech') {
+    doLast {
+        def prefixes = new groovy.json.JsonSlurper().parse(file('src/main/assets/decision-speech.json'))
+        def names = ['test', 'unavailable'] + prefixes.keySet().toList()
+        (0..<80).each { id -> (0..<3).each { direction -> names.add("${id}_${direction}") } }
+        names.each { name ->
+            def clip = file("src/main/assets/speech/${name}.m4a")
+            if (!clip.isFile() || clip.length() < 1_000) {
+                throw new GradleException("Missing or empty Arabic speech asset: ${name}")
+            }
+        }
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'checkBundledSpeech' }
