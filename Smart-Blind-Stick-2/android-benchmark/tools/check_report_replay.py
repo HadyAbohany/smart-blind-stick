@@ -30,7 +30,7 @@ with tempfile.TemporaryDirectory(prefix="sbs-report-replay-") as temporary:
     with tsv_path.open() as stream:
         rows = list(csv.DictReader(stream, delimiter="\t"))
     assert len(rows) == 3 and rows[0]["reason"] == "NONE"
-    assert rows[-1]["reason"] == "CENTER_OBJECT" and rows[-1]["eligible_announcement"] == "CENTER_OBJECT"
+    assert rows[-1]["reason"] == "DESCRIPTION" and rows[-1]["eligible_announcement"] == "DESCRIPTION"
     for invalid in ({**report, "mode": "stored_jpeg"}, {**report, "decision_replay": []}):
         report_path.write_text(json.dumps(invalid))
         result = subprocess.run([sys.executable, str(tools / "report_to_replay.py"), str(report_path), str(csv_path)],

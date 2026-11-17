@@ -12,7 +12,7 @@ else
 fi
 SOURCE="$ROOT/app/src/main/java/eg/sbs/benchmark"
 "$JAVAC" --release 17 -d "$CLASSES" "$SOURCE/AlertPolicy.java" "$SOURCE/SceneTracker.java" \
-    "$SOURCE/DecisionEngine.java" "$SOURCE/DecisionSpeech.java" \
+    "$SOURCE/DecisionEngine.java" "$SOURCE/DecisionSpeech.java" "$SOURCE/SpeechPlan.java" \
     "$ROOT/tools/AlertPolicyCheck.java" "$ROOT/tools/DecisionEngineCheck.java" "$ROOT/tools/DecisionReplay.java"
 "$JAVA" -cp "$CLASSES" eg.sbs.benchmark.AlertPolicyCheck
 if [ "$#" -gt 0 ]; then

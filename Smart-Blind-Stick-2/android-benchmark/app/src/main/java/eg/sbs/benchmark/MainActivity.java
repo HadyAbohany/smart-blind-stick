@@ -47,25 +47,28 @@ public final class MainActivity extends Activity {
     private ArabicAudio audio;
     private String[] arabicLabels;
     private DecisionEngine.Decision lastDecision, playingDecision;
+    private List<DecisionEngine.Decision> lastScene = List.of();
     private boolean smartDecisions = true;
     private int targetClass = -1;
     private Switch decisionToggle;
     private Spinner targetPicker;
     private TextView decisionReason;
     private boolean haptics;
-    private final Runnable stalledCameraAudio = () -> {
+    private final Runnable stalledCameraAudio = this::stopStalledSpeech;
+
+    private void stopStalledSpeech() {
         if (audio != null) audio.stop();
-    };
+        playingDecision = null;
+    }
     private final Runnable staleSpeech = this::expireGuidance;
 
     private void expireGuidance() {
         lastDecision = null;
-        playingDecision = null;
-        if (audio != null) audio.stop();
+        lastScene = List.of();
         if (active != null) active.policy.invalidate();
         if (preview != null) preview.select(null);
         if (guidance != null) guidance.setText("الصورة متأخرة، في انتظار تحديث");
-        if (decisionReason != null) decisionReason.setText("لا يوجد تحديث حديث؛ المسافة وحالة الطريق غير معروفتين");
+        if (decisionReason != null) decisionReason.setText("في انتظار صورة حديثة لوصف الموجود");
         if (active != null) active.report.recordDecision(YoloEngine.now() - active.report.created, null, "STALE_FRAME");
     }
     private DetectionView preview;
@@ -87,6 +90,7 @@ public final class MainActivity extends Activity {
         YoloEngine engine; // Accessed only by the inference worker.
         RearJpegCamera camera;
         long lastFrame;
+        long lastFreshFrame = -1;
 
         ActiveRun(BenchmarkRun report, boolean smart, int target) {
             this.report = report;
@@ -184,7 +188,7 @@ public final class MainActivity extends Activity {
         root.addView(confidenceBar, new LinearLayout.LayoutParams(-1, dp(40)));
 
         decisionToggle = new Switch(this);
-        decisionToggle.setText("طبقة القرار الذكية · اقفلها للنسخة القديمة");
+        decisionToggle.setText("الوصف الذكي للأوضة");
         decisionToggle.setMinHeight(dp(48));
         decisionToggle.setChecked(smartDecisions);
         decisionToggle.setOnCheckedChangeListener((view, enabled) -> {
@@ -195,7 +199,7 @@ public final class MainActivity extends Activity {
             lastDecision = playingDecision = null;
             preview.select(null);
             guidance.setText("في انتظار نتيجة مؤكدة");
-            decisionReason.setText(enabled ? "التنبيه حسب أهمية المشهد · المسافة غير معروفة"
+            decisionReason.setText(enabled ? "وصف الموجود واتجاهه حسب الصورة"
                     : "القرار القديم: اسم الجسم واتجاهه");
         });
         root.addView(decisionToggle);
@@ -242,7 +246,7 @@ public final class MainActivity extends Activity {
         guidance = text("في انتظار نتيجة مؤكدة", 18, ACCENT);
         guidance.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_NONE);
         root.addView(guidance);
-        decisionReason = text(smartDecisions ? "التنبيه حسب أهمية المشهد · المسافة غير معروفة"
+        decisionReason = text(smartDecisions ? "وصف الموجود واتجاهه حسب الصورة"
                 : "القرار القديم: اسم الجسم واتجاهه", 14, Color.WHITE);
         root.addView(decisionReason);
         preview = new DetectionView(this);
@@ -511,15 +515,16 @@ public final class MainActivity extends Activity {
                 .collect(java.util.stream.Collectors.toList());
         run.report.recordReplay(now, age, run.policy.targetClass(), still, boxes);
         var decision = still ? run.policy.describeStill(boxes) : run.policy.update(boxes, now, age);
+        lastScene = still ? run.policy.describeStillScene(boxes) : run.policy.describeScene(now);
         lastDecision = decision;
         preview.select(decision == null ? null : decision.selection());
         boolean stale = age < 0 || age > SceneTracker.MAX_AGE_MS;
         if (decision == null) {
             guidance.setText(stale && !still ? "الصورة متأخرة، في انتظار تحديث"
-                    : "لا يوجد جسم مؤكد حاليًا؛ ده لا يعني إن الطريق خالي");
+                    : "مش شايف جسم واضح حاليًا");
             decisionReason.setText(run.policy.targetClass() >= 0
                     ? "البحث مستمر عن: " + arabicLabels[run.policy.targetClass()]
-                    : "الكاميرا لا تقيس المسافة ولا تؤكد خلو الطريق");
+                    : "في انتظار جسم واضح لوصفه");
         } else {
             guidance.setText(DecisionSpeech.phrase(decision, arabicLabels)
                     + (still ? " · صورة ثابتة" : ""));
@@ -527,19 +532,11 @@ public final class MainActivity extends Activity {
                     : DecisionSpeech.explanation(decision));
         }
         main.removeCallbacks(staleSpeech);
-        main.removeCallbacks(stalledCameraAudio);
-        if (!still) {
-            if (playingDecision != null && audio.isBusy() && !run.policy.isValid(playingDecision, now)) {
-                audio.stop();
-                playingDecision = null;
-            }
-            if (stale) {
-                audio.stop();
-                playingDecision = null;
-            } else {
-                main.postDelayed(staleSpeech, Math.max(1, SceneTracker.MAX_AGE_MS - age));
-                main.postDelayed(stalledCameraAudio, 1_500);
-            }
+        if (!still && !stale) {
+            run.lastFreshFrame = sourceNs / 1_000_000;
+            main.removeCallbacks(stalledCameraAudio);
+            main.postDelayed(staleSpeech, Math.max(1, SceneTracker.MAX_AGE_MS - age));
+            main.postDelayed(stalledCameraAudio, Math.max(1, SpeechPlan.CAMERA_TIMEOUT_MS - age));
         }
         run.report.recordDecision(nowNs - run.report.created, decision,
                 stale && !still ? "STALE_FRAME" : decision == null ? "NO_CONFIRMED_OBJECT" : "CONFIRMED");
@@ -556,14 +553,18 @@ public final class MainActivity extends Activity {
     }
 
     private void announce(ActiveRun run, DecisionEngine.Decision decision, boolean still) {
+        int target = run.policy.targetClass();
+        String spokenText = DecisionSpeech.phrase(decision, arabicLabels);
         boolean accepted = audio.play(DecisionSpeech.assets(decision),
                 () -> still ? tab == IMAGE && active == null && lastDecision == decision
                         : active == run && run.policy.isValid(decision, android.os.SystemClock.elapsedRealtime()),
+                () -> still ? tab == IMAGE && active == null && lastDecision == decision
+                        : speechSessionActive(run, target),
                 () -> {
             long now = android.os.SystemClock.elapsedRealtime();
             if (!still) run.policy.announced(decision, now);
             run.report.alerts.add(new BenchmarkRun.AlertEvent(now * 1_000_000 - run.report.created,
-                    decision, DecisionSpeech.phrase(decision, arabicLabels), run.policy.targetClass()));
+                    decision, spokenText, target));
             if (haptics) {
                 var vibrator = getSystemService(VibratorManager.class).getDefaultVibrator();
                 if (vibrator.hasVibrator()) {
@@ -574,34 +575,53 @@ public final class MainActivity extends Activity {
                     }
                 }
             }
-        });
+        }, () -> run.report.completedSpeech.add(new BenchmarkRun.AlertEvent(
+                android.os.SystemClock.elapsedRealtime() * 1_000_000 - run.report.created,
+                decision, spokenText, target)));
         if (accepted) playingDecision = decision;
     }
 
     private void describeNow() {
         boolean still = tab == IMAGE && active == null;
         long now = android.os.SystemClock.elapsedRealtime();
-        if (lastDecision == null || (!still && (active == null
+        if (lastDecision == null || lastScene.isEmpty() || (!still && (active == null
                 || !active.policy.isValid(lastDecision, now)))) {
             audioStatus.setText("في انتظار نتيجة حديثة ومؤكدة");
             return;
         }
         audio.stop();
         var decision = lastDecision;
+        var scene = lastScene;
         var run = active;
-        boolean accepted = audio.play(DecisionSpeech.assets(decision),
+        int target = run == null ? targetClass : run.policy.targetClass();
+        var assets = scene.stream().map(d -> d.classId() + "_" + d.direction())
+                .collect(java.util.stream.Collectors.toList());
+        String spokenText = scene.stream().map(d -> DecisionSpeech.objectPhrase(d, arabicLabels))
+                .collect(java.util.stream.Collectors.joining("، "));
+        boolean accepted = audio.play(assets,
                 () -> still ? tab == IMAGE && active == null && lastDecision == decision
                         : active == run && run != null
                                 && run.policy.isValid(decision, android.os.SystemClock.elapsedRealtime()),
+                () -> still ? tab == IMAGE && active == null && lastScene == scene
+                        : run != null && speechSessionActive(run, target),
                 () -> {
                     long at = android.os.SystemClock.elapsedRealtime();
                     if (run != null) {
-                        run.policy.announced(decision, at);
+                        for (var described : scene) run.policy.announced(described, at);
                         run.report.alerts.add(new BenchmarkRun.AlertEvent(at * 1_000_000 - run.report.created,
-                                decision, DecisionSpeech.phrase(decision, arabicLabels), run.policy.targetClass()));
+                                decision, spokenText, target));
                     }
+                }, () -> {
+                    if (run != null) run.report.completedSpeech.add(new BenchmarkRun.AlertEvent(
+                            android.os.SystemClock.elapsedRealtime() * 1_000_000 - run.report.created,
+                            decision, spokenText, target));
                 });
         if (accepted) playingDecision = decision;
+    }
+
+    private boolean speechSessionActive(ActiveRun run, int target) {
+        return active == run && run.running && run.policy.targetClass() == target
+                && SpeechPlan.recentCamera(android.os.SystemClock.elapsedRealtime(), run.lastFreshFrame);
     }
 
     private void reportError(ActiveRun run, Throwable error) {

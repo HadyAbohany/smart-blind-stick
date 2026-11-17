@@ -24,6 +24,7 @@ final class BenchmarkRun {
     record DecisionEvent(long elapsed, DecisionEngine.Decision decision, String state) {}
     record ReplayFrame(long nowMs, long ageMs, int targetClass, boolean still, List<AlertPolicy.Box> boxes) {}
     final List<AlertEvent> alerts = new ArrayList<>();
+    final List<AlertEvent> completedSpeech = new ArrayList<>();
     final List<DecisionEvent> decisions = new ArrayList<>();
     final List<ReplayFrame> replayFrames = new ArrayList<>();
     String decisionMode = "SMART", lastDecisionKey;
@@ -244,6 +245,12 @@ final class BenchmarkRun {
                     .put("search_class_id", event.targetClass() < 0 ? JSONObject.NULL : event.targetClass()));
         }
         report.put("spoken_alerts", spoken);
+        var completed = new JSONArray();
+        for (var event : completedSpeech) {
+            completed.put(decisionJson(event.decision()).put("elapsed_since_start_ms", ms(event.elapsed()))
+                    .put("phrase_ar", event.phrase()).put("speech_status", "completed"));
+        }
+        report.put("completed_speech", completed);
         var timeline = new JSONArray();
         for (var event : decisions) {
             var entry = event.decision() == null ? new JSONObject() : decisionJson(event.decision());

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate only the six new bundled decision prefixes using the original macOS Majed voice."""
+"""Regenerate only the bundled attention/search prefixes using the original macOS Majed voice."""
 import json
 import shutil
 import subprocess

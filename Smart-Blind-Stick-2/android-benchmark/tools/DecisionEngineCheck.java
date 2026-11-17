@@ -26,7 +26,7 @@ public final class DecisionEngineCheck {
     }
     private static AlertPolicy.Box left() { return box(56, .02f, .3f, .22f, .85f); }
     private static AlertPolicy.Box center() { return box(0, .41f, .4f, .59f, .85f); }
-    private static AlertPolicy.Box car() { return box(2, .35f, .45f, .65f, .9f); }
+    private static AlertPolicy.Box car() { return box(2, .2f, .2f, .8f, .95f); }
     private static DecisionEngine smart() { return new DecisionEngine(DecisionEngine.Mode.SMART, .25f, -1); }
     private static DecisionEngine.Decision confirm(DecisionEngine engine, List<AlertPolicy.Box> boxes, long start) {
         engine.update(boxes, start, 30);
@@ -47,26 +47,25 @@ public final class DecisionEngineCheck {
     private static void testQuietScene() {
         var e = smart();
         var d = confirm(e, List.of(left()), 1_000);
-        require(d != null && d.level() == DecisionEngine.Level.INFO, "Peripheral chair remains describable");
-        require(e.announcement(1_200) == null, "Peripheral clutter does not speak automatically");
+        require(d != null && d.level() == DecisionEngine.Level.INFO, "Peripheral object is an ordinary description");
+        require(e.announcement(1_200) != null, "Room description includes peripheral objects automatically");
         require(e.isValid(d, 1_200), "Manual description can use peripheral object");
         e.update(List.of(), 1_300, 0);
-        require(e.current() == null && !e.isValid(d, 1_300), "Missing objects cannot start speaking");
-        require(e.announcement(1_300) == null, "Empty image never claims a clear path");
+        require(e.current() == null && !e.isValid(d, 1_300), "Missing objects cannot start a new description");
+        require(e.announcement(1_300) == null, "Empty image remains silent");
     }
     private static void testPriority() {
-        var phone = box(67, .3f, .1f, .7f, .95f);
-        var d = confirm(smart(), List.of(phone, center(), left()), 1_000);
-        require(d.classId() == 0 && d.reason() == DecisionEngine.Reason.CENTER_OBJECT,
-                "Relevant forward person beats a larger phone");
-        var vehicle = confirm(smart(), List.of(car(), center()), 1_000);
-        require(vehicle.classId() == 2 && vehicle.level() == DecisionEngine.Level.CAUTION,
-                "Forward vehicle has caution priority");
-        var large = confirm(smart(), List.of(box(56, .3f, .2f, .7f, .9f)), 1_000);
-        require(large.reason() == DecisionEngine.Reason.LARGE_CENTER_OBJECT, "Large forward furniture is prominent");
+        var normalCar = box(2, .35f, .45f, .65f, .9f);
+        var d = confirm(smart(), List.of(normalCar, center(), left()), 1_000);
+        require(d.level() == DecisionEngine.Level.INFO, "Ordinary center objects do not trigger attention");
+        require(d.reason() == DecisionEngine.Reason.DESCRIPTION, "Vehicle class alone is not a proximity warning");
+        var near = confirm(smart(), List.of(car(), center()), 1_000);
+        require(near.classId() == 2 && near.reason() == DecisionEngine.Reason.VISUALLY_NEAR_CENTER,
+                "Sustained large foreground object gets the short attention cue");
+        var moderatelyLarge = confirm(smart(), List.of(box(56, .3f, .2f, .7f, .9f)), 1_000);
+        require(moderatelyLarge.level() == DecisionEngine.Level.INFO, "Moderate prominence remains a description");
         var high = confirm(smart(), List.of(box(56, .4f, .01f, .6f, .4f)), 1_000);
-        require(high.level() == DecisionEngine.Level.INFO, "Upper image is not the lower forward region");
-        require(confirm(smart(), List.of(left(), center()), 1_000).direction() == 1, "Forward region wins");
+        require(high.level() == DecisionEngine.Level.INFO, "Upper image does not count as lower foreground");
     }
     private static void testSearch() {
         var e = new DecisionEngine(DecisionEngine.Mode.SMART, .25f, 56);
@@ -101,8 +100,8 @@ public final class DecisionEngineCheck {
         require(next != null && next.classId() == 56, "Suppressed top candidate does not starve another target");
         e.announced(next, 3_700);
         require(e.announcement(3_701) == null, "Global cooldown applies");
-        for (long t = 3_800; t <= 7_200; t += 100) e.update(boxes, t, 0);
-        require(e.announcement(7_200).classId() == 2, "Persistent caution may repeat after six seconds");
+        for (long t = 3_800; t <= 11_200; t += 100) e.update(boxes, t, 0);
+        require(e.announcement(11_200).classId() == 2, "Persistent visual attention may repeat after ten seconds");
 
         var restart = smart();
         var first = confirm(restart, List.of(center()), 1_000);
@@ -113,11 +112,11 @@ public final class DecisionEngineCheck {
     }
     private static void testEscalation() {
         var e = smart();
-        var small = box(56, .4f, .4f, .6f, .85f);
+        var small = box(56, .35f, .4f, .65f, .85f);
         var first = confirm(e, List.of(small), 1_000);
-        require(first.level() == DecisionEngine.Level.NOTICE, "Initial notice");
+        require(first.level() == DecisionEngine.Level.INFO, "Initial ordinary description");
         e.announced(first, 1_200);
-        var large = box(56, .33f, .3f, .67f, .9f);
+        var large = box(56, .2f, .15f, .8f, .95f);
         e.update(List.of(large), 1_400, 0);
         var next = e.update(List.of(large), 1_950, 0);
         require(next == null, "Gap above continuity threshold requires confirmation");
@@ -176,8 +175,8 @@ public final class DecisionEngineCheck {
             float x = .04f + i * .04f;
             d = e.update(List.of(box(0, x, .3f, x + .18f, .85f)), 1_000 + i * 200, 0);
         }
-        require(d != null && d.reason() == DecisionEngine.Reason.ENTERING_CENTER,
-                "Consistent image movement toward center gets attention");
+        require(d != null && d.level() == DecisionEngine.Level.INFO,
+                "Small moving objects are described without a proximity warning");
         require(d.imageVelocity() > 0, "Image velocity is recorded without metric units");
         var growth = smart();
         for (int i = 0; i < 4; i++) {
@@ -185,8 +184,8 @@ public final class DecisionEngineCheck {
             d = growth.update(List.of(box(0, .5f - w / 2, .9f - h, .5f + w / 2, .9f)),
                     1_000 + i * 200, 0);
         }
-        require(d.reason() == DecisionEngine.Reason.IMAGE_EXPANSION && d.imageGrowth() >= 1.4f,
-                "Sustained image expansion is explicit evidence, not asserted proximity");
+        require(d.level() == DecisionEngine.Level.INFO && d.imageGrowth() >= 1.4f,
+                "Image expansion alone is not enough to claim a near foreground object");
         var jitter = smart();
         float[] widths = {.18f, .18f, .23f, .18f};
         for (int i = 0; i < widths.length; i++) {
@@ -194,7 +193,7 @@ public final class DecisionEngineCheck {
             d = jitter.update(List.of(box(0, .5f - w / 2, .4f, .5f + w / 2, .85f)),
                     1_000 + i * 200, 0);
         }
-        require(d.reason() != DecisionEngine.Reason.IMAGE_EXPANSION, "One size spike is not expansion");
+        require(d.level() == DecisionEngine.Level.INFO, "Size jitter does not trigger attention");
     }
     private static void testCameraMotion() {
         var t = new SceneTracker();
@@ -227,17 +226,71 @@ public final class DecisionEngineCheck {
     }
     private static void testSeverityHold() {
         var e = smart();
-        var large = box(56, .3f, .2f, .7f, .9f);
-        var small = box(56, .41f, .4f, .59f, .85f);
+        var large = box(56, .25f, .15f, .75f, .85f);
+        var medium = box(56, .26f, .25f, .74f, .85f);
+        var small = box(56, .4f, .25f, .6f, .85f);
         var d = confirm(e, List.of(large), 1_000);
-        require(d.level() == DecisionEngine.Level.CAUTION, "Starts with visual caution");
-        d = e.update(List.of(small), 1_300, 0);
-        require(d.level() == DecisionEngine.Level.CAUTION, "Short size wobble does not change spoken wording");
-        e.update(List.of(small), 1_500, 0);
-        d = e.update(List.of(small), 1_800, 0);
-        require(d.level() == DecisionEngine.Level.NOTICE, "Old caution does not persist indefinitely");
-        e.update(List.of(), 1_900, 0);
-        require(e.current() == null, "Severity hold never invents an absent object");
+        require(d.level() == DecisionEngine.Level.CAUTION, "Sustained prominent foreground gets attention");
+        d = e.update(List.of(medium), 1_300, 0);
+        require(d.level() == DecisionEngine.Level.CAUTION, "Visual prominence has exit hysteresis");
+        d = e.update(List.of(small), 1_400, 0);
+        require(d.level() == DecisionEngine.Level.INFO, "An ordinary smaller object returns to description");
+        e.update(List.of(), 1_500, 0);
+        require(e.current() == null, "Hysteresis never invents an absent object");
+        var spike = smart();
+        var ordinary = box(56, .35f, .3f, .65f, .85f);
+        confirm(spike, List.of(ordinary), 2_000);
+        var big = box(56, .2f, .2f, .8f, .9f);
+        require(spike.update(List.of(big), 2_300, 0).level() == DecisionEngine.Level.INFO,
+                "A single prominent frame cannot trigger attention");
+        spike.update(List.of(big), 2_400, 0);
+        require(spike.update(List.of(big), 2_500, 0).level() == DecisionEngine.Level.CAUTION,
+                "Prominence must persist for three observations");
+    }
+    private static void testRoomSummaryAndPacing() {
+        var e = smart();
+        var objects = List.of(left(), center(), box(39, .7f, .4f, .85f, .8f),
+                box(67, .7f, .1f, .85f, .3f));
+        confirm(e, objects, 1_000);
+        var scene = e.describeScene(1_200);
+        require(scene.size() == 3, "Manual room summary is limited to three confirmed descriptions");
+        require(scene.stream().map(DecisionEngine.Decision::phraseKey).distinct().count() == 3,
+                "Room summary does not repeat equivalent class and direction phrases");
+        require(e.describeScene(1_800).isEmpty(), "An old scene cannot start a room summary");
+        int emitted = 0;
+        for (long t = 1_300; t <= 14_000; t += 100) {
+            e.update(objects, t, 0);
+            var next = e.announcement(t);
+            if (next != null) { e.announced(next, t); emitted++; }
+        }
+        require(emitted == 3, "Automatic room descriptions allow three context items per fifteen seconds");
+        for (long t = 14_100; t <= 16_500; t += 100) e.update(objects, t, 0);
+        require(e.announcement(16_500) != null, "Unmentioned room items become eligible after the context pause");
+    }
+    private static void testSpeechContinuity() {
+        var e = smart();
+        var decision = confirm(e, List.of(center()), 1_000);
+        boolean[] session = {true};
+        long[] capture = {1_170};
+        var plan = new SpeechPlan(() -> e.isValid(decision, 1_200),
+                () -> session[0] && SpeechPlan.recentCamera(capture[0] + 100, capture[0]));
+        require(plan.valid(1_200), "Fresh confirmed evidence permits the first clip");
+        plan.started(1_200);
+        e.update(List.of(), 1_300, 0);
+        capture[0] = 1_300;
+        require(!e.isValid(decision, 1_300) && plan.valid(1_300),
+                "One missed detection must not cut an accepted sentence or its next clip");
+        session[0] = false;
+        require(!plan.valid(1_400), "Stopping, muting or changing target cancels further clips");
+        session[0] = true;
+        require(!plan.valid(1_100), "Backwards time cannot continue a sentence");
+        plan.started(5_000);
+        require(!plan.valid(1_200 + SpeechPlan.MAX_DURATION_MS + 1), "Later clips cannot reset the speech duration limit");
+        require(SpeechPlan.recentCamera(2_799, 1_300), "Brief camera gaps do not clip speech");
+        require(!SpeechPlan.recentCamera(2_800, 1_300), "A 1.5-second loss of usable camera updates stops speech");
+        require(!SpeechPlan.recentCamera(1_200, 1_300), "Future camera timestamps cannot sustain speech");
+        var pending = new SpeechPlan(() -> false, () -> true);
+        require(!pending.valid(1_500), "Continuation grace cannot start an unconfirmed sentence");
     }
     private static void testStillImagesAndSpeech() {
         var e = smart();
@@ -253,7 +306,8 @@ public final class DecisionEngineCheck {
             var event = new DecisionEngine.Decision(new AlertPolicy.Selection(1, 0, 1, .9f),
                     DecisionEngine.Level.CAUTION, reason, 1, false, false, .1f, 1, 0);
             String phrase = DecisionSpeech.phrase(event, labels);
-            require(!phrase.contains("الطريق آمن") && !phrase.contains("تحرك يمين") && !phrase.contains("متر"),
+            require(!phrase.contains("الطريق آمن") && !phrase.contains("تحرك يمين") && !phrase.contains("متر")
+                    && !phrase.contains("عصاي") && !phrase.contains("تمهّل") && !phrase.contains("اتحقق"),
                     "No unmeasured safety, turn or distance claim: " + reason);
             require(!DecisionSpeech.assets(event).isEmpty(), "Every decision has bundled speech");
         }
@@ -309,17 +363,19 @@ public final class DecisionEngineCheck {
 
     public static void main(String[] args) throws Exception {
         scenario("temporal_confirmation", DecisionEngineCheck::testConfirmation);
-        scenario("quiet_peripheral_and_empty_scene", DecisionEngineCheck::testQuietScene);
-        scenario("semantic_and_forward_priority", DecisionEngineCheck::testPriority);
+        scenario("room_peripheral_and_empty_scene", DecisionEngineCheck::testQuietScene);
+        scenario("sustained_near_foreground_only_attention", DecisionEngineCheck::testPriority);
         scenario("search_and_caution_preemption", DecisionEngineCheck::testSearch);
         scenario("cooldown_and_candidate_starvation", DecisionEngineCheck::testRepeatAndStarvation);
         scenario("same_phrase_severity_escalation", DecisionEngineCheck::testEscalation);
         scenario("stale_duplicate_and_reversed_time", DecisionEngineCheck::testStaleAndClock);
         scenario("malformed_low_confidence_duplicate_boxes", DecisionEngineCheck::testInvalidInput);
-        scenario("image_motion_and_growth_evidence", DecisionEngineCheck::testMotion);
+        scenario("motion_is_description_without_near_evidence", DecisionEngineCheck::testMotion);
         scenario("shared_camera_motion_suppression", DecisionEngineCheck::testCameraMotion);
         scenario("identity_direction_and_class_changes", DecisionEngineCheck::testTracking);
-        scenario("bounded_severity_hysteresis", DecisionEngineCheck::testSeverityHold);
+        scenario("visual_proximity_hysteresis_and_confirmation", DecisionEngineCheck::testSeverityHold);
+        scenario("room_summary_and_context_pacing", DecisionEngineCheck::testRoomSummaryAndPacing);
+        scenario("speech_survives_detection_jitter", DecisionEngineCheck::testSpeechContinuity);
         scenario("still_image_and_arabic_wording", DecisionEngineCheck::testStillImagesAndSpeech);
         scenario("legacy_runtime_fallback", DecisionEngineCheck::testLegacy);
         scenario("bounded_10000_frame_crowded_replay", DecisionEngineCheck::testStress);

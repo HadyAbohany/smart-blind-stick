@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scenarios": 17,
+  "assertions": 30125,
+  "synthetic_stress_frames": 10000,
+  "desktop_stress_p95_ms": 0.0834,
+  "physical_phone_tested": false,
+  "camera_accuracy_tested": false,
+  "scenario_names": ["temporal_confirmation", "room_peripheral_and_empty_scene", "sustained_near_foreground_only_attention", "search_and_caution_preemption", "cooldown_and_candidate_starvation", "same_phrase_severity_escalation", "stale_duplicate_and_reversed_time", "malformed_low_confidence_duplicate_boxes", "motion_is_description_without_near_evidence", "shared_camera_motion_suppression", "identity_direction_and_class_changes", "visual_proximity_hysteresis_and_confirmation", "room_summary_and_context_pacing", "speech_survives_detection_jitter", "still_image_and_arabic_wording", "legacy_runtime_fallback", "bounded_10000_frame_crowded_replay"]
+}
