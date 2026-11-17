@@ -1,5 +1,7 @@
 # Smart Blind Stick
 
+Latest tested APK: [v0.3.1 — room descriptions](https://github.com/HadyAbohany/smart-blind-stick/releases/tag/v0.3.1). The release source and APK match the current Galaxy A35 trial.
+
 Offline Android vision and Arabic alerts, ESP32 cane and camera firmware, and hardware documentation.
 
 - Original project: [`Smart-Blind-Stick-2/`](Smart-Blind-Stick-2/README.md).
