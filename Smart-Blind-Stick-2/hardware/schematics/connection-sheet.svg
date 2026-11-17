@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1180" viewBox="0 0 1240 1180" role="img" aria-labelledby="title"><title id="title">Smart Blind Stick 2.0 electrical schematic</title><style>text{font:16px monospace;fill:#162b3b}.heading{font:bold 26px sans-serif}.section{font:bold 20px sans-serif}.label{font:bold 15px monospace;fill:#06675f} .wire{stroke:#24736d;stroke-width:2;fill:none}</style><rect width="1240" height="1180" fill="#f5f9fa"/>
+<text x="32" y="44" class="heading">Smart Blind Stick 2.0 · electrical schematic</text>
+<text x="32" y="72" class="">Rev A · Equal net names join electrically · NC terminals remain open · GPIO uses IO labels</text>
+<rect x="32" y="95" width="1176" height="202" rx="8" fill="white" stroke="#b4c5ca"/>
+<text x="48" y="127" class="section">Power distribution · USB power bank, 5 V / 2 A minimum</text>
+<text x="48" y="162" class="label">5V → SW5</text>
+<path class="wire" d="M 194 157 h 25"/>
+<text x="232" y="162" class="">USB VBUS → F1 1.5 A hold → S1 → switched 5 V star</text>
+<text x="48" y="190" class="label">SW5</text>
+<path class="wire" d="M 194 185 h 25"/>
+<text x="232" y="190" class="">U1.5V, U2.VCC, U3.14, J2.1 (camera 5 V), M1+, D1 cathode, C1+, C3+</text>
+<text x="48" y="218" class="label">SW5 → GND</text>
+<path class="wire" d="M 194 213 h 25"/>
+<text x="232" y="218" class="">C1 470 µF at star, C2 100 nF at U3, C3 220 µF at camera, C4 100 nF at U2</text>
+<text x="48" y="246" class="label">GND</text>
+<path class="wire" d="M 194 241 h 25"/>
+<text x="232" y="246" class="">Common ground. Return camera and motor directly to star. J2.2 → camera GND.</text>
+<text x="48" y="274" class="label">USB</text>
+<path class="wire" d="M 194 269 h 25"/>
+<text x="232" y="274" class="">Disconnect J1 before programming U1 by USB. Camera: unplug J2 before using MB.</text>
+<rect x="32" y="315" width="1176" height="231" rx="8" fill="white" stroke="#b4c5ca"/>
+<text x="48" y="347" class="section">Ultrasonic · HC-SR04 and SN74AHCT125N</text>
+<text x="48" y="382" class="label">TRIG3</text>
+<path class="wire" d="M 194 377 h 25"/>
+<text x="232" y="382" class="">U1.IO26 → U3.2 (1A). R7 100k to GND.</text>
+<text x="48" y="410" class="label">TRIG5</text>
+<path class="wire" d="M 194 405 h 25"/>
+<text x="232" y="410" class="">U3.3 (1Y) → U2.TRIG. U3.1 (1OE) to GND.</text>
+<text x="48" y="438" class="label">BUFFER_DISABLE</text>
+<path class="wire" d="M 194 433 h 25"/>
+<text x="232" y="438" class="">U3.4, .10, .13 via R8 10k to SW5. U3.5, .9, .12, .7 to GND.</text>
+<text x="48" y="466" class="label">NO CONNECTION</text>
+<path class="wire" d="M 194 461 h 25"/>
+<text x="232" y="466" class="">U3.6, .8, .11 left open.</text>
+<text x="48" y="494" class="label">ECHO5 → ECHO3</text>
+<path class="wire" d="M 194 489 h 25"/>
+<text x="232" y="494" class="">U2.ECHO → R1 10k → junction → U1.IO27. R2 15k from junction to GND.</text>
+<text x="48" y="522" class="label">SW5 / GND</text>
+<path class="wire" d="M 194 517 h 25"/>
+<text x="232" y="522" class="">U2 VCC / GND. Probe echo junction before connecting U1.IO27.</text>
+<rect x="32" y="564" width="1176" height="171" rx="8" fill="white" stroke="#b4c5ca"/>
+<text x="48" y="596" class="section">Haptics · 5 V motor and AO3400A low-side switch</text>
+<text x="48" y="631" class="label">GATE</text>
+<path class="wire" d="M 194 626 h 25"/>
+<text x="232" y="631" class="">U1.IO25 → R3 100Ω → Q1 pin 1. R4 100k from gate to GND.</text>
+<text x="48" y="659" class="label">MOTOR_LOW</text>
+<path class="wire" d="M 194 654 h 25"/>
+<text x="232" y="659" class="">Q1 pin 3 → M1− and D1 anode. Q1 pin 2 → GND.</text>
+<text x="48" y="687" class="label">SW5</text>
+<path class="wire" d="M 194 682 h 25"/>
+<text x="232" y="687" class="">M1+ and D1 stripe/cathode. D1 is in parallel with M1.</text>
+<text x="48" y="715" class="label">M1</text>
+<path class="wire" d="M 194 710 h 25"/>
+<text x="232" y="715" class="">Use isolated 5 V ERM rated ≤100 mA running / ≤250 mA stall.</text>
+<rect x="32" y="753" width="1176" height="202" rx="8" fill="white" stroke="#b4c5ca"/>
+<text x="48" y="785" class="section">Water and manual SOS</text>
+<text x="48" y="820" class="label">PROBE_A</text>
+<path class="wire" d="M 194 815 h 25"/>
+<text x="232" y="820" class="">U1.IO32 → R5 10k → JP1.1. Pulse high only while sampling.</text>
+<text x="48" y="848" class="label">WATER_ADC</text>
+<path class="wire" d="M 194 843 h 25"/>
+<text x="232" y="848" class="">JP1.2 → U1.IO34. R6 100k and C5 100 nF each to GND.</text>
+<text x="48" y="876" class="label">JP1</text>
+<path class="wire" d="M 194 871 h 25"/>
+<text x="232" y="876" class="">Insulated mount. Water bridges two 316 stainless contacts.</text>
+<text x="48" y="904" class="label">SOS</text>
+<path class="wire" d="M 194 899 h 25"/>
+<text x="232" y="904" class="">U1.IO33 → SW2 normally open → GND. R9 10k from IO33 to U1.3V3.</text>
+<text x="48" y="932" class="label">3V3</text>
+<path class="wire" d="M 194 927 h 25"/>
+<text x="232" y="932" class="">From U1 regulator only. Never bridge to SW5.</text>
+<text x="32" y="1000" class="">U1 ESP32-DevKitC V4 WROOM-32D/32E  ·  Camera AI-Thinker ESP32-CAM + OV2640</text>
+<text x="32" y="1032" class="">Exact terminal inventory in nets.tsv and parts.tsv. Fuse selection and load headroom need bench checks.</text>
+<text x="32" y="1064" class="">Ground, 5 V and connector pin order must be verified on the physical boards before energizing.</text>
+</svg>

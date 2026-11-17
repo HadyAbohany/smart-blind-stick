@@ -1,0 +1,1 @@
+run_id,phone,model_hash,route_id,light_lux,target_class,distance_cm,ground_truth,predicted_class,confidence,jpeg_bytes,fetch_ms,inference_ms,context_latency_ms,temperature_c,notes

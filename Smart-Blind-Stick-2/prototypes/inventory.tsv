@@ -1,0 +1,9 @@
+Item	Existing status	Model/marking	Qty	Voltage/output	Reuse decision	Required purchase if unsuitable	Bench evidence/owner
+Cane body	Confirmed	TBD	1	N/A	Reuse if mounting preserves sweep	N/A	Photograph and weigh
+Controller	Confirmed Arduino	TBD	1	TBD	Keep as V1 baseline	ESP32-DevKitC V4 WROOM-32D	Photograph silkscreen and capture current firmware if available
+Proximity sensor	Confirmed unspecified	TBD	1	TBD	Conditional	HC-SR04 5 V four-pin	Record pins and scope output
+Alarm	Confirmed behavior, separate device unconfirmed	TBD	TBD	TBD	Leave V1 functional	N/A	Record type and tone
+Power source	Unknown	TBD	0 assumed	TBD	Conditional	Protected 5 V 2 A or better USB bank	Low-load cutoff and peak test
+Android handset	Unconfirmed	TBD	0 assumed	Own battery	Conditional	Borrow Android 12+ with BLE, GNSS and gyro	BLE/Wi-Fi coex and TTS
+Vision branch	Absent	ESP32-CAM + OV2640	1	5 V	New	ESP32-CAM and CAM-MB	Check PSRAM and lens
+Haptics and water	Absent	5 V ERM and isolated probe	1 set	5 V / 3.3 V	New	See BOM	Check motor stall and dry/wet threshold

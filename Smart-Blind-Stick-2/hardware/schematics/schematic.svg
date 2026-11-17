@@ -1,0 +1,314 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1140" viewBox="0 0 1400 1140" role="img" aria-labelledby="title">
+<title id="title">Smart Blind Stick 2.0 Rev A circuit schematic</title>
+<style>
+text{font:15px monospace;fill:#152534}
+.title{font:bold 26px sans-serif}.section{font:bold 19px sans-serif}
+.net{font:bold 14px monospace;fill:#005f54}.ref{font:bold 15px monospace}
+.wire{stroke:#165952;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.part{stroke:#142a3a;stroke-width:2;fill:white;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<rect width="1400" height="1140" fill="#f2f7f7"/>
+
+<text x="32" y="42" class="title" text-anchor="start">Smart Blind Stick 2.0 · Rev A circuit</text>
+<text x="32" y="69" class="" text-anchor="start">Identical net labels connect across panels. NC pins left open. For power and assembly see the connection sheet.</text>
+<rect x="25" y="92" width="438" height="563" fill="white" stroke="#aabdbe" rx="8"/>
+<text x="41" y="122" class="section" text-anchor="start">U1 local controller and U2 ranger</text>
+<rect x="154" y="138" width="205" height="311" class="part"/>
+<text x="163" y="158" class="ref" text-anchor="start">U1</text>
+<text x="163" y="177" class="" text-anchor="start">ESP32-DevKitC V4</text>
+<path class="wire" d="M154 197 h-24"/>
+<path class="wire" d="M130 197 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="202" class="net" text-anchor="end">SW5</text>
+<text x="162" y="202" class="" text-anchor="start">5V</text>
+<path class="wire" d="M154 226 h-24"/>
+<path class="wire" d="M130 226 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="231" class="net" text-anchor="end">GND</text>
+<text x="162" y="231" class="" text-anchor="start">GND</text>
+<path class="wire" d="M154 255 h-24"/>
+<path class="wire" d="M130 255 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="260" class="net" text-anchor="end">3V3</text>
+<text x="162" y="260" class="" text-anchor="start">3V3</text>
+<path class="wire" d="M154 284 h-24"/>
+<path class="wire" d="M130 284 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="289" class="net" text-anchor="end">TRIG3</text>
+<text x="162" y="289" class="" text-anchor="start">IO26</text>
+<path class="wire" d="M154 313 h-24"/>
+<path class="wire" d="M130 313 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="318" class="net" text-anchor="end">ECHO3</text>
+<text x="162" y="318" class="" text-anchor="start">IO27</text>
+<path class="wire" d="M154 342 h-24"/>
+<path class="wire" d="M130 342 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="347" class="net" text-anchor="end">MOTOR_GATE</text>
+<text x="162" y="347" class="" text-anchor="start">IO25</text>
+<path class="wire" d="M154 371 h-24"/>
+<path class="wire" d="M130 371 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="376" class="net" text-anchor="end">WATER_EXCITE</text>
+<text x="162" y="376" class="" text-anchor="start">IO32</text>
+<path class="wire" d="M154 400 h-24"/>
+<path class="wire" d="M130 400 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="405" class="net" text-anchor="end">WATER_ADC</text>
+<text x="162" y="405" class="" text-anchor="start">IO34</text>
+<path class="wire" d="M154 429 h-24"/>
+<path class="wire" d="M130 429 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="110" y="434" class="net" text-anchor="end">SOS</text>
+<text x="162" y="434" class="" text-anchor="start">IO33</text>
+<rect x="160" y="457" width="164" height="166" class="part"/>
+<text x="169" y="477" class="ref" text-anchor="start">U2</text>
+<text x="169" y="496" class="" text-anchor="start">HC-SR04</text>
+<path class="wire" d="M160 516 h-24"/>
+<path class="wire" d="M136 516 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="116" y="521" class="net" text-anchor="end">SW5</text>
+<text x="168" y="521" class="" text-anchor="start">VCC</text>
+<path class="wire" d="M160 545 h-24"/>
+<path class="wire" d="M136 545 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="116" y="550" class="net" text-anchor="end">TRIG5</text>
+<text x="168" y="550" class="" text-anchor="start">TRIG</text>
+<path class="wire" d="M160 574 h-24"/>
+<path class="wire" d="M136 574 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="116" y="579" class="net" text-anchor="end">ECHO5</text>
+<text x="168" y="579" class="" text-anchor="start">ECHO</text>
+<path class="wire" d="M160 603 h-24"/>
+<path class="wire" d="M136 603 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="116" y="608" class="net" text-anchor="end">GND</text>
+<text x="168" y="608" class="" text-anchor="start">GND</text>
+<rect x="480" y="92" width="430" height="563" fill="white" stroke="#aabdbe" rx="8"/>
+<text x="496" y="122" class="section" text-anchor="start">Trigger shifter and echo divider</text>
+<rect x="652" y="138" width="178" height="456" class="part"/>
+<text x="661" y="158" class="ref" text-anchor="start">U3</text>
+<text x="661" y="177" class="" text-anchor="start">SN74AHCT125N</text>
+<path class="wire" d="M652 197 h-24"/>
+<path class="wire" d="M628 197 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="202" class="net" text-anchor="end">GND</text>
+<text x="660" y="202" class="" text-anchor="start">1OE</text>
+<path class="wire" d="M652 226 h-24"/>
+<path class="wire" d="M628 226 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="231" class="net" text-anchor="end">TRIG3</text>
+<text x="660" y="231" class="" text-anchor="start">1A</text>
+<path class="wire" d="M652 255 h-24"/>
+<path class="wire" d="M628 255 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="260" class="net" text-anchor="end">TRIG5</text>
+<text x="660" y="260" class="" text-anchor="start">1Y</text>
+<path class="wire" d="M652 284 h-24"/>
+<path class="wire" d="M628 284 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="289" class="net" text-anchor="end">BUFFER_DISABLE</text>
+<text x="660" y="289" class="" text-anchor="start">2OE</text>
+<path class="wire" d="M652 313 h-24"/>
+<path class="wire" d="M628 313 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="318" class="net" text-anchor="end">GND</text>
+<text x="660" y="318" class="" text-anchor="start">2A</text>
+<path class="wire" d="M652 342 h-24"/>
+<path class="wire" d="M624 338 l8 8 M624 346 l8 -8"/>
+<text x="660" y="347" class="" text-anchor="start">2Y</text>
+<path class="wire" d="M652 371 h-24"/>
+<path class="wire" d="M628 371 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="376" class="net" text-anchor="end">GND</text>
+<text x="660" y="376" class="" text-anchor="start">GND</text>
+<path class="wire" d="M652 400 h-24"/>
+<path class="wire" d="M624 396 l8 8 M624 404 l8 -8"/>
+<text x="660" y="405" class="" text-anchor="start">3Y</text>
+<path class="wire" d="M652 429 h-24"/>
+<path class="wire" d="M628 429 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="434" class="net" text-anchor="end">GND</text>
+<text x="660" y="434" class="" text-anchor="start">3A</text>
+<path class="wire" d="M652 458 h-24"/>
+<path class="wire" d="M628 458 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="463" class="net" text-anchor="end">BUFFER_DISABLE</text>
+<text x="660" y="463" class="" text-anchor="start">3OE</text>
+<path class="wire" d="M652 487 h-24"/>
+<path class="wire" d="M624 483 l8 8 M624 491 l8 -8"/>
+<text x="660" y="492" class="" text-anchor="start">4Y</text>
+<path class="wire" d="M652 516 h-24"/>
+<path class="wire" d="M628 516 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="521" class="net" text-anchor="end">GND</text>
+<text x="660" y="521" class="" text-anchor="start">4A</text>
+<path class="wire" d="M652 545 h-24"/>
+<path class="wire" d="M628 545 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="550" class="net" text-anchor="end">BUFFER_DISABLE</text>
+<text x="660" y="550" class="" text-anchor="start">4OE</text>
+<path class="wire" d="M652 574 h-24"/>
+<path class="wire" d="M628 574 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="608" y="579" class="net" text-anchor="end">SW5</text>
+<text x="660" y="579" class="" text-anchor="start">VCC</text>
+<rect x="928" y="92" width="447" height="563" fill="white" stroke="#aabdbe" rx="8"/>
+<text x="944" y="122" class="section" text-anchor="start">Input and power distribution</text>
+<path class="wire" d="M1090 160 H1121 M1167 160 H1198"/>
+<path class="wire" d="M1090 160 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="165" class="net" text-anchor="end">5V</text>
+<path class="wire" d="M1198 160 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="165" class="net" text-anchor="start">FUSED</text>
+<text x="1144" y="146" class="ref" text-anchor="middle">F1 1.5A hold</text>
+<rect x="1129" y="154" width="30" height="12" class="part"/>
+<path class="part" d="M1121 160 h46"/>
+<path class="wire" d="M1090 224 H1121 M1167 224 H1198"/>
+<path class="wire" d="M1090 224 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="229" class="net" text-anchor="end">FUSED</text>
+<path class="wire" d="M1198 224 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="229" class="net" text-anchor="start">SW5</text>
+<text x="1144" y="210" class="ref" text-anchor="middle">S1 2A DC</text>
+<path class="part" d="M1121 224 h8 l27 -12 M1159 224 h8"/>
+<path class="wire" d="M1090 288 H1121 M1167 288 H1198"/>
+<path class="wire" d="M1090 288 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="293" class="net" text-anchor="end">SW5</text>
+<path class="wire" d="M1198 288 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="293" class="net" text-anchor="start">GND</text>
+<text x="1144" y="274" class="ref" text-anchor="middle">C1 470µF</text>
+<path class="part" d="M1121 288 h18 m0 -9 v18 M1149 279 v18 m0 -9 h18"/>
+<path class="wire" d="M1090 352 H1121 M1167 352 H1198"/>
+<path class="wire" d="M1090 352 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="357" class="net" text-anchor="end">SW5</text>
+<path class="wire" d="M1198 352 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="357" class="net" text-anchor="start">GND</text>
+<text x="1144" y="338" class="ref" text-anchor="middle">C2 100nF U3</text>
+<path class="part" d="M1121 352 h18 m0 -9 v18 M1149 343 v18 m0 -9 h18"/>
+<path class="wire" d="M1090 416 H1121 M1167 416 H1198"/>
+<path class="wire" d="M1090 416 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="421" class="net" text-anchor="end">SW5</text>
+<path class="wire" d="M1198 416 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="421" class="net" text-anchor="start">GND</text>
+<text x="1144" y="402" class="ref" text-anchor="middle">C3 220µF CAM</text>
+<path class="part" d="M1121 416 h18 m0 -9 v18 M1149 407 v18 m0 -9 h18"/>
+<path class="wire" d="M1090 480 H1121 M1167 480 H1198"/>
+<path class="wire" d="M1090 480 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="485" class="net" text-anchor="end">SW5</text>
+<path class="wire" d="M1198 480 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="485" class="net" text-anchor="start">GND</text>
+<text x="1144" y="466" class="ref" text-anchor="middle">C4 100nF U2</text>
+<path class="part" d="M1121 480 h18 m0 -9 v18 M1149 471 v18 m0 -9 h18"/>
+<rect x="1028" y="521" width="110" height="108" class="part"/>
+<text x="1037" y="541" class="ref" text-anchor="start">J1</text>
+<text x="1037" y="560" class="" text-anchor="start">USB 5V</text>
+<path class="wire" d="M1028 580 h-24"/>
+<path class="wire" d="M1004 580 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="984" y="585" class="net" text-anchor="end">5V</text>
+<text x="1036" y="585" class="" text-anchor="start">VBUS</text>
+<path class="wire" d="M1028 609 h-24"/>
+<path class="wire" d="M1004 609 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="984" y="614" class="net" text-anchor="end">GND</text>
+<text x="1036" y="614" class="" text-anchor="start">GND</text>
+<rect x="1166" y="521" width="122" height="108" class="part"/>
+<text x="1175" y="541" class="ref" text-anchor="start">J2</text>
+<text x="1175" y="560" class="" text-anchor="start">CAM 5V</text>
+<path class="wire" d="M1288 580 h24"/>
+<path class="wire" d="M1312 580 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1332" y="585" class="net" text-anchor="start">SW5</text>
+<text x="1280" y="585" class="" text-anchor="end">1 / 5V</text>
+<path class="wire" d="M1288 609 h24"/>
+<path class="wire" d="M1312 609 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1332" y="614" class="net" text-anchor="start">GND</text>
+<text x="1280" y="614" class="" text-anchor="end">2 / GND</text>
+<rect x="25" y="673" width="438" height="403" fill="white" stroke="#aabdbe" rx="8"/>
+<text x="41" y="703" class="section" text-anchor="start">Motor and flyback</text>
+<path class="wire" d="M172 735 H203 M249 735 H280"/>
+<path class="wire" d="M172 735 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="152" y="740" class="net" text-anchor="end">MOTOR_GATE</text>
+<path class="wire" d="M280 735 h12 l4 -4 m-4 4 l4 4"/>
+<text x="300" y="740" class="net" text-anchor="start">GATE</text>
+<text x="226" y="721" class="ref" text-anchor="middle">R3 100Ω</text>
+<path class="part" d="M203 735 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M172 794 H203 M249 794 H280"/>
+<path class="wire" d="M172 794 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="152" y="799" class="net" text-anchor="end">GATE</text>
+<path class="wire" d="M280 794 h12 l4 -4 m-4 4 l4 4"/>
+<text x="300" y="799" class="net" text-anchor="start">GND</text>
+<text x="226" y="780" class="ref" text-anchor="middle">R4 100k</text>
+<path class="part" d="M203 794 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M172 853 H203 M249 853 H280"/>
+<path class="wire" d="M172 853 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="152" y="858" class="net" text-anchor="end">SW5</text>
+<path class="wire" d="M280 853 h12 l4 -4 m-4 4 l4 4"/>
+<text x="300" y="858" class="net" text-anchor="start">MOTOR_LOW</text>
+<text x="226" y="839" class="ref" text-anchor="middle">M1 5V ERM</text>
+<circle cx="226" cy="853" r="12" class="part"/>
+<text x="226" y="858" class="" text-anchor="middle">M</text>
+<path class="part" d="M203 853 h11 M238 853 h11"/>
+<path class="wire" d="M172 912 H203 M249 912 H280"/>
+<path class="wire" d="M172 912 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="152" y="917" class="net" text-anchor="end">SW5</text>
+<path class="wire" d="M280 912 h12 l4 -4 m-4 4 l4 4"/>
+<text x="300" y="917" class="net" text-anchor="start">MOTOR_LOW</text>
+<text x="226" y="898" class="ref" text-anchor="middle">D1 1N5819</text>
+<path class="part" d="M203 912 h13 l18 -9 v18 l-18 -9 m0 -10 v20 M234 912 h15"/>
+<path class="part" d="M206 1014 h28 M246 989 v50 M246 994 h23 v-10 h25 M246 1034 h23 v10 h25 M246 1014 h23 v20 M249 1014 l9 -5 v10 z"/>
+<path class="wire" d="M206 1014 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="186" y="1019" class="net" text-anchor="end">GATE</text>
+<path class="wire" d="M294 984 h12 l4 -4 m-4 4 l4 4"/>
+<text x="314" y="989" class="net" text-anchor="start">MOTOR_LOW</text>
+<path class="wire" d="M294 1044 h12 l4 -4 m-4 4 l4 4"/>
+<text x="314" y="1049" class="net" text-anchor="start">GND</text>
+<text x="240" y="967" class="ref" text-anchor="middle">Q1 AO3400A</text>
+<rect x="480" y="673" width="430" height="403" fill="white" stroke="#aabdbe" rx="8"/>
+<text x="496" y="703" class="section" text-anchor="start">Echo, probe and button bias</text>
+<path class="wire" d="M640 735 H671 M717 735 H748"/>
+<path class="wire" d="M640 735 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="620" y="740" class="net" text-anchor="end">ECHO5</text>
+<path class="wire" d="M748 735 h12 l4 -4 m-4 4 l4 4"/>
+<text x="768" y="740" class="net" text-anchor="start">ECHO3</text>
+<text x="694" y="721" class="ref" text-anchor="middle">R1 10k</text>
+<path class="part" d="M671 735 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M640 801 H671 M717 801 H748"/>
+<path class="wire" d="M640 801 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="620" y="806" class="net" text-anchor="end">ECHO3</text>
+<path class="wire" d="M748 801 h12 l4 -4 m-4 4 l4 4"/>
+<text x="768" y="806" class="net" text-anchor="start">GND</text>
+<text x="694" y="787" class="ref" text-anchor="middle">R2 15k</text>
+<path class="part" d="M671 801 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M640 867 H671 M717 867 H748"/>
+<path class="wire" d="M640 867 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="620" y="872" class="net" text-anchor="end">TRIG3</text>
+<path class="wire" d="M748 867 h12 l4 -4 m-4 4 l4 4"/>
+<text x="768" y="872" class="net" text-anchor="start">GND</text>
+<text x="694" y="853" class="ref" text-anchor="middle">R7 100k</text>
+<path class="part" d="M671 867 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M640 933 H671 M717 933 H748"/>
+<path class="wire" d="M640 933 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="620" y="938" class="net" text-anchor="end">BUFFER_DISABLE</text>
+<path class="wire" d="M748 933 h12 l4 -4 m-4 4 l4 4"/>
+<text x="768" y="938" class="net" text-anchor="start">SW5</text>
+<text x="694" y="919" class="ref" text-anchor="middle">R8 10k</text>
+<path class="part" d="M671 933 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M640 999 H671 M717 999 H748"/>
+<path class="wire" d="M640 999 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="620" y="1004" class="net" text-anchor="end">SOS</text>
+<path class="wire" d="M748 999 h12 l4 -4 m-4 4 l4 4"/>
+<text x="768" y="1004" class="net" text-anchor="start">3V3</text>
+<text x="694" y="985" class="ref" text-anchor="middle">R9 10k</text>
+<path class="part" d="M671 999 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<rect x="928" y="673" width="447" height="403" fill="white" stroke="#aabdbe" rx="8"/>
+<text x="944" y="703" class="section" text-anchor="start">Water contact and SOS</text>
+<path class="wire" d="M1090 735 H1121 M1167 735 H1198"/>
+<path class="wire" d="M1090 735 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="740" class="net" text-anchor="end">WATER_EXCITE</text>
+<path class="wire" d="M1198 735 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="740" class="net" text-anchor="start">PROBE_A</text>
+<text x="1144" y="721" class="ref" text-anchor="middle">R5 10k</text>
+<path class="part" d="M1121 735 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M1090 801 H1121 M1167 801 H1198"/>
+<path class="wire" d="M1090 801 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="806" class="net" text-anchor="end">PROBE_A</text>
+<path class="wire" d="M1198 801 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="806" class="net" text-anchor="start">WATER_ADC</text>
+<text x="1144" y="787" class="ref" text-anchor="middle">JP1 316 electrodes</text>
+<path class="part" d="M1121 801 h16 m0 -6 v12 M1151 795 v12 m0 -6 h16"/>
+<path class="wire" d="M1090 867 H1121 M1167 867 H1198"/>
+<path class="wire" d="M1090 867 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="872" class="net" text-anchor="end">WATER_ADC</text>
+<path class="wire" d="M1198 867 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="872" class="net" text-anchor="start">GND</text>
+<text x="1144" y="853" class="ref" text-anchor="middle">R6 100k</text>
+<path class="part" d="M1121 867 l5 -7 6 14 6 -14 6 14 6 -14 6 14 5 -7 h6"/>
+<path class="wire" d="M1090 933 H1121 M1167 933 H1198"/>
+<path class="wire" d="M1090 933 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="938" class="net" text-anchor="end">WATER_ADC</text>
+<path class="wire" d="M1198 933 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="938" class="net" text-anchor="start">GND</text>
+<text x="1144" y="919" class="ref" text-anchor="middle">C5 100nF</text>
+<path class="part" d="M1121 933 h18 m0 -9 v18 M1149 924 v18 m0 -9 h18"/>
+<path class="wire" d="M1090 999 H1121 M1167 999 H1198"/>
+<path class="wire" d="M1090 999 h-12 l-4 -4 m4 4 l-4 4"/>
+<text x="1070" y="1004" class="net" text-anchor="end">SOS</text>
+<path class="wire" d="M1198 999 h12 l4 -4 m-4 4 l4 4"/>
+<text x="1218" y="1004" class="net" text-anchor="start">GND</text>
+<text x="1144" y="985" class="ref" text-anchor="middle">SW2 momentary N.O.</text>
+<path class="part" d="M1121 999 h8 l27 -12 M1159 999 h8"/>
+<text x="32" y="1112" class="" text-anchor="start">All pin names and polarities are listed in nets.tsv and parts.tsv. USB programming requires isolated external power.</text>
+</svg>

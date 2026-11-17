@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <application>
+        <receiver android:name=".SmsResult" android:exported="false" />
+    </application>
+</manifest>

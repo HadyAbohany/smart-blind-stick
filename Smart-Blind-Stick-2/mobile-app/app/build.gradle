@@ -1,0 +1,27 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'eg.sbs'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'eg.sbs'
+        minSdk 31
+        targetSdk 35
+        versionCode 1
+        versionName '0.1'
+    }
+    buildFeatures { buildConfig true }
+    flavorDimensions 'dispatch'
+    productFlavors {
+        demo { dimension 'dispatch'; buildConfigField 'boolean', 'LAB_SMS', 'false' }
+        lab {
+            dimension 'dispatch'
+            applicationIdSuffix '.lab'
+            buildConfigField 'boolean', 'LAB_SMS', 'true'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+dependencies { implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.20.0' }

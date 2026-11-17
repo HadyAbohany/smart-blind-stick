@@ -1,0 +1,27 @@
+Ref	Part
+J1	USB-A 5V pigtail input
+F1	1.5A hold resettable fuse Bourns MF-R150
+S1	SPST 5V DC 2A or higher
+U1	Espressif ESP32-DevKitC V4 WROOM-32D or 32E
+U2	HC-SR04 5V four-pin ultrasonic
+U3	SN74AHCT125N DIP-14
+J2	Locking 2-pin camera supply SW5/GND
+Q1	AO3400A SOT-23 on breakout, 1 gate 2 source 3 drain
+M1	5V ERM motor qualified at 100mA running and 250mA stall maximum
+D1	1N5819 Schottky
+SW2	Normally open momentary SOS
+JP1	Two isolated 316 stainless probe electrodes
+R1	10k 1%
+R2	15k 1%
+R3	100 ohm
+R4	100k
+R5	10k 1%
+R6	100k
+R7	100k
+R8	10k
+R9	10k
+C1	470uF 10V electrolytic at power branch
+C2	100nF at U3
+C3	220uF 10V at J2 camera end
+C4	100nF at U2
+C5	100nF at U1 ADC

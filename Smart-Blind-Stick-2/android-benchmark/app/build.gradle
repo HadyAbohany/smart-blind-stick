@@ -1,0 +1,35 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'eg.sbs.benchmark'
+    compileSdk 35
+    buildToolsVersion "35.0.0"
+    defaultConfig {
+        applicationId 'eg.sbs.benchmark'
+        minSdk 31
+        targetSdk 34
+        versionCode 4
+        versionName '0.2.1'
+    }
+    androidResources { noCompress += "m4a" }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.20.0'
+}
+
+tasks.register('checkBundledModels') {
+    doLast {
+        ['320', '640'].each { size ->
+            def model = file("src/main/assets/yolo26n-${size}.onnx")
+            if (!model.isFile() || model.length() < 1_000_000) {
+                throw new GradleException("Missing YOLO26n ${size} export. See tools/export_models.py.")
+            }
+        }
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'checkBundledModels' }

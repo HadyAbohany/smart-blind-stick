@@ -1,0 +1,8 @@
+.DS_Store
+.rollback/
+.env
+.env.*
+*.pem
+*.key
+*.keystore
+*.jks

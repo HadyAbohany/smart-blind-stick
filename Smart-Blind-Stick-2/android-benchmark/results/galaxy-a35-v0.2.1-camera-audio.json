@@ -1,0 +1,6464 @@
+{
+  "started_utc": "2026-11-17T15:54:07.095832Z",
+  "device": "samsung SM-A356E",
+  "android": "15",
+  "api": 35,
+  "chipset": "Samsung s5e8835",
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+  ],
+  "mode": "live_camera",
+  "source": "JPEG 640x480 · realtime sensor clock",
+  "model": "YOLO26n",
+  "format": "ONNX FP32",
+  "size": 320,
+  "backend": "ONNX Runtime 1.20.0 · CPU (2 threads)",
+  "confidence": 0.25,
+  "warmup_completed": 5,
+  "model_load_ms": 276.759154,
+  "measured_frames": 694,
+  "duration_sec": 60.56640261,
+  "average_fps": 11.458497947596694,
+  "finish_reason": "Stopped manually",
+  "latency_ms": {
+    "preprocess": {
+      "median": 12.028788500000001,
+      "p95": 13.110885
+    },
+    "inference": {
+      "median": 54.9397885,
+      "p95": 61.315654
+    },
+    "postprocess": {
+      "median": 0.246885,
+      "p95": 0.616385
+    },
+    "processing_total": {
+      "median": 67.433481,
+      "p95": 73.906538
+    },
+    "camera_callback_to_ui": {
+      "median": 71.53542300000001,
+      "p95": 83.585884
+    },
+    "camera_sensor_to_ui": {
+      "median": 322.5714615,
+      "p95": 367.397692
+    }
+  },
+  "frames": [
+    {
+      "elapsed_ms": 79.191769,
+      "preprocess_ms": 11.764731,
+      "inference_ms": 53.169961,
+      "postprocess_ms": 0.741154,
+      "processing_ms": 65.675846,
+      "camera_callback_to_ui_ms": 70.386308,
+      "camera_sensor_to_ui_ms": 295.5645
+    },
+    {
+      "elapsed_ms": 158.794384,
+      "preprocess_ms": 12.599115,
+      "inference_ms": 54.0275,
+      "postprocess_ms": 0.637885,
+      "processing_ms": 67.2645,
+      "camera_callback_to_ui_ms": 69.595269,
+      "camera_sensor_to_ui_ms": 308.493269
+    },
+    {
+      "elapsed_ms": 238.821577,
+      "preprocess_ms": 15.437846,
+      "inference_ms": 55.164269,
+      "postprocess_ms": 0.669116,
+      "processing_ms": 71.271231,
+      "camera_callback_to_ui_ms": 73.425577,
+      "camera_sensor_to_ui_ms": 321.843923
+    },
+    {
+      "elapsed_ms": 318.795038,
+      "preprocess_ms": 11.671808,
+      "inference_ms": 53.664538,
+      "postprocess_ms": 0.629654,
+      "processing_ms": 65.966,
+      "camera_callback_to_ui_ms": 68.264769,
+      "camera_sensor_to_ui_ms": 301.810192
+    },
+    {
+      "elapsed_ms": 502.823692,
+      "preprocess_ms": 12.9775,
+      "inference_ms": 60.278461,
+      "postprocess_ms": 0.631231,
+      "processing_ms": 73.887192,
+      "camera_callback_to_ui_ms": 75.129577,
+      "camera_sensor_to_ui_ms": 352.4915
+    },
+    {
+      "elapsed_ms": 608.505499,
+      "preprocess_ms": 12.534846,
+      "inference_ms": 67.31,
+      "postprocess_ms": 0.779885,
+      "processing_ms": 80.624731,
+      "camera_callback_to_ui_ms": 82.228038,
+      "camera_sensor_to_ui_ms": 358.167653
+    },
+    {
+      "elapsed_ms": 693.655192,
+      "preprocess_ms": 11.784154,
+      "inference_ms": 54.846538,
+      "postprocess_ms": 0.683423,
+      "processing_ms": 67.314115,
+      "camera_callback_to_ui_ms": 76.669885,
+      "camera_sensor_to_ui_ms": 376.633885
+    },
+    {
+      "elapsed_ms": 801.878692,
+      "preprocess_ms": 16.336923,
+      "inference_ms": 54.812731,
+      "postprocess_ms": 0.616385,
+      "processing_ms": 71.766039,
+      "camera_callback_to_ui_ms": 81.816385,
+      "camera_sensor_to_ui_ms": 384.854115
+    },
+    {
+      "elapsed_ms": 877.340922,
+      "preprocess_ms": 11.140576,
+      "inference_ms": 52.575539,
+      "postprocess_ms": 0.627346,
+      "processing_ms": 64.343461,
+      "camera_callback_to_ui_ms": 69.358846,
+      "camera_sensor_to_ui_ms": 360.300846
+    },
+    {
+      "elapsed_ms": 950.445692,
+      "preprocess_ms": 11.53123,
+      "inference_ms": 54.766347,
+      "postprocess_ms": 0.620192,
+      "processing_ms": 66.917769,
+      "camera_callback_to_ui_ms": 67.790193,
+      "camera_sensor_to_ui_ms": 366.745769
+    },
+    {
+      "elapsed_ms": 1029.83873,
+      "preprocess_ms": 11.282116,
+      "inference_ms": 52.146307,
+      "postprocess_ms": 0.628577,
+      "processing_ms": 64.057,
+      "camera_callback_to_ui_ms": 67.128615,
+      "camera_sensor_to_ui_ms": 346.123
+    },
+    {
+      "elapsed_ms": 1106.785384,
+      "preprocess_ms": 11.267231,
+      "inference_ms": 52.146346,
+      "postprocess_ms": 0.601962,
+      "processing_ms": 64.015539,
+      "camera_callback_to_ui_ms": 65.060231,
+      "camera_sensor_to_ui_ms": 313.066231
+    },
+    {
+      "elapsed_ms": 1185.176076,
+      "preprocess_ms": 11.377769,
+      "inference_ms": 53.531,
+      "postprocess_ms": 0.647385,
+      "processing_ms": 65.556154,
+      "camera_callback_to_ui_ms": 66.713346,
+      "camera_sensor_to_ui_ms": 291.443731
+    },
+    {
+      "elapsed_ms": 1270.434037,
+      "preprocess_ms": 11.925616,
+      "inference_ms": 51.805692,
+      "postprocess_ms": 0.621885,
+      "processing_ms": 64.353193,
+      "camera_callback_to_ui_ms": 65.198576,
+      "camera_sensor_to_ui_ms": 310.024422
+    },
+    {
+      "elapsed_ms": 1353.204576,
+      "preprocess_ms": 11.283346,
+      "inference_ms": 51.951,
+      "postprocess_ms": 0.634693,
+      "processing_ms": 63.869039,
+      "camera_callback_to_ui_ms": 72.814192,
+      "camera_sensor_to_ui_ms": 292.787615
+    },
+    {
+      "elapsed_ms": 1426.665307,
+      "preprocess_ms": 11.602538,
+      "inference_ms": 54.530154,
+      "postprocess_ms": 0.650231,
+      "processing_ms": 66.782923,
+      "camera_callback_to_ui_ms": 67.936808,
+      "camera_sensor_to_ui_ms": 299.581962
+    },
+    {
+      "elapsed_ms": 1508.660422,
+      "preprocess_ms": 11.53523,
+      "inference_ms": 53.087116,
+      "postprocess_ms": 0.643577,
+      "processing_ms": 65.265923,
+      "camera_callback_to_ui_ms": 66.122192,
+      "camera_sensor_to_ui_ms": 314.895615
+    },
+    {
+      "elapsed_ms": 1599.947306,
+      "preprocess_ms": 11.619923,
+      "inference_ms": 53.260346,
+      "postprocess_ms": 0.623039,
+      "processing_ms": 65.503308,
+      "camera_callback_to_ui_ms": 66.141653,
+      "camera_sensor_to_ui_ms": 306.183769
+    },
+    {
+      "elapsed_ms": 1683.686691,
+      "preprocess_ms": 11.456,
+      "inference_ms": 52.233115,
+      "postprocess_ms": 0.613962,
+      "processing_ms": 64.303077,
+      "camera_callback_to_ui_ms": 65.125231,
+      "camera_sensor_to_ui_ms": 323.241346
+    },
+    {
+      "elapsed_ms": 1763.07346,
+      "preprocess_ms": 11.35627,
+      "inference_ms": 53.564153,
+      "postprocess_ms": 0.676885,
+      "processing_ms": 65.597308,
+      "camera_callback_to_ui_ms": 71.411923,
+      "camera_sensor_to_ui_ms": 335.962807
+    },
+    {
+      "elapsed_ms": 1847.452422,
+      "preprocess_ms": 11.598923,
+      "inference_ms": 52.101923,
+      "postprocess_ms": 0.719923,
+      "processing_ms": 64.420769,
+      "camera_callback_to_ui_ms": 74.645616,
+      "camera_sensor_to_ui_ms": 320.319
+    },
+    {
+      "elapsed_ms": 1923.052037,
+      "preprocess_ms": 11.780269,
+      "inference_ms": 51.955385,
+      "postprocess_ms": 0.702077,
+      "processing_ms": 64.437731,
+      "camera_callback_to_ui_ms": 65.411961,
+      "camera_sensor_to_ui_ms": 295.923077
+    },
+    {
+      "elapsed_ms": 2005.153998,
+      "preprocess_ms": 11.446346,
+      "inference_ms": 57.010384,
+      "postprocess_ms": 0.6615,
+      "processing_ms": 69.11823,
+      "camera_callback_to_ui_ms": 70.75773,
+      "camera_sensor_to_ui_ms": 311.349499
+    },
+    {
+      "elapsed_ms": 2105.775537,
+      "preprocess_ms": 12.032923,
+      "inference_ms": 51.826769,
+      "postprocess_ms": 0.628039,
+      "processing_ms": 64.487731,
+      "camera_callback_to_ui_ms": 66.233962,
+      "camera_sensor_to_ui_ms": 345.292385
+    },
+    {
+      "elapsed_ms": 2187.42646,
+      "preprocess_ms": 11.573154,
+      "inference_ms": 52.809692,
+      "postprocess_ms": 0.682039,
+      "processing_ms": 65.064885,
+      "camera_callback_to_ui_ms": 73.375039,
+      "camera_sensor_to_ui_ms": 326.941308
+    },
+    {
+      "elapsed_ms": 2256.489998,
+      "preprocess_ms": 11.420923,
+      "inference_ms": 51.960885,
+      "postprocess_ms": 0.629885,
+      "processing_ms": 64.011693,
+      "camera_callback_to_ui_ms": 66.127346,
+      "camera_sensor_to_ui_ms": 329.31273
+    },
+    {
+      "elapsed_ms": 2339.222152,
+      "preprocess_ms": 11.430269,
+      "inference_ms": 51.981731,
+      "postprocess_ms": 0.683307,
+      "processing_ms": 64.095307,
+      "camera_callback_to_ui_ms": 68.0365,
+      "camera_sensor_to_ui_ms": 312.052923
+    },
+    {
+      "elapsed_ms": 2413.677344,
+      "preprocess_ms": 11.311654,
+      "inference_ms": 52.978115,
+      "postprocess_ms": 0.645962,
+      "processing_ms": 64.935731,
+      "camera_callback_to_ui_ms": 66.081653,
+      "camera_sensor_to_ui_ms": 286.501461
+    },
+    {
+      "elapsed_ms": 2492.062537,
+      "preprocess_ms": 11.455153,
+      "inference_ms": 51.350539,
+      "postprocess_ms": 0.625423,
+      "processing_ms": 63.431115,
+      "camera_callback_to_ui_ms": 66.744347,
+      "camera_sensor_to_ui_ms": 298.217154
+    },
+    {
+      "elapsed_ms": 2566.651844,
+      "preprocess_ms": 11.244384,
+      "inference_ms": 51.911231,
+      "postprocess_ms": 0.640885,
+      "processing_ms": 63.7965,
+      "camera_callback_to_ui_ms": 64.74023,
+      "camera_sensor_to_ui_ms": 306.1225
+    },
+    {
+      "elapsed_ms": 2646.603806,
+      "preprocess_ms": 11.680231,
+      "inference_ms": 52.320384,
+      "postprocess_ms": 0.644154,
+      "processing_ms": 64.644769,
+      "camera_callback_to_ui_ms": 67.316231,
+      "camera_sensor_to_ui_ms": 286.075808
+    },
+    {
+      "elapsed_ms": 2720.770921,
+      "preprocess_ms": 11.30477,
+      "inference_ms": 51.338346,
+      "postprocess_ms": 0.640038,
+      "processing_ms": 63.283154,
+      "camera_callback_to_ui_ms": 64.185961,
+      "camera_sensor_to_ui_ms": 293.561
+    },
+    {
+      "elapsed_ms": 2798.782536,
+      "preprocess_ms": 11.571038,
+      "inference_ms": 52.727885,
+      "postprocess_ms": 0.621384,
+      "processing_ms": 64.920307,
+      "camera_callback_to_ui_ms": 68.276577,
+      "camera_sensor_to_ui_ms": 304.903192
+    },
+    {
+      "elapsed_ms": 2885.853152,
+      "preprocess_ms": 11.668616,
+      "inference_ms": 54.217692,
+      "postprocess_ms": 0.646808,
+      "processing_ms": 66.533116,
+      "camera_callback_to_ui_ms": 67.5975,
+      "camera_sensor_to_ui_ms": 291.9675
+    },
+    {
+      "elapsed_ms": 2993.052575,
+      "preprocess_ms": 11.769539,
+      "inference_ms": 58.460923,
+      "postprocess_ms": 0.619038,
+      "processing_ms": 70.8495,
+      "camera_callback_to_ui_ms": 71.750731,
+      "camera_sensor_to_ui_ms": 332.495308
+    },
+    {
+      "elapsed_ms": 3070.420998,
+      "preprocess_ms": 11.381,
+      "inference_ms": 52.233423,
+      "postprocess_ms": 0.6485,
+      "processing_ms": 64.262923,
+      "camera_callback_to_ui_ms": 67.346346,
+      "camera_sensor_to_ui_ms": 343.189654
+    },
+    {
+      "elapsed_ms": 3150.263459,
+      "preprocess_ms": 11.453538,
+      "inference_ms": 53.554,
+      "postprocess_ms": 0.363577,
+      "processing_ms": 65.371115,
+      "camera_callback_to_ui_ms": 66.288577,
+      "camera_sensor_to_ui_ms": 353.022423
+    },
+    {
+      "elapsed_ms": 3230.693075,
+      "preprocess_ms": 11.589,
+      "inference_ms": 53.888847,
+      "postprocess_ms": 0.352807,
+      "processing_ms": 65.830654,
+      "camera_callback_to_ui_ms": 67.036154,
+      "camera_sensor_to_ui_ms": 333.443231
+    },
+    {
+      "elapsed_ms": 3315.257151,
+      "preprocess_ms": 11.50523,
+      "inference_ms": 52.109577,
+      "postprocess_ms": 0.430923,
+      "processing_ms": 64.04573,
+      "camera_callback_to_ui_ms": 64.98873,
+      "camera_sensor_to_ui_ms": 317.995615
+    },
+    {
+      "elapsed_ms": 3415.708844,
+      "preprocess_ms": 11.494615,
+      "inference_ms": 61.8665,
+      "postprocess_ms": 0.363884,
+      "processing_ms": 73.724999,
+      "camera_callback_to_ui_ms": 80.903077,
+      "camera_sensor_to_ui_ms": 318.439269
+    },
+    {
+      "elapsed_ms": 3496.945767,
+      "preprocess_ms": 11.76027,
+      "inference_ms": 53.45823,
+      "postprocess_ms": 0.382846,
+      "processing_ms": 65.601346,
+      "camera_callback_to_ui_ms": 70.68227,
+      "camera_sensor_to_ui_ms": 332.999
+    },
+    {
+      "elapsed_ms": 3585.258497,
+      "preprocess_ms": 11.73177,
+      "inference_ms": 55.121384,
+      "postprocess_ms": 0.392693,
+      "processing_ms": 67.245847,
+      "camera_callback_to_ui_ms": 68.170384,
+      "camera_sensor_to_ui_ms": 354.644884
+    },
+    {
+      "elapsed_ms": 3689.106574,
+      "preprocess_ms": 11.8175,
+      "inference_ms": 58.552577,
+      "postprocess_ms": 0.392538,
+      "processing_ms": 70.762615,
+      "camera_callback_to_ui_ms": 76.544692,
+      "camera_sensor_to_ui_ms": 358.481076
+    },
+    {
+      "elapsed_ms": 3782.020036,
+      "preprocess_ms": 11.831769,
+      "inference_ms": 57.125039,
+      "postprocess_ms": 0.38323,
+      "processing_ms": 69.340038,
+      "camera_callback_to_ui_ms": 70.313731,
+      "camera_sensor_to_ui_ms": 351.383731
+    },
+    {
+      "elapsed_ms": 3886.891497,
+      "preprocess_ms": 11.685193,
+      "inference_ms": 55.6395,
+      "postprocess_ms": 0.37473,
+      "processing_ms": 67.699423,
+      "camera_callback_to_ui_ms": 69.008038,
+      "camera_sensor_to_ui_ms": 389.584769
+    },
+    {
+      "elapsed_ms": 3989.922189,
+      "preprocess_ms": 11.631193,
+      "inference_ms": 57.642769,
+      "postprocess_ms": 0.420731,
+      "processing_ms": 69.694693,
+      "camera_callback_to_ui_ms": 71.095653,
+      "camera_sensor_to_ui_ms": 392.602422
+    },
+    {
+      "elapsed_ms": 4076.927574,
+      "preprocess_ms": 11.362961,
+      "inference_ms": 58.130962,
+      "postprocess_ms": 0.281461,
+      "processing_ms": 69.775384,
+      "camera_callback_to_ui_ms": 71.532923,
+      "camera_sensor_to_ui_ms": 379.602808
+    },
+    {
+      "elapsed_ms": 4170.302035,
+      "preprocess_ms": 11.602307,
+      "inference_ms": 54.279,
+      "postprocess_ms": 0.300962,
+      "processing_ms": 66.182269,
+      "camera_callback_to_ui_ms": 68.624384,
+      "camera_sensor_to_ui_ms": 372.970576
+    },
+    {
+      "elapsed_ms": 4265.068728,
+      "preprocess_ms": 11.323654,
+      "inference_ms": 53.951076,
+      "postprocess_ms": 0.285616,
+      "processing_ms": 65.560346,
+      "camera_callback_to_ui_ms": 66.794077,
+      "camera_sensor_to_ui_ms": 367.724539
+    },
+    {
+      "elapsed_ms": 4349.122112,
+      "preprocess_ms": 11.701692,
+      "inference_ms": 54.646116,
+      "postprocess_ms": 0.2675,
+      "processing_ms": 66.615308,
+      "camera_callback_to_ui_ms": 73.697615,
+      "camera_sensor_to_ui_ms": 351.770192
+    },
+    {
+      "elapsed_ms": 4435.384804,
+      "preprocess_ms": 11.648385,
+      "inference_ms": 56.355115,
+      "postprocess_ms": 0.265077,
+      "processing_ms": 68.268577,
+      "camera_callback_to_ui_ms": 72.852153,
+      "camera_sensor_to_ui_ms": 338.022461
+    },
+    {
+      "elapsed_ms": 4516.286997,
+      "preprocess_ms": 11.482193,
+      "inference_ms": 52.13123,
+      "postprocess_ms": 0.276462,
+      "processing_ms": 63.889885,
+      "camera_callback_to_ui_ms": 71.468077,
+      "camera_sensor_to_ui_ms": 318.916115
+    },
+    {
+      "elapsed_ms": 4586.32015,
+      "preprocess_ms": 11.33373,
+      "inference_ms": 53.338731,
+      "postprocess_ms": 0.268346,
+      "processing_ms": 64.940807,
+      "camera_callback_to_ui_ms": 66.300153,
+      "camera_sensor_to_ui_ms": 288.934961
+    },
+    {
+      "elapsed_ms": 4670.142727,
+      "preprocess_ms": 11.369231,
+      "inference_ms": 53.564384,
+      "postprocess_ms": 0.269154,
+      "processing_ms": 65.202769,
+      "camera_callback_to_ui_ms": 68.201577,
+      "camera_sensor_to_ui_ms": 306.08473
+    },
+    {
+      "elapsed_ms": 4744.67692,
+      "preprocess_ms": 11.781616,
+      "inference_ms": 52.8385,
+      "postprocess_ms": 0.259346,
+      "processing_ms": 64.879462,
+      "camera_callback_to_ui_ms": 65.771962,
+      "camera_sensor_to_ui_ms": 313.952192
+    },
+    {
+      "elapsed_ms": 4822.359304,
+      "preprocess_ms": 11.482461,
+      "inference_ms": 52.854308,
+      "postprocess_ms": 0.273538,
+      "processing_ms": 64.610307,
+      "camera_callback_to_ui_ms": 68.744923,
+      "camera_sensor_to_ui_ms": 291.62423
+    },
+    {
+      "elapsed_ms": 4894.308343,
+      "preprocess_ms": 11.315923,
+      "inference_ms": 52.385577,
+      "postprocess_ms": 0.28123,
+      "processing_ms": 63.98273,
+      "camera_callback_to_ui_ms": 64.659193,
+      "camera_sensor_to_ui_ms": 296.889654
+    },
+    {
+      "elapsed_ms": 4978.326919,
+      "preprocess_ms": 11.548154,
+      "inference_ms": 53.278923,
+      "postprocess_ms": 0.291116,
+      "processing_ms": 65.118193,
+      "camera_callback_to_ui_ms": 66.161346,
+      "camera_sensor_to_ui_ms": 280.912961
+    },
+    {
+      "elapsed_ms": 5076.82565,
+      "preprocess_ms": 11.170923,
+      "inference_ms": 52.544346,
+      "postprocess_ms": 0.267539,
+      "processing_ms": 63.982808,
+      "camera_callback_to_ui_ms": 70.495269,
+      "camera_sensor_to_ui_ms": 312.722461
+    },
+    {
+      "elapsed_ms": 5179.10815,
+      "preprocess_ms": 11.250539,
+      "inference_ms": 52.991192,
+      "postprocess_ms": 0.351193,
+      "processing_ms": 64.592924,
+      "camera_callback_to_ui_ms": 70.552192,
+      "camera_sensor_to_ui_ms": 315.008538
+    },
+    {
+      "elapsed_ms": 5254.600881,
+      "preprocess_ms": 11.466461,
+      "inference_ms": 52.342769,
+      "postprocess_ms": 0.261731,
+      "processing_ms": 64.070961,
+      "camera_callback_to_ui_ms": 65.018962,
+      "camera_sensor_to_ui_ms": 290.495654
+    },
+    {
+      "elapsed_ms": 5331.387419,
+      "preprocess_ms": 11.157962,
+      "inference_ms": 51.858154,
+      "postprocess_ms": 0.338038,
+      "processing_ms": 63.354154,
+      "camera_callback_to_ui_ms": 67.928846,
+      "camera_sensor_to_ui_ms": 300.606269
+    },
+    {
+      "elapsed_ms": 5413.618304,
+      "preprocess_ms": 11.381115,
+      "inference_ms": 52.377539,
+      "postprocess_ms": 0.282846,
+      "processing_ms": 64.0415,
+      "camera_callback_to_ui_ms": 65.706616,
+      "camera_sensor_to_ui_ms": 282.829577
+    },
+    {
+      "elapsed_ms": 5494.758765,
+      "preprocess_ms": 11.790962,
+      "inference_ms": 53.166884,
+      "postprocess_ms": 0.2765,
+      "processing_ms": 65.234346,
+      "camera_callback_to_ui_ms": 66.048769,
+      "camera_sensor_to_ui_ms": 297.287423
+    },
+    {
+      "elapsed_ms": 5575.766419,
+      "preprocess_ms": 11.308308,
+      "inference_ms": 52.847769,
+      "postprocess_ms": 0.279884,
+      "processing_ms": 64.435961,
+      "camera_callback_to_ui_ms": 65.429769,
+      "camera_sensor_to_ui_ms": 311.632923
+    },
+    {
+      "elapsed_ms": 5657.400919,
+      "preprocess_ms": 11.578615,
+      "inference_ms": 52.633577,
+      "postprocess_ms": 0.268615,
+      "processing_ms": 64.480807,
+      "camera_callback_to_ui_ms": 65.737692,
+      "camera_sensor_to_ui_ms": 326.592
+    },
+    {
+      "elapsed_ms": 5739.18038,
+      "preprocess_ms": 11.236385,
+      "inference_ms": 51.914346,
+      "postprocess_ms": 0.279961,
+      "processing_ms": 63.430692,
+      "camera_callback_to_ui_ms": 70.38723,
+      "camera_sensor_to_ui_ms": 308.365846
+    },
+    {
+      "elapsed_ms": 5813.889073,
+      "preprocess_ms": 11.354154,
+      "inference_ms": 52.787769,
+      "postprocess_ms": 0.271385,
+      "processing_ms": 64.413308,
+      "camera_callback_to_ui_ms": 65.377039,
+      "camera_sensor_to_ui_ms": 316.395346
+    },
+    {
+      "elapsed_ms": 5895.479111,
+      "preprocess_ms": 11.4525,
+      "inference_ms": 53.225039,
+      "postprocess_ms": 0.280269,
+      "processing_ms": 64.957808,
+      "camera_callback_to_ui_ms": 66.018115,
+      "camera_sensor_to_ui_ms": 297.969346
+    },
+    {
+      "elapsed_ms": 5979.39038,
+      "preprocess_ms": 11.504269,
+      "inference_ms": 53.141731,
+      "postprocess_ms": 0.322731,
+      "processing_ms": 64.968731,
+      "camera_callback_to_ui_ms": 66.056038,
+      "camera_sensor_to_ui_ms": 315.2205
+    },
+    {
+      "elapsed_ms": 6056.910265,
+      "preprocess_ms": 11.555308,
+      "inference_ms": 51.986615,
+      "postprocess_ms": 0.2895,
+      "processing_ms": 63.831423,
+      "camera_callback_to_ui_ms": 64.697769,
+      "camera_sensor_to_ui_ms": 292.727962
+    },
+    {
+      "elapsed_ms": 6133.771188,
+      "preprocess_ms": 11.132,
+      "inference_ms": 52.359384,
+      "postprocess_ms": 0.2775,
+      "processing_ms": 63.768884,
+      "camera_callback_to_ui_ms": 64.6865,
+      "camera_sensor_to_ui_ms": 302.917885
+    },
+    {
+      "elapsed_ms": 6216.076726,
+      "preprocess_ms": 11.194384,
+      "inference_ms": 52.629577,
+      "postprocess_ms": 0.263923,
+      "processing_ms": 64.087884,
+      "camera_callback_to_ui_ms": 69.947846,
+      "camera_sensor_to_ui_ms": 318.55523
+    },
+    {
+      "elapsed_ms": 6290.030265,
+      "preprocess_ms": 11.263423,
+      "inference_ms": 52.766231,
+      "postprocess_ms": 0.270231,
+      "processing_ms": 64.299885,
+      "camera_callback_to_ui_ms": 65.214039,
+      "camera_sensor_to_ui_ms": 292.497385
+    },
+    {
+      "elapsed_ms": 6368.396688,
+      "preprocess_ms": 11.480808,
+      "inference_ms": 52.186346,
+      "postprocess_ms": 0.267846,
+      "processing_ms": 63.935,
+      "camera_callback_to_ui_ms": 68.365462,
+      "camera_sensor_to_ui_ms": 304.187577
+    },
+    {
+      "elapsed_ms": 6450.587265,
+      "preprocess_ms": 11.809962,
+      "inference_ms": 52.168692,
+      "postprocess_ms": 0.262423,
+      "processing_ms": 64.241077,
+      "camera_callback_to_ui_ms": 65.478654,
+      "camera_sensor_to_ui_ms": 286.370539
+    },
+    {
+      "elapsed_ms": 6525.97088,
+      "preprocess_ms": 11.277,
+      "inference_ms": 51.749616,
+      "postprocess_ms": 0.254038,
+      "processing_ms": 63.280654,
+      "camera_callback_to_ui_ms": 64.259615,
+      "camera_sensor_to_ui_ms": 295.082538
+    },
+    {
+      "elapsed_ms": 6627.187072,
+      "preprocess_ms": 11.470769,
+      "inference_ms": 53.601808,
+      "postprocess_ms": 0.260269,
+      "processing_ms": 65.332846,
+      "camera_callback_to_ui_ms": 72.043384,
+      "camera_sensor_to_ui_ms": 329.626423
+    },
+    {
+      "elapsed_ms": 6710.578187,
+      "preprocess_ms": 11.853347,
+      "inference_ms": 52.732769,
+      "postprocess_ms": 0.250654,
+      "processing_ms": 64.83677,
+      "camera_callback_to_ui_ms": 69.228,
+      "camera_sensor_to_ui_ms": 313.006999
+    },
+    {
+      "elapsed_ms": 6789.49038,
+      "preprocess_ms": 11.541192,
+      "inference_ms": 54.8605,
+      "postprocess_ms": 0.361308,
+      "processing_ms": 66.763,
+      "camera_callback_to_ui_ms": 67.636577,
+      "camera_sensor_to_ui_ms": 325.245962
+    },
+    {
+      "elapsed_ms": 6881.114072,
+      "preprocess_ms": 11.859115,
+      "inference_ms": 55.670731,
+      "postprocess_ms": 0.261692,
+      "processing_ms": 67.791538,
+      "camera_callback_to_ui_ms": 68.819154,
+      "camera_sensor_to_ui_ms": 350.199923
+    },
+    {
+      "elapsed_ms": 6963.646533,
+      "preprocess_ms": 11.284346,
+      "inference_ms": 52.038192,
+      "postprocess_ms": 0.279269,
+      "processing_ms": 63.601807,
+      "camera_callback_to_ui_ms": 74.296807,
+      "camera_sensor_to_ui_ms": 332.719384
+    },
+    {
+      "elapsed_ms": 7037.001456,
+      "preprocess_ms": 11.874423,
+      "inference_ms": 52.325077,
+      "postprocess_ms": 0.304192,
+      "processing_ms": 64.503692,
+      "camera_callback_to_ui_ms": 65.525615,
+      "camera_sensor_to_ui_ms": 306.067769
+    },
+    {
+      "elapsed_ms": 7120.206803,
+      "preprocess_ms": 11.679424,
+      "inference_ms": 52.281384,
+      "postprocess_ms": 0.248,
+      "processing_ms": 64.208808,
+      "camera_callback_to_ui_ms": 73.240693,
+      "camera_sensor_to_ui_ms": 322.597539
+    },
+    {
+      "elapsed_ms": 7204.57861,
+      "preprocess_ms": 11.455346,
+      "inference_ms": 54.290039,
+      "postprocess_ms": 0.263846,
+      "processing_ms": 66.009231,
+      "camera_callback_to_ui_ms": 79.762423,
+      "camera_sensor_to_ui_ms": 306.963692
+    },
+    {
+      "elapsed_ms": 7289.153341,
+      "preprocess_ms": 11.631539,
+      "inference_ms": 53.680961,
+      "postprocess_ms": 0.271346,
+      "processing_ms": 65.583846,
+      "camera_callback_to_ui_ms": 73.398231,
+      "camera_sensor_to_ui_ms": 324.849038
+    },
+    {
+      "elapsed_ms": 7373.160456,
+      "preprocess_ms": 11.385038,
+      "inference_ms": 53.538385,
+      "postprocess_ms": 0.283807,
+      "processing_ms": 65.20723,
+      "camera_callback_to_ui_ms": 82.070731,
+      "camera_sensor_to_ui_ms": 308.864
+    },
+    {
+      "elapsed_ms": 7470.794495,
+      "preprocess_ms": 12.021193,
+      "inference_ms": 52.177692,
+      "postprocess_ms": 0.287077,
+      "processing_ms": 64.485962,
+      "camera_callback_to_ui_ms": 65.56777,
+      "camera_sensor_to_ui_ms": 306.477885
+    },
+    {
+      "elapsed_ms": 7547.490995,
+      "preprocess_ms": 11.604039,
+      "inference_ms": 53.356923,
+      "postprocess_ms": 0.278231,
+      "processing_ms": 65.239193,
+      "camera_callback_to_ui_ms": 66.148462,
+      "camera_sensor_to_ui_ms": 283.173962
+    },
+    {
+      "elapsed_ms": 7630.35511,
+      "preprocess_ms": 11.625192,
+      "inference_ms": 52.831385,
+      "postprocess_ms": 0.275462,
+      "processing_ms": 64.732039,
+      "camera_callback_to_ui_ms": 68.710808,
+      "camera_sensor_to_ui_ms": 299.365192
+    },
+    {
+      "elapsed_ms": 7712.246687,
+      "preprocess_ms": 11.567769,
+      "inference_ms": 52.096,
+      "postprocess_ms": 0.2555,
+      "processing_ms": 63.919269,
+      "camera_callback_to_ui_ms": 71.185846,
+      "camera_sensor_to_ui_ms": 281.244769
+    },
+    {
+      "elapsed_ms": 7785.779071,
+      "preprocess_ms": 11.285077,
+      "inference_ms": 53.660192,
+      "postprocess_ms": 0.275269,
+      "processing_ms": 65.220538,
+      "camera_callback_to_ui_ms": 66.033846,
+      "camera_sensor_to_ui_ms": 288.107769
+    },
+    {
+      "elapsed_ms": 7865.240764,
+      "preprocess_ms": 11.479193,
+      "inference_ms": 52.456192,
+      "postprocess_ms": 0.261308,
+      "processing_ms": 64.196693,
+      "camera_callback_to_ui_ms": 65.72527,
+      "camera_sensor_to_ui_ms": 300.889231
+    },
+    {
+      "elapsed_ms": 7949.218225,
+      "preprocess_ms": 11.714692,
+      "inference_ms": 52.436693,
+      "postprocess_ms": 0.278807,
+      "processing_ms": 64.430192,
+      "camera_callback_to_ui_ms": 65.641961,
+      "camera_sensor_to_ui_ms": 318.186923
+    },
+    {
+      "elapsed_ms": 8030.066725,
+      "preprocess_ms": 11.618346,
+      "inference_ms": 54.363654,
+      "postprocess_ms": 0.259885,
+      "processing_ms": 66.241885,
+      "camera_callback_to_ui_ms": 67.177731,
+      "camera_sensor_to_ui_ms": 299.035961
+    },
+    {
+      "elapsed_ms": 8143.254533,
+      "preprocess_ms": 11.48773,
+      "inference_ms": 53.821347,
+      "postprocess_ms": 0.294384,
+      "processing_ms": 65.603461,
+      "camera_callback_to_ui_ms": 66.410616,
+      "camera_sensor_to_ui_ms": 345.554693
+    },
+    {
+      "elapsed_ms": 8222.010648,
+      "preprocess_ms": 11.2905,
+      "inference_ms": 52.347423,
+      "postprocess_ms": 0.261923,
+      "processing_ms": 63.899846,
+      "camera_callback_to_ui_ms": 70.2105,
+      "camera_sensor_to_ui_ms": 324.303423
+    },
+    {
+      "elapsed_ms": 8292.322379,
+      "preprocess_ms": 11.586846,
+      "inference_ms": 52.060269,
+      "postprocess_ms": 0.2685,
+      "processing_ms": 63.915615,
+      "camera_callback_to_ui_ms": 64.792154,
+      "camera_sensor_to_ui_ms": 327.942308
+    },
+    {
+      "elapsed_ms": 8375.184686,
+      "preprocess_ms": 11.447115,
+      "inference_ms": 52.15327,
+      "postprocess_ms": 0.349307,
+      "processing_ms": 63.949692,
+      "camera_callback_to_ui_ms": 65.71523,
+      "camera_sensor_to_ui_ms": 344.13273
+    },
+    {
+      "elapsed_ms": 8453.58734,
+      "preprocess_ms": 11.6465,
+      "inference_ms": 52.312423,
+      "postprocess_ms": 0.272462,
+      "processing_ms": 64.231385,
+      "camera_callback_to_ui_ms": 65.157269,
+      "camera_sensor_to_ui_ms": 289.188269
+    },
+    {
+      "elapsed_ms": 8531.90784,
+      "preprocess_ms": 11.370846,
+      "inference_ms": 52.262308,
+      "postprocess_ms": 0.270577,
+      "processing_ms": 63.903731,
+      "camera_callback_to_ui_ms": 65.001692,
+      "camera_sensor_to_ui_ms": 300.831654
+    },
+    {
+      "elapsed_ms": 8613.24984,
+      "preprocess_ms": 11.604962,
+      "inference_ms": 52.226538,
+      "postprocess_ms": 0.264462,
+      "processing_ms": 64.095962,
+      "camera_callback_to_ui_ms": 71.476885,
+      "camera_sensor_to_ui_ms": 315.506577
+    },
+    {
+      "elapsed_ms": 8697.137071,
+      "preprocess_ms": 11.410424,
+      "inference_ms": 51.875999,
+      "postprocess_ms": 0.285077,
+      "processing_ms": 63.5715,
+      "camera_callback_to_ui_ms": 77.660385,
+      "camera_sensor_to_ui_ms": 299.382731
+    },
+    {
+      "elapsed_ms": 8767.202301,
+      "preprocess_ms": 11.336462,
+      "inference_ms": 52.163615,
+      "postprocess_ms": 0.340615,
+      "processing_ms": 63.840692,
+      "camera_callback_to_ui_ms": 65.358461,
+      "camera_sensor_to_ui_ms": 302.77673
+    },
+    {
+      "elapsed_ms": 8853.869955,
+      "preprocess_ms": 11.565692,
+      "inference_ms": 51.714423,
+      "postprocess_ms": 0.233808,
+      "processing_ms": 63.513923,
+      "camera_callback_to_ui_ms": 64.497269,
+      "camera_sensor_to_ui_ms": 289.430577
+    },
+    {
+      "elapsed_ms": 8926.30607,
+      "preprocess_ms": 9.336,
+      "inference_ms": 44.341269,
+      "postprocess_ms": 0.224423,
+      "processing_ms": 53.901692,
+      "camera_callback_to_ui_ms": 55.327115,
+      "camera_sensor_to_ui_ms": 295.193807
+    },
+    {
+      "elapsed_ms": 9012.458686,
+      "preprocess_ms": 9.852461,
+      "inference_ms": 45.503385,
+      "postprocess_ms": 0.226653,
+      "processing_ms": 55.582499,
+      "camera_callback_to_ui_ms": 56.697269,
+      "camera_sensor_to_ui_ms": 314.677308
+    },
+    {
+      "elapsed_ms": 9108.147993,
+      "preprocess_ms": 11.7145,
+      "inference_ms": 44.850308,
+      "postprocess_ms": 0.237923,
+      "processing_ms": 56.802731,
+      "camera_callback_to_ui_ms": 58.694576,
+      "camera_sensor_to_ui_ms": 310.344653
+    },
+    {
+      "elapsed_ms": 9207.442532,
+      "preprocess_ms": 11.386577,
+      "inference_ms": 48.598538,
+      "postprocess_ms": 0.230885,
+      "processing_ms": 60.216,
+      "camera_callback_to_ui_ms": 61.822462,
+      "camera_sensor_to_ui_ms": 342.979269
+    },
+    {
+      "elapsed_ms": 9282.944916,
+      "preprocess_ms": 10.805808,
+      "inference_ms": 56.76,
+      "postprocess_ms": 0.254115,
+      "processing_ms": 67.819923,
+      "camera_callback_to_ui_ms": 73.514153,
+      "camera_sensor_to_ui_ms": 385.146807
+    },
+    {
+      "elapsed_ms": 9406.012416,
+      "preprocess_ms": 10.090385,
+      "inference_ms": 63.643,
+      "postprocess_ms": 0.6095,
+      "processing_ms": 74.342885,
+      "camera_callback_to_ui_ms": 82.728192,
+      "camera_sensor_to_ui_ms": 408.205999
+    },
+    {
+      "elapsed_ms": 9501.809839,
+      "preprocess_ms": 11.885423,
+      "inference_ms": 62.596846,
+      "postprocess_ms": 0.3525,
+      "processing_ms": 74.834769,
+      "camera_callback_to_ui_ms": 79.244038,
+      "camera_sensor_to_ui_ms": 403.994038
+    },
+    {
+      "elapsed_ms": 9595.206839,
+      "preprocess_ms": 10.768039,
+      "inference_ms": 61.769423,
+      "postprocess_ms": 0.263423,
+      "processing_ms": 72.800885,
+      "camera_callback_to_ui_ms": 78.598192,
+      "camera_sensor_to_ui_ms": 397.376269
+    },
+    {
+      "elapsed_ms": 9687.329416,
+      "preprocess_ms": 11.133385,
+      "inference_ms": 57.392269,
+      "postprocess_ms": 0.249192,
+      "processing_ms": 68.774846,
+      "camera_callback_to_ui_ms": 70.604885,
+      "camera_sensor_to_ui_ms": 389.492154
+    },
+    {
+      "elapsed_ms": 9776.893454,
+      "preprocess_ms": 10.562154,
+      "inference_ms": 58.07973,
+      "postprocess_ms": 0.215,
+      "processing_ms": 68.856884,
+      "camera_callback_to_ui_ms": 86.978499,
+      "camera_sensor_to_ui_ms": 412.355115
+    },
+    {
+      "elapsed_ms": 9856.616531,
+      "preprocess_ms": 10.892693,
+      "inference_ms": 48.753769,
+      "postprocess_ms": 0.261384,
+      "processing_ms": 59.907846,
+      "camera_callback_to_ui_ms": 61.63173,
+      "camera_sensor_to_ui_ms": 392.091346
+    },
+    {
+      "elapsed_ms": 9946.354916,
+      "preprocess_ms": 10.650346,
+      "inference_ms": 60.150231,
+      "postprocess_ms": 0.250192,
+      "processing_ms": 71.050769,
+      "camera_callback_to_ui_ms": 77.031308,
+      "camera_sensor_to_ui_ms": 381.828884
+    },
+    {
+      "elapsed_ms": 10038.434877,
+      "preprocess_ms": 10.545308,
+      "inference_ms": 48.086731,
+      "postprocess_ms": 0.333038,
+      "processing_ms": 58.965077,
+      "camera_callback_to_ui_ms": 80.206653,
+      "camera_sensor_to_ui_ms": 407.234807
+    },
+    {
+      "elapsed_ms": 10102.59407,
+      "preprocess_ms": 10.238193,
+      "inference_ms": 43.74723,
+      "postprocess_ms": 0.233924,
+      "processing_ms": 54.219347,
+      "camera_callback_to_ui_ms": 56.937193,
+      "camera_sensor_to_ui_ms": 338.048308
+    },
+    {
+      "elapsed_ms": 10189.837877,
+      "preprocess_ms": 10.135424,
+      "inference_ms": 45.196499,
+      "postprocess_ms": 0.241077,
+      "processing_ms": 55.573,
+      "camera_callback_to_ui_ms": 56.441384,
+      "camera_sensor_to_ui_ms": 291.945153
+    },
+    {
+      "elapsed_ms": 10272.957569,
+      "preprocess_ms": 10.394846,
+      "inference_ms": 49.165577,
+      "postprocess_ms": 0.235577,
+      "processing_ms": 59.796,
+      "camera_callback_to_ui_ms": 60.633307,
+      "camera_sensor_to_ui_ms": 308.394884
+    },
+    {
+      "elapsed_ms": 10377.109146,
+      "preprocess_ms": 9.877962,
+      "inference_ms": 55.274346,
+      "postprocess_ms": 0.365731,
+      "processing_ms": 65.518039,
+      "camera_callback_to_ui_ms": 66.691538,
+      "camera_sensor_to_ui_ms": 345.875846
+    },
+    {
+      "elapsed_ms": 10475.971415,
+      "preprocess_ms": 10.332808,
+      "inference_ms": 51.6615,
+      "postprocess_ms": 0.254807,
+      "processing_ms": 62.249115,
+      "camera_callback_to_ui_ms": 62.919076,
+      "camera_sensor_to_ui_ms": 344.722961
+    },
+    {
+      "elapsed_ms": 10562.555185,
+      "preprocess_ms": 9.293039,
+      "inference_ms": 45.908385,
+      "postprocess_ms": 0.235538,
+      "processing_ms": 55.436962,
+      "camera_callback_to_ui_ms": 56.230693,
+      "camera_sensor_to_ui_ms": 331.298077
+    },
+    {
+      "elapsed_ms": 10633.088762,
+      "preprocess_ms": 9.855462,
+      "inference_ms": 44.368654,
+      "postprocess_ms": 0.241077,
+      "processing_ms": 54.465193,
+      "camera_callback_to_ui_ms": 55.271654,
+      "camera_sensor_to_ui_ms": 335.159193
+    },
+    {
+      "elapsed_ms": 10716.575569,
+      "preprocess_ms": 9.51773,
+      "inference_ms": 43.036385,
+      "postprocess_ms": 0.240923,
+      "processing_ms": 52.795038,
+      "camera_callback_to_ui_ms": 53.584769,
+      "camera_sensor_to_ui_ms": 318.640423
+    },
+    {
+      "elapsed_ms": 10798.189684,
+      "preprocess_ms": 9.19223,
+      "inference_ms": 45.143193,
+      "postprocess_ms": 0.257884,
+      "processing_ms": 54.593307,
+      "camera_callback_to_ui_ms": 55.74123,
+      "camera_sensor_to_ui_ms": 300.246422
+    },
+    {
+      "elapsed_ms": 10877.716569,
+      "preprocess_ms": 9.439423,
+      "inference_ms": 44.474923,
+      "postprocess_ms": 0.254654,
+      "processing_ms": 54.169,
+      "camera_callback_to_ui_ms": 54.830769,
+      "camera_sensor_to_ui_ms": 279.764346
+    },
+    {
+      "elapsed_ms": 10962.744415,
+      "preprocess_ms": 10.045384,
+      "inference_ms": 48.916462,
+      "postprocess_ms": 0.286615,
+      "processing_ms": 59.248461,
+      "camera_callback_to_ui_ms": 60.176461,
+      "camera_sensor_to_ui_ms": 298.120192
+    },
+    {
+      "elapsed_ms": 11065.258223,
+      "preprocess_ms": 10.116077,
+      "inference_ms": 61.315654,
+      "postprocess_ms": 0.262115,
+      "processing_ms": 71.693846,
+      "camera_callback_to_ui_ms": 72.434385,
+      "camera_sensor_to_ui_ms": 333.961692
+    },
+    {
+      "elapsed_ms": 11186.32453,
+      "preprocess_ms": 11.26673,
+      "inference_ms": 62.662885,
+      "postprocess_ms": 0.271346,
+      "processing_ms": 74.200961,
+      "camera_callback_to_ui_ms": 88.572153,
+      "camera_sensor_to_ui_ms": 355.017961
+    },
+    {
+      "elapsed_ms": 11296.101223,
+      "preprocess_ms": 10.218346,
+      "inference_ms": 61.563731,
+      "postprocess_ms": 0.23523,
+      "processing_ms": 72.017307,
+      "camera_callback_to_ui_ms": 73.745731,
+      "camera_sensor_to_ui_ms": 398.115539
+    },
+    {
+      "elapsed_ms": 11393.207453,
+      "preprocess_ms": 10.69373,
+      "inference_ms": 59.061539,
+      "postprocess_ms": 0.365538,
+      "processing_ms": 70.120807,
+      "camera_callback_to_ui_ms": 73.100807,
+      "camera_sensor_to_ui_ms": 395.214499
+    },
+    {
+      "elapsed_ms": 11494.181492,
+      "preprocess_ms": 11.211346,
+      "inference_ms": 59.693115,
+      "postprocess_ms": 0.250577,
+      "processing_ms": 71.155038,
+      "camera_callback_to_ui_ms": 73.163423,
+      "camera_sensor_to_ui_ms": 429.512962
+    },
+    {
+      "elapsed_ms": 11587.567799,
+      "preprocess_ms": 11.476885,
+      "inference_ms": 59.761538,
+      "postprocess_ms": 0.245308,
+      "processing_ms": 71.483731,
+      "camera_callback_to_ui_ms": 72.425538,
+      "camera_sensor_to_ui_ms": 389.561346
+    },
+    {
+      "elapsed_ms": 11681.507299,
+      "preprocess_ms": 12.1735,
+      "inference_ms": 70.661884,
+      "postprocess_ms": 0.252885,
+      "processing_ms": 83.088269,
+      "camera_callback_to_ui_ms": 87.231346,
+      "camera_sensor_to_ui_ms": 416.824884
+    },
+    {
+      "elapsed_ms": 11824.148299,
+      "preprocess_ms": 15.249615,
+      "inference_ms": 60.599693,
+      "postprocess_ms": 0.310192,
+      "processing_ms": 76.1595,
+      "camera_callback_to_ui_ms": 77.330115,
+      "camera_sensor_to_ui_ms": 426.122307
+    },
+    {
+      "elapsed_ms": 11914.583568,
+      "preprocess_ms": 13.681962,
+      "inference_ms": 57.309692,
+      "postprocess_ms": 0.268385,
+      "processing_ms": 71.260039,
+      "camera_callback_to_ui_ms": 87.328192,
+      "camera_sensor_to_ui_ms": 416.547115
+    },
+    {
+      "elapsed_ms": 12024.178645,
+      "preprocess_ms": 12.152538,
+      "inference_ms": 55.371731,
+      "postprocess_ms": 0.274654,
+      "processing_ms": 67.798923,
+      "camera_callback_to_ui_ms": 68.802692,
+      "camera_sensor_to_ui_ms": 359.456577
+    },
+    {
+      "elapsed_ms": 12112.069491,
+      "preprocess_ms": 11.657154,
+      "inference_ms": 52.854808,
+      "postprocess_ms": 0.242923,
+      "processing_ms": 64.754885,
+      "camera_callback_to_ui_ms": 65.73323,
+      "camera_sensor_to_ui_ms": 347.334807
+    },
+    {
+      "elapsed_ms": 12199.703914,
+      "preprocess_ms": 12.06,
+      "inference_ms": 55.085039,
+      "postprocess_ms": 0.255846,
+      "processing_ms": 67.400885,
+      "camera_callback_to_ui_ms": 68.5125,
+      "camera_sensor_to_ui_ms": 334.958423
+    },
+    {
+      "elapsed_ms": 12275.975337,
+      "preprocess_ms": 11.300269,
+      "inference_ms": 52.265423,
+      "postprocess_ms": 0.273769,
+      "processing_ms": 63.839461,
+      "camera_callback_to_ui_ms": 64.781077,
+      "camera_sensor_to_ui_ms": 311.225307
+    },
+    {
+      "elapsed_ms": 12357.140876,
+      "preprocess_ms": 11.737,
+      "inference_ms": 52.633384,
+      "postprocess_ms": 0.281192,
+      "processing_ms": 64.651576,
+      "camera_callback_to_ui_ms": 66.222654,
+      "camera_sensor_to_ui_ms": 325.725115
+    },
+    {
+      "elapsed_ms": 12439.052183,
+      "preprocess_ms": 12.277808,
+      "inference_ms": 52.213577,
+      "postprocess_ms": 0.370192,
+      "processing_ms": 64.861577,
+      "camera_callback_to_ui_ms": 65.571423,
+      "camera_sensor_to_ui_ms": 307.625499
+    },
+    {
+      "elapsed_ms": 12556.398068,
+      "preprocess_ms": 12.029,
+      "inference_ms": 55.213885,
+      "postprocess_ms": 0.294115,
+      "processing_ms": 67.537,
+      "camera_callback_to_ui_ms": 70.714846,
+      "camera_sensor_to_ui_ms": 291.628846
+    },
+    {
+      "elapsed_ms": 12669.856145,
+      "preprocess_ms": 12.386962,
+      "inference_ms": 54.063269,
+      "postprocess_ms": 0.2865,
+      "processing_ms": 66.736731,
+      "camera_callback_to_ui_ms": 69.807616,
+      "camera_sensor_to_ui_ms": 338.413615
+    },
+    {
+      "elapsed_ms": 12747.737991,
+      "preprocess_ms": 11.329654,
+      "inference_ms": 53.483539,
+      "postprocess_ms": 0.24223,
+      "processing_ms": 65.055423,
+      "camera_callback_to_ui_ms": 66.230308,
+      "camera_sensor_to_ui_ms": 349.620346
+    },
+    {
+      "elapsed_ms": 12839.361991,
+      "preprocess_ms": 9.646,
+      "inference_ms": 42.687115,
+      "postprocess_ms": 0.250154,
+      "processing_ms": 52.583269,
+      "camera_callback_to_ui_ms": 53.463539,
+      "camera_sensor_to_ui_ms": 307.893
+    },
+    {
+      "elapsed_ms": 12915.18976,
+      "preprocess_ms": 9.231115,
+      "inference_ms": 45.034846,
+      "postprocess_ms": 0.285462,
+      "processing_ms": 54.551423,
+      "camera_callback_to_ui_ms": 55.314462,
+      "camera_sensor_to_ui_ms": 283.713692
+    },
+    {
+      "elapsed_ms": 12992.248798,
+      "preprocess_ms": 10.433115,
+      "inference_ms": 48.625077,
+      "postprocess_ms": 0.247808,
+      "processing_ms": 59.306,
+      "camera_callback_to_ui_ms": 60.367461,
+      "camera_sensor_to_ui_ms": 260.76773
+    },
+    {
+      "elapsed_ms": 13087.775875,
+      "preprocess_ms": 10.013461,
+      "inference_ms": 47.081,
+      "postprocess_ms": 0.340346,
+      "processing_ms": 57.434807,
+      "camera_callback_to_ui_ms": 58.249269,
+      "camera_sensor_to_ui_ms": 289.621961
+    },
+    {
+      "elapsed_ms": 13177.038644,
+      "preprocess_ms": 10.570385,
+      "inference_ms": 49.601077,
+      "postprocess_ms": 0.267884,
+      "processing_ms": 60.439346,
+      "camera_callback_to_ui_ms": 61.268577,
+      "camera_sensor_to_ui_ms": 312.209769
+    },
+    {
+      "elapsed_ms": 13267.49626,
+      "preprocess_ms": 11.036423,
+      "inference_ms": 51.866693,
+      "postprocess_ms": 0.252961,
+      "processing_ms": 63.156077,
+      "camera_callback_to_ui_ms": 63.983462,
+      "camera_sensor_to_ui_ms": 335.992885
+    },
+    {
+      "elapsed_ms": 13350.094567,
+      "preprocess_ms": 12.724808,
+      "inference_ms": 48.815077,
+      "postprocess_ms": 0.254769,
+      "processing_ms": 61.794654,
+      "camera_callback_to_ui_ms": 63.160346,
+      "camera_sensor_to_ui_ms": 351.923923
+    },
+    {
+      "elapsed_ms": 13431.585644,
+      "preprocess_ms": 11.192884,
+      "inference_ms": 49.465539,
+      "postprocess_ms": 0.263,
+      "processing_ms": 60.921423,
+      "camera_callback_to_ui_ms": 61.704692,
+      "camera_sensor_to_ui_ms": 333.406423
+    },
+    {
+      "elapsed_ms": 13520.285798,
+      "preprocess_ms": 11.814,
+      "inference_ms": 53.444,
+      "postprocess_ms": 0.304654,
+      "processing_ms": 65.562654,
+      "camera_callback_to_ui_ms": 66.299731,
+      "camera_sensor_to_ui_ms": 322.093615
+    },
+    {
+      "elapsed_ms": 13604.689259,
+      "preprocess_ms": 11.821577,
+      "inference_ms": 53.408115,
+      "postprocess_ms": 0.275154,
+      "processing_ms": 65.504846,
+      "camera_callback_to_ui_ms": 66.762115,
+      "camera_sensor_to_ui_ms": 306.492538
+    },
+    {
+      "elapsed_ms": 13692.915221,
+      "preprocess_ms": 12.123116,
+      "inference_ms": 53.007692,
+      "postprocess_ms": 0.288462,
+      "processing_ms": 65.41927,
+      "camera_callback_to_ui_ms": 66.471,
+      "camera_sensor_to_ui_ms": 328.038
+    },
+    {
+      "elapsed_ms": 13773.454721,
+      "preprocess_ms": 11.437,
+      "inference_ms": 52.578,
+      "postprocess_ms": 0.261961,
+      "processing_ms": 64.276961,
+      "camera_callback_to_ui_ms": 65.047808,
+      "camera_sensor_to_ui_ms": 308.572269
+    },
+    {
+      "elapsed_ms": 13857.023682,
+      "preprocess_ms": 11.609653,
+      "inference_ms": 53.114116,
+      "postprocess_ms": 0.283115,
+      "processing_ms": 65.006884,
+      "camera_callback_to_ui_ms": 65.827192,
+      "camera_sensor_to_ui_ms": 325.462346
+    },
+    {
+      "elapsed_ms": 13941.336567,
+      "preprocess_ms": 11.412653,
+      "inference_ms": 53.597923,
+      "postprocess_ms": 0.283423,
+      "processing_ms": 65.293999,
+      "camera_callback_to_ui_ms": 66.033615,
+      "camera_sensor_to_ui_ms": 309.769961
+    },
+    {
+      "elapsed_ms": 14026.142028,
+      "preprocess_ms": 11.465154,
+      "inference_ms": 55.283731,
+      "postprocess_ms": 0.259538,
+      "processing_ms": 67.008423,
+      "camera_callback_to_ui_ms": 67.944923,
+      "camera_sensor_to_ui_ms": 327.907307
+    },
+    {
+      "elapsed_ms": 14107.317105,
+      "preprocess_ms": 12.450077,
+      "inference_ms": 54.780193,
+      "postprocess_ms": 0.261269,
+      "processing_ms": 67.491539,
+      "camera_callback_to_ui_ms": 74.181038,
+      "camera_sensor_to_ui_ms": 309.069538
+    },
+    {
+      "elapsed_ms": 14192.316067,
+      "preprocess_ms": 11.585116,
+      "inference_ms": 55.674961,
+      "postprocess_ms": 0.316154,
+      "processing_ms": 67.576231,
+      "camera_callback_to_ui_ms": 72.763231,
+      "camera_sensor_to_ui_ms": 327.397885
+    },
+    {
+      "elapsed_ms": 14275.192528,
+      "preprocess_ms": 11.478038,
+      "inference_ms": 53.936116,
+      "postprocess_ms": 0.347077,
+      "processing_ms": 65.761231,
+      "camera_callback_to_ui_ms": 76.161923,
+      "camera_sensor_to_ui_ms": 310.265
+    },
+    {
+      "elapsed_ms": 14352.521259,
+      "preprocess_ms": 11.764039,
+      "inference_ms": 54.100769,
+      "postprocess_ms": 0.266961,
+      "processing_ms": 66.131769,
+      "camera_callback_to_ui_ms": 66.949,
+      "camera_sensor_to_ui_ms": 320.917038
+    },
+    {
+      "elapsed_ms": 14438.310028,
+      "preprocess_ms": 12.682461,
+      "inference_ms": 54.322462,
+      "postprocess_ms": 0.310385,
+      "processing_ms": 67.315308,
+      "camera_callback_to_ui_ms": 68.420731,
+      "camera_sensor_to_ui_ms": 306.699269
+    },
+    {
+      "elapsed_ms": 14517.973682,
+      "preprocess_ms": 11.709423,
+      "inference_ms": 54.703461,
+      "postprocess_ms": 0.280385,
+      "processing_ms": 66.693269,
+      "camera_callback_to_ui_ms": 67.679577,
+      "camera_sensor_to_ui_ms": 319.693346
+    },
+    {
+      "elapsed_ms": 14609.533489,
+      "preprocess_ms": 12.831154,
+      "inference_ms": 58.271615,
+      "postprocess_ms": 0.283577,
+      "processing_ms": 71.386346,
+      "camera_callback_to_ui_ms": 72.994461,
+      "camera_sensor_to_ui_ms": 344.581461
+    },
+    {
+      "elapsed_ms": 14697.271336,
+      "preprocess_ms": 12.293385,
+      "inference_ms": 54.376269,
+      "postprocess_ms": 0.302154,
+      "processing_ms": 66.971808,
+      "camera_callback_to_ui_ms": 68.101154,
+      "camera_sensor_to_ui_ms": 332.305962
+    },
+    {
+      "elapsed_ms": 14791.810682,
+      "preprocess_ms": 11.730846,
+      "inference_ms": 55.890538,
+      "postprocess_ms": 0.3455,
+      "processing_ms": 67.966884,
+      "camera_callback_to_ui_ms": 69.0795,
+      "camera_sensor_to_ui_ms": 326.837731
+    },
+    {
+      "elapsed_ms": 14910.408682,
+      "preprocess_ms": 12.315308,
+      "inference_ms": 79.820462,
+      "postprocess_ms": 0.235153,
+      "processing_ms": 92.370923,
+      "camera_callback_to_ui_ms": 96.108116,
+      "camera_sensor_to_ui_ms": 378.758039
+    },
+    {
+      "elapsed_ms": 14993.066797,
+      "preprocess_ms": 10.226461,
+      "inference_ms": 50.029846,
+      "postprocess_ms": 0.263539,
+      "processing_ms": 60.519846,
+      "camera_callback_to_ui_ms": 61.455539,
+      "camera_sensor_to_ui_ms": 328.066769
+    },
+    {
+      "elapsed_ms": 15084.670335,
+      "preprocess_ms": 10.225423,
+      "inference_ms": 57.659385,
+      "postprocess_ms": 0.230115,
+      "processing_ms": 68.114923,
+      "camera_callback_to_ui_ms": 68.848807,
+      "camera_sensor_to_ui_ms": 319.665961
+    },
+    {
+      "elapsed_ms": 15164.708412,
+      "preprocess_ms": 10.874192,
+      "inference_ms": 51.979885,
+      "postprocess_ms": 0.280077,
+      "processing_ms": 63.134154,
+      "camera_callback_to_ui_ms": 63.879846,
+      "camera_sensor_to_ui_ms": 299.696153
+    },
+    {
+      "elapsed_ms": 15261.142297,
+      "preprocess_ms": 10.821423,
+      "inference_ms": 55.752962,
+      "postprocess_ms": 0.233576,
+      "processing_ms": 66.807961,
+      "camera_callback_to_ui_ms": 68.622193,
+      "camera_sensor_to_ui_ms": 296.109885
+    },
+    {
+      "elapsed_ms": 15417.892797,
+      "preprocess_ms": 12.399385,
+      "inference_ms": 80.057577,
+      "postprocess_ms": 0.248884,
+      "processing_ms": 92.705846,
+      "camera_callback_to_ui_ms": 129.844962,
+      "camera_sensor_to_ui_ms": 386.198385
+    },
+    {
+      "elapsed_ms": 15497.057412,
+      "preprocess_ms": 10.978731,
+      "inference_ms": 52.129654,
+      "postprocess_ms": 0.242461,
+      "processing_ms": 63.350846,
+      "camera_callback_to_ui_ms": 72.637654,
+      "camera_sensor_to_ui_ms": 365.339423
+    },
+    {
+      "elapsed_ms": 15582.168104,
+      "preprocess_ms": 10.842731,
+      "inference_ms": 60.97773,
+      "postprocess_ms": 0.307769,
+      "processing_ms": 72.12823,
+      "camera_callback_to_ui_ms": 73.605269,
+      "camera_sensor_to_ui_ms": 350.45723
+    },
+    {
+      "elapsed_ms": 15670.952373,
+      "preprocess_ms": 12.959923,
+      "inference_ms": 57.135539,
+      "postprocess_ms": 0.276308,
+      "processing_ms": 70.37177,
+      "camera_callback_to_ui_ms": 81.327615,
+      "camera_sensor_to_ui_ms": 339.228499
+    },
+    {
+      "elapsed_ms": 15762.134489,
+      "preprocess_ms": 11.792923,
+      "inference_ms": 60.2705,
+      "postprocess_ms": 0.287962,
+      "processing_ms": 72.351385,
+      "camera_callback_to_ui_ms": 89.650654,
+      "camera_sensor_to_ui_ms": 330.402154
+    },
+    {
+      "elapsed_ms": 15840.551642,
+      "preprocess_ms": 12.091962,
+      "inference_ms": 54.2255,
+      "postprocess_ms": 0.291115,
+      "processing_ms": 66.608577,
+      "camera_callback_to_ui_ms": 74.94823,
+      "camera_sensor_to_ui_ms": 308.809192
+    },
+    {
+      "elapsed_ms": 15924.172258,
+      "preprocess_ms": 11.320308,
+      "inference_ms": 53.959576,
+      "postprocess_ms": 0.276077,
+      "processing_ms": 65.555961,
+      "camera_callback_to_ui_ms": 72.841731,
+      "camera_sensor_to_ui_ms": 325.759962
+    },
+    {
+      "elapsed_ms": 16023.681835,
+      "preprocess_ms": 11.821116,
+      "inference_ms": 63.994653,
+      "postprocess_ms": 0.282962,
+      "processing_ms": 76.098731,
+      "camera_callback_to_ui_ms": 77.564693,
+      "camera_sensor_to_ui_ms": 358.597692
+    },
+    {
+      "elapsed_ms": 16124.736796,
+      "preprocess_ms": 12.595192,
+      "inference_ms": 65.705884,
+      "postprocess_ms": 0.276193,
+      "processing_ms": 78.577269,
+      "camera_callback_to_ui_ms": 79.634769,
+      "camera_sensor_to_ui_ms": 359.645654
+    },
+    {
+      "elapsed_ms": 16207.55745,
+      "preprocess_ms": 12.1215,
+      "inference_ms": 61.887808,
+      "postprocess_ms": 0.294346,
+      "processing_ms": 74.303654,
+      "camera_callback_to_ui_ms": 75.442385,
+      "camera_sensor_to_ui_ms": 342.456269
+    },
+    {
+      "elapsed_ms": 16292.905834,
+      "preprocess_ms": 12.795539,
+      "inference_ms": 58.206076,
+      "postprocess_ms": 0.277077,
+      "processing_ms": 71.278692,
+      "camera_callback_to_ui_ms": 73.124,
+      "camera_sensor_to_ui_ms": 361.134845
+    },
+    {
+      "elapsed_ms": 16390.520296,
+      "preprocess_ms": 12.497154,
+      "inference_ms": 55.339923,
+      "postprocess_ms": 0.276231,
+      "processing_ms": 68.113308,
+      "camera_callback_to_ui_ms": 69.396885,
+      "camera_sensor_to_ui_ms": 358.736538
+    },
+    {
+      "elapsed_ms": 16486.31218,
+      "preprocess_ms": 12.470423,
+      "inference_ms": 54.10827,
+      "postprocess_ms": 0.2695,
+      "processing_ms": 66.848193,
+      "camera_callback_to_ui_ms": 68.596846,
+      "camera_sensor_to_ui_ms": 354.509961
+    },
+    {
+      "elapsed_ms": 16573.18495,
+      "preprocess_ms": 12.05873,
+      "inference_ms": 56.406347,
+      "postprocess_ms": 0.30423,
+      "processing_ms": 68.769307,
+      "camera_callback_to_ui_ms": 78.086462,
+      "camera_sensor_to_ui_ms": 341.375654
+    },
+    {
+      "elapsed_ms": 16656.941642,
+      "preprocess_ms": 11.666577,
+      "inference_ms": 55.712461,
+      "postprocess_ms": 0.260539,
+      "processing_ms": 67.639577,
+      "camera_callback_to_ui_ms": 74.037577,
+      "camera_sensor_to_ui_ms": 358.467923
+    },
+    {
+      "elapsed_ms": 16748.480988,
+      "preprocess_ms": 11.2815,
+      "inference_ms": 60.313653,
+      "postprocess_ms": 0.752846,
+      "processing_ms": 72.347999,
+      "camera_callback_to_ui_ms": 82.692769,
+      "camera_sensor_to_ui_ms": 349.9995
+    },
+    {
+      "elapsed_ms": 16837.254219,
+      "preprocess_ms": 12.479077,
+      "inference_ms": 55.645653,
+      "postprocess_ms": 0.250962,
+      "processing_ms": 68.375692,
+      "camera_callback_to_ui_ms": 69.27377,
+      "camera_sensor_to_ui_ms": 338.763462
+    },
+    {
+      "elapsed_ms": 16912.63818,
+      "preprocess_ms": 11.669308,
+      "inference_ms": 56.292962,
+      "postprocess_ms": 0.264653,
+      "processing_ms": 68.226923,
+      "camera_callback_to_ui_ms": 69.406077,
+      "camera_sensor_to_ui_ms": 347.475269
+    },
+    {
+      "elapsed_ms": 16997.633719,
+      "preprocess_ms": 11.559616,
+      "inference_ms": 56.256461,
+      "postprocess_ms": 0.281,
+      "processing_ms": 68.097077,
+      "camera_callback_to_ui_ms": 70.567693,
+      "camera_sensor_to_ui_ms": 332.464231
+    },
+    {
+      "elapsed_ms": 17091.945142,
+      "preprocess_ms": 11.736461,
+      "inference_ms": 59.8375,
+      "postprocess_ms": 0.282193,
+      "processing_ms": 71.856154,
+      "camera_callback_to_ui_ms": 72.798808,
+      "camera_sensor_to_ui_ms": 326.745154
+    },
+    {
+      "elapsed_ms": 17211.939026,
+      "preprocess_ms": 13.544385,
+      "inference_ms": 67.28173,
+      "postprocess_ms": 0.325577,
+      "processing_ms": 81.151692,
+      "camera_callback_to_ui_ms": 82.686038,
+      "camera_sensor_to_ui_ms": 346.747346
+    },
+    {
+      "elapsed_ms": 17291.440834,
+      "preprocess_ms": 12.418616,
+      "inference_ms": 59.952,
+      "postprocess_ms": 0.274269,
+      "processing_ms": 72.644885,
+      "camera_callback_to_ui_ms": 75.947923,
+      "camera_sensor_to_ui_ms": 359.559808
+    },
+    {
+      "elapsed_ms": 17384.051141,
+      "preprocess_ms": 13.123307,
+      "inference_ms": 66.405346,
+      "postprocess_ms": 0.303885,
+      "processing_ms": 79.832538,
+      "camera_callback_to_ui_ms": 84.02723,
+      "camera_sensor_to_ui_ms": 385.51373
+    },
+    {
+      "elapsed_ms": 17473.821026,
+      "preprocess_ms": 12.395385,
+      "inference_ms": 60.189,
+      "postprocess_ms": 0.262385,
+      "processing_ms": 72.84677,
+      "camera_callback_to_ui_ms": 73.796808,
+      "camera_sensor_to_ui_ms": 375.2745
+    },
+    {
+      "elapsed_ms": 17563.062295,
+      "preprocess_ms": 11.546231,
+      "inference_ms": 60.644346,
+      "postprocess_ms": 0.274654,
+      "processing_ms": 72.465231,
+      "camera_callback_to_ui_ms": 80.681923,
+      "camera_sensor_to_ui_ms": 331.168577
+    },
+    {
+      "elapsed_ms": 17655.858564,
+      "preprocess_ms": 13.232461,
+      "inference_ms": 66.065808,
+      "postprocess_ms": 0.2555,
+      "processing_ms": 79.553769,
+      "camera_callback_to_ui_ms": 82.965,
+      "camera_sensor_to_ui_ms": 357.295461
+    },
+    {
+      "elapsed_ms": 17754.01691,
+      "preprocess_ms": 12.405461,
+      "inference_ms": 78.451308,
+      "postprocess_ms": 0.279269,
+      "processing_ms": 91.136038,
+      "camera_callback_to_ui_ms": 94.541884,
+      "camera_sensor_to_ui_ms": 355.437923
+    },
+    {
+      "elapsed_ms": 17841.973487,
+      "preprocess_ms": 12.721308,
+      "inference_ms": 64.406077,
+      "postprocess_ms": 0.308077,
+      "processing_ms": 77.435462,
+      "camera_callback_to_ui_ms": 84.219269,
+      "camera_sensor_to_ui_ms": 343.392692
+    },
+    {
+      "elapsed_ms": 17919.300026,
+      "preprocess_ms": 12.110385,
+      "inference_ms": 57.080577,
+      "postprocess_ms": 0.211577,
+      "processing_ms": 69.402539,
+      "camera_callback_to_ui_ms": 72.266,
+      "camera_sensor_to_ui_ms": 354.036231
+    },
+    {
+      "elapsed_ms": 17999.138102,
+      "preprocess_ms": 11.678577,
+      "inference_ms": 55.116846,
+      "postprocess_ms": 0.279077,
+      "processing_ms": 67.0745,
+      "camera_callback_to_ui_ms": 70.840884,
+      "camera_sensor_to_ui_ms": 333.861807
+    },
+    {
+      "elapsed_ms": 18084.691602,
+      "preprocess_ms": 11.397115,
+      "inference_ms": 55.787077,
+      "postprocess_ms": 0.222808,
+      "processing_ms": 67.407,
+      "camera_callback_to_ui_ms": 72.421615,
+      "camera_sensor_to_ui_ms": 352.749038
+    },
+    {
+      "elapsed_ms": 18168.583256,
+      "preprocess_ms": 11.578616,
+      "inference_ms": 54.997307,
+      "postprocess_ms": 0.220462,
+      "processing_ms": 66.796385,
+      "camera_callback_to_ui_ms": 72.359731,
+      "camera_sensor_to_ui_ms": 336.631692
+    },
+    {
+      "elapsed_ms": 18261.066795,
+      "preprocess_ms": 11.288576,
+      "inference_ms": 62.349423,
+      "postprocess_ms": 0.231231,
+      "processing_ms": 73.86923,
+      "camera_callback_to_ui_ms": 84.136923,
+      "camera_sensor_to_ui_ms": 329.099154
+    },
+    {
+      "elapsed_ms": 18360.311179,
+      "preprocess_ms": 11.697192,
+      "inference_ms": 54.168616,
+      "postprocess_ms": 0.239538,
+      "processing_ms": 66.105346,
+      "camera_callback_to_ui_ms": 66.745115,
+      "camera_sensor_to_ui_ms": 295.010346
+    },
+    {
+      "elapsed_ms": 18448.642333,
+      "preprocess_ms": 12.058654,
+      "inference_ms": 53.29123,
+      "postprocess_ms": 0.219577,
+      "processing_ms": 65.569461,
+      "camera_callback_to_ui_ms": 66.37,
+      "camera_sensor_to_ui_ms": 316.665808
+    },
+    {
+      "elapsed_ms": 18527.708679,
+      "preprocess_ms": 11.256346,
+      "inference_ms": 54.084039,
+      "postprocess_ms": 0.246346,
+      "processing_ms": 65.586731,
+      "camera_callback_to_ui_ms": 66.560923,
+      "camera_sensor_to_ui_ms": 295.7255
+    },
+    {
+      "elapsed_ms": 18616.106833,
+      "preprocess_ms": 11.416038,
+      "inference_ms": 54.667308,
+      "postprocess_ms": 0.217769,
+      "processing_ms": 66.301115,
+      "camera_callback_to_ui_ms": 67.141962,
+      "camera_sensor_to_ui_ms": 317.453654
+    },
+    {
+      "elapsed_ms": 18698.264333,
+      "preprocess_ms": 11.49173,
+      "inference_ms": 52.926577,
+      "postprocess_ms": 0.238577,
+      "processing_ms": 64.656884,
+      "camera_callback_to_ui_ms": 65.382,
+      "camera_sensor_to_ui_ms": 332.931577
+    },
+    {
+      "elapsed_ms": 18779.555563,
+      "preprocess_ms": 11.799076,
+      "inference_ms": 53.625654,
+      "postprocess_ms": 0.252269,
+      "processing_ms": 65.676999,
+      "camera_callback_to_ui_ms": 69.872269,
+      "camera_sensor_to_ui_ms": 314.218615
+    },
+    {
+      "elapsed_ms": 18900.025756,
+      "preprocess_ms": 11.703731,
+      "inference_ms": 55.922616,
+      "postprocess_ms": 0.252192,
+      "processing_ms": 67.878539,
+      "camera_callback_to_ui_ms": 69.981,
+      "camera_sensor_to_ui_ms": 301.334154
+    },
+    {
+      "elapsed_ms": 18985.116409,
+      "preprocess_ms": 11.385347,
+      "inference_ms": 54.645269,
+      "postprocess_ms": 0.230846,
+      "processing_ms": 66.261462,
+      "camera_callback_to_ui_ms": 67.300961,
+      "camera_sensor_to_ui_ms": 319.760384
+    },
+    {
+      "elapsed_ms": 19068.656179,
+      "preprocess_ms": 11.261423,
+      "inference_ms": 54.425115,
+      "postprocess_ms": 0.235885,
+      "processing_ms": 65.922423,
+      "camera_callback_to_ui_ms": 73.41727,
+      "camera_sensor_to_ui_ms": 303.284693
+    },
+    {
+      "elapsed_ms": 19152.746602,
+      "preprocess_ms": 11.093693,
+      "inference_ms": 53.264615,
+      "postprocess_ms": 0.2355,
+      "processing_ms": 64.593808,
+      "camera_callback_to_ui_ms": 77.493077,
+      "camera_sensor_to_ui_ms": 320.693269
+    },
+    {
+      "elapsed_ms": 19223.855525,
+      "preprocess_ms": 11.512769,
+      "inference_ms": 54.587346,
+      "postprocess_ms": 0.255077,
+      "processing_ms": 66.355192,
+      "camera_callback_to_ui_ms": 67.476154,
+      "camera_sensor_to_ui_ms": 325.146962
+    },
+    {
+      "elapsed_ms": 19310.751486,
+      "preprocess_ms": 11.412039,
+      "inference_ms": 55.845538,
+      "postprocess_ms": 0.217692,
+      "processing_ms": 67.475269,
+      "camera_callback_to_ui_ms": 69.207192,
+      "camera_sensor_to_ui_ms": 312.027423
+    },
+    {
+      "elapsed_ms": 19401.549871,
+      "preprocess_ms": 12.718077,
+      "inference_ms": 52.949308,
+      "postprocess_ms": 0.235269,
+      "processing_ms": 65.902654,
+      "camera_callback_to_ui_ms": 67.084654,
+      "camera_sensor_to_ui_ms": 336.16
+    },
+    {
+      "elapsed_ms": 19481.200909,
+      "preprocess_ms": 11.280116,
+      "inference_ms": 53.157577,
+      "postprocess_ms": 0.234615,
+      "processing_ms": 64.672308,
+      "camera_callback_to_ui_ms": 65.939538,
+      "camera_sensor_to_ui_ms": 315.797461
+    },
+    {
+      "elapsed_ms": 19567.834217,
+      "preprocess_ms": 11.146153,
+      "inference_ms": 56.605847,
+      "postprocess_ms": 0.21823,
+      "processing_ms": 67.97023,
+      "camera_callback_to_ui_ms": 68.9655,
+      "camera_sensor_to_ui_ms": 335.759462
+    },
+    {
+      "elapsed_ms": 19658.046255,
+      "preprocess_ms": 12.066923,
+      "inference_ms": 52.985846,
+      "postprocess_ms": 0.234539,
+      "processing_ms": 65.287308,
+      "camera_callback_to_ui_ms": 66.350346,
+      "camera_sensor_to_ui_ms": 325.951923
+    },
+    {
+      "elapsed_ms": 19734.464332,
+      "preprocess_ms": 11.296038,
+      "inference_ms": 53.704423,
+      "postprocess_ms": 0.242577,
+      "processing_ms": 65.243038,
+      "camera_callback_to_ui_ms": 66.315923,
+      "camera_sensor_to_ui_ms": 302.372654
+    },
+    {
+      "elapsed_ms": 19818.363755,
+      "preprocess_ms": 11.299384,
+      "inference_ms": 53.853731,
+      "postprocess_ms": 0.245039,
+      "processing_ms": 65.398154,
+      "camera_callback_to_ui_ms": 66.551077,
+      "camera_sensor_to_ui_ms": 319.585192
+    },
+    {
+      "elapsed_ms": 19900.598178,
+      "preprocess_ms": 11.454153,
+      "inference_ms": 53.365154,
+      "postprocess_ms": 0.221693,
+      "processing_ms": 65.041,
+      "camera_callback_to_ui_ms": 70.277808,
+      "camera_sensor_to_ui_ms": 335.154538
+    },
+    {
+      "elapsed_ms": 19976.063716,
+      "preprocess_ms": 11.28927,
+      "inference_ms": 54.506346,
+      "postprocess_ms": 0.324307,
+      "processing_ms": 66.119923,
+      "camera_callback_to_ui_ms": 66.835307,
+      "camera_sensor_to_ui_ms": 310.618769
+    },
+    {
+      "elapsed_ms": 20069.437486,
+      "preprocess_ms": 11.0725,
+      "inference_ms": 54.833539,
+      "postprocess_ms": 0.219384,
+      "processing_ms": 66.125423,
+      "camera_callback_to_ui_ms": 77.023808,
+      "camera_sensor_to_ui_ms": 303.978231
+    },
+    {
+      "elapsed_ms": 20149.941909,
+      "preprocess_ms": 11.975692,
+      "inference_ms": 55.318924,
+      "postprocess_ms": 0.254153,
+      "processing_ms": 67.548769,
+      "camera_callback_to_ui_ms": 68.288116,
+      "camera_sensor_to_ui_ms": 317.813808
+    },
+    {
+      "elapsed_ms": 20225.429985,
+      "preprocess_ms": 11.326846,
+      "inference_ms": 54.586654,
+      "postprocess_ms": 0.242346,
+      "processing_ms": 66.155846,
+      "camera_callback_to_ui_ms": 67.533884,
+      "camera_sensor_to_ui_ms": 326.626961
+    },
+    {
+      "elapsed_ms": 20309.603832,
+      "preprocess_ms": 11.165539,
+      "inference_ms": 54.333269,
+      "postprocess_ms": 0.234038,
+      "processing_ms": 65.732846,
+      "camera_callback_to_ui_ms": 71.167385,
+      "camera_sensor_to_ui_ms": 310.792808
+    },
+    {
+      "elapsed_ms": 20388.258524,
+      "preprocess_ms": 11.915462,
+      "inference_ms": 53.949538,
+      "postprocess_ms": 0.238539,
+      "processing_ms": 66.103539,
+      "camera_callback_to_ui_ms": 67.066885,
+      "camera_sensor_to_ui_ms": 322.758038
+    },
+    {
+      "elapsed_ms": 20463.025562,
+      "preprocess_ms": 11.04977,
+      "inference_ms": 53.504076,
+      "postprocess_ms": 0.28777,
+      "processing_ms": 64.841616,
+      "camera_callback_to_ui_ms": 65.544846,
+      "camera_sensor_to_ui_ms": 297.527192
+    },
+    {
+      "elapsed_ms": 20550.794754,
+      "preprocess_ms": 11.41,
+      "inference_ms": 56.634384,
+      "postprocess_ms": 0.240462,
+      "processing_ms": 68.284846,
+      "camera_callback_to_ui_ms": 69.075192,
+      "camera_sensor_to_ui_ms": 318.629769
+    },
+    {
+      "elapsed_ms": 20632.929293,
+      "preprocess_ms": 11.635269,
+      "inference_ms": 54.514769,
+      "postprocess_ms": 0.229616,
+      "processing_ms": 66.379654,
+      "camera_callback_to_ui_ms": 73.67,
+      "camera_sensor_to_ui_ms": 300.755385
+    },
+    {
+      "elapsed_ms": 20715.9216,
+      "preprocess_ms": 11.077347,
+      "inference_ms": 53.117384,
+      "postprocess_ms": 0.224846,
+      "processing_ms": 64.419577,
+      "camera_callback_to_ui_ms": 73.335807,
+      "camera_sensor_to_ui_ms": 317.063999
+    },
+    {
+      "elapsed_ms": 20792.379716,
+      "preprocess_ms": 11.406462,
+      "inference_ms": 55.498923,
+      "postprocess_ms": 0.239654,
+      "processing_ms": 67.145039,
+      "camera_callback_to_ui_ms": 68.252039,
+      "camera_sensor_to_ui_ms": 326.860154
+    },
+    {
+      "elapsed_ms": 20882.852254,
+      "preprocess_ms": 12.072462,
+      "inference_ms": 54.29,
+      "postprocess_ms": 0.218192,
+      "processing_ms": 66.580654,
+      "camera_callback_to_ui_ms": 67.450423,
+      "camera_sensor_to_ui_ms": 317.319307
+    },
+    {
+      "elapsed_ms": 20959.079216,
+      "preprocess_ms": 11.538654,
+      "inference_ms": 52.466231,
+      "postprocess_ms": 0.231615,
+      "processing_ms": 64.2365,
+      "camera_callback_to_ui_ms": 65.414654,
+      "camera_sensor_to_ui_ms": 326.879115
+    },
+    {
+      "elapsed_ms": 21041.254369,
+      "preprocess_ms": 11.946346,
+      "inference_ms": 53.510115,
+      "postprocess_ms": 0.261039,
+      "processing_ms": 65.7175,
+      "camera_callback_to_ui_ms": 68.115269,
+      "camera_sensor_to_ui_ms": 309.042576
+    },
+    {
+      "elapsed_ms": 21124.752446,
+      "preprocess_ms": 11.093654,
+      "inference_ms": 52.818808,
+      "postprocess_ms": 0.233769,
+      "processing_ms": 64.146231,
+      "camera_callback_to_ui_ms": 72.223884,
+      "camera_sensor_to_ui_ms": 325.869692
+    },
+    {
+      "elapsed_ms": 21195.304639,
+      "preprocess_ms": 11.4765,
+      "inference_ms": 54.04823,
+      "postprocess_ms": 0.292193,
+      "processing_ms": 65.816923,
+      "camera_callback_to_ui_ms": 67.007154,
+      "camera_sensor_to_ui_ms": 296.408539
+    },
+    {
+      "elapsed_ms": 21282.915639,
+      "preprocess_ms": 10.99727,
+      "inference_ms": 57.257577,
+      "postprocess_ms": 0.222807,
+      "processing_ms": 68.477654,
+      "camera_callback_to_ui_ms": 74.700577,
+      "camera_sensor_to_ui_ms": 317.3525
+    },
+    {
+      "elapsed_ms": 21363.743792,
+      "preprocess_ms": 11.566423,
+      "inference_ms": 54.191846,
+      "postprocess_ms": 0.240077,
+      "processing_ms": 65.998346,
+      "camera_callback_to_ui_ms": 72.026384,
+      "camera_sensor_to_ui_ms": 298.171192
+    },
+    {
+      "elapsed_ms": 21448.460369,
+      "preprocess_ms": 11.544115,
+      "inference_ms": 53.409462,
+      "postprocess_ms": 0.227153,
+      "processing_ms": 65.18073,
+      "camera_callback_to_ui_ms": 67.653423,
+      "camera_sensor_to_ui_ms": 316.184653
+    },
+    {
+      "elapsed_ms": 21534.051792,
+      "preprocess_ms": 11.045115,
+      "inference_ms": 54.994846,
+      "postprocess_ms": 0.243193,
+      "processing_ms": 66.283154,
+      "camera_callback_to_ui_ms": 73.186461,
+      "camera_sensor_to_ui_ms": 335.114653
+    },
+    {
+      "elapsed_ms": 21624.845677,
+      "preprocess_ms": 12.89223,
+      "inference_ms": 58.402693,
+      "postprocess_ms": 0.228077,
+      "processing_ms": 71.523,
+      "camera_callback_to_ui_ms": 78.577269,
+      "camera_sensor_to_ui_ms": 325.900038
+    },
+    {
+      "elapsed_ms": 21705.219407,
+      "preprocess_ms": 11.853154,
+      "inference_ms": 55.408808,
+      "postprocess_ms": 0.229807,
+      "processing_ms": 67.491769,
+      "camera_callback_to_ui_ms": 69.352499,
+      "camera_sensor_to_ui_ms": 339.618769
+    },
+    {
+      "elapsed_ms": 21801.0306,
+      "preprocess_ms": 11.545116,
+      "inference_ms": 65.169077,
+      "postprocess_ms": 0.2735,
+      "processing_ms": 76.987693,
+      "camera_callback_to_ui_ms": 82.443231,
+      "camera_sensor_to_ui_ms": 335.421846
+    },
+    {
+      "elapsed_ms": 21893.190292,
+      "preprocess_ms": 12.089461,
+      "inference_ms": 53.232846,
+      "postprocess_ms": 0.237,
+      "processing_ms": 65.559307,
+      "camera_callback_to_ui_ms": 66.461808,
+      "camera_sensor_to_ui_ms": 360.905846
+    },
+    {
+      "elapsed_ms": 21988.666792,
+      "preprocess_ms": 12.125654,
+      "inference_ms": 54.7545,
+      "postprocess_ms": 0.224231,
+      "processing_ms": 67.104385,
+      "camera_callback_to_ui_ms": 67.923654,
+      "camera_sensor_to_ui_ms": 356.372154
+    },
+    {
+      "elapsed_ms": 22079.830638,
+      "preprocess_ms": 12.186192,
+      "inference_ms": 54.198654,
+      "postprocess_ms": 0.253577,
+      "processing_ms": 66.638423,
+      "camera_callback_to_ui_ms": 68.003692,
+      "camera_sensor_to_ui_ms": 347.523
+    },
+    {
+      "elapsed_ms": 22168.073907,
+      "preprocess_ms": 11.459846,
+      "inference_ms": 55.385731,
+      "postprocess_ms": 0.235307,
+      "processing_ms": 67.080884,
+      "camera_callback_to_ui_ms": 67.870269,
+      "camera_sensor_to_ui_ms": 369.100346
+    },
+    {
+      "elapsed_ms": 22257.778446,
+      "preprocess_ms": 12.818615,
+      "inference_ms": 60.480538,
+      "postprocess_ms": 0.273154,
+      "processing_ms": 73.572307,
+      "camera_callback_to_ui_ms": 75.041577,
+      "camera_sensor_to_ui_ms": 358.795885
+    },
+    {
+      "elapsed_ms": 22337.316984,
+      "preprocess_ms": 11.680808,
+      "inference_ms": 53.773999,
+      "postprocess_ms": 0.200962,
+      "processing_ms": 65.655769,
+      "camera_callback_to_ui_ms": 66.875154,
+      "camera_sensor_to_ui_ms": 338.317808
+    },
+    {
+      "elapsed_ms": 22420.437292,
+      "preprocess_ms": 11.373384,
+      "inference_ms": 53.845885,
+      "postprocess_ms": 0.222769,
+      "processing_ms": 65.442038,
+      "camera_callback_to_ui_ms": 66.825847,
+      "camera_sensor_to_ui_ms": 321.427
+    },
+    {
+      "elapsed_ms": 22501.23583,
+      "preprocess_ms": 11.498154,
+      "inference_ms": 53.173115,
+      "postprocess_ms": 0.235539,
+      "processing_ms": 64.906808,
+      "camera_callback_to_ui_ms": 68.824077,
+      "camera_sensor_to_ui_ms": 302.224423
+    },
+    {
+      "elapsed_ms": 22582.843176,
+      "preprocess_ms": 12.202539,
+      "inference_ms": 55.76373,
+      "postprocess_ms": 0.233539,
+      "processing_ms": 68.199808,
+      "camera_callback_to_ui_ms": 68.998038,
+      "camera_sensor_to_ui_ms": 317.15423
+    },
+    {
+      "elapsed_ms": 22660.294638,
+      "preprocess_ms": 11.300884,
+      "inference_ms": 53.703116,
+      "postprocess_ms": 0.225154,
+      "processing_ms": 65.229154,
+      "camera_callback_to_ui_ms": 66.183731,
+      "camera_sensor_to_ui_ms": 294.577539
+    },
+    {
+      "elapsed_ms": 22744.79033,
+      "preprocess_ms": 11.245731,
+      "inference_ms": 54.131153,
+      "postprocess_ms": 0.263,
+      "processing_ms": 65.639884,
+      "camera_callback_to_ui_ms": 66.4525,
+      "camera_sensor_to_ui_ms": 312.426654
+    },
+    {
+      "elapsed_ms": 22826.317407,
+      "preprocess_ms": 11.839577,
+      "inference_ms": 54.64523,
+      "postprocess_ms": 0.241654,
+      "processing_ms": 66.726461,
+      "camera_callback_to_ui_ms": 73.643193,
+      "camera_sensor_to_ui_ms": 327.278
+    },
+    {
+      "elapsed_ms": 22909.497791,
+      "preprocess_ms": 11.573077,
+      "inference_ms": 52.976308,
+      "postprocess_ms": 0.233423,
+      "processing_ms": 64.782808,
+      "camera_callback_to_ui_ms": 76.9345,
+      "camera_sensor_to_ui_ms": 310.435153
+    },
+    {
+      "elapsed_ms": 22980.830176,
+      "preprocess_ms": 11.24277,
+      "inference_ms": 54.239884,
+      "postprocess_ms": 0.226539,
+      "processing_ms": 65.709193,
+      "camera_callback_to_ui_ms": 66.565116,
+      "camera_sensor_to_ui_ms": 315.110192
+    },
+    {
+      "elapsed_ms": 23062.203906,
+      "preprocess_ms": 11.432308,
+      "inference_ms": 53.349692,
+      "postprocess_ms": 0.230077,
+      "processing_ms": 65.012077,
+      "camera_callback_to_ui_ms": 68.350115,
+      "camera_sensor_to_ui_ms": 296.473615
+    },
+    {
+      "elapsed_ms": 23138.51756,
+      "preprocess_ms": 11.596,
+      "inference_ms": 52.621423,
+      "postprocess_ms": 0.255038,
+      "processing_ms": 64.472461,
+      "camera_callback_to_ui_ms": 65.232692,
+      "camera_sensor_to_ui_ms": 306.118538
+    },
+    {
+      "elapsed_ms": 23238.307868,
+      "preprocess_ms": 12.419039,
+      "inference_ms": 57.354846,
+      "postprocess_ms": 0.246462,
+      "processing_ms": 70.020347,
+      "camera_callback_to_ui_ms": 70.878231,
+      "camera_sensor_to_ui_ms": 339.232884
+    },
+    {
+      "elapsed_ms": 23325.632252,
+      "preprocess_ms": 12.204461,
+      "inference_ms": 57.544731,
+      "postprocess_ms": 0.256654,
+      "processing_ms": 70.005846,
+      "camera_callback_to_ui_ms": 70.83673,
+      "camera_sensor_to_ui_ms": 326.542999
+    },
+    {
+      "elapsed_ms": 23407.041829,
+      "preprocess_ms": 12.023885,
+      "inference_ms": 57.527538,
+      "postprocess_ms": 0.274577,
+      "processing_ms": 69.826,
+      "camera_callback_to_ui_ms": 71.76223,
+      "camera_sensor_to_ui_ms": 341.278153
+    },
+    {
+      "elapsed_ms": 23490.374829,
+      "preprocess_ms": 11.819231,
+      "inference_ms": 55.856884,
+      "postprocess_ms": 0.242385,
+      "processing_ms": 67.9185,
+      "camera_callback_to_ui_ms": 76.265884,
+      "camera_sensor_to_ui_ms": 324.605153
+    },
+    {
+      "elapsed_ms": 23579.111291,
+      "preprocess_ms": 11.926846,
+      "inference_ms": 58.969077,
+      "postprocess_ms": 0.241,
+      "processing_ms": 71.136923,
+      "camera_callback_to_ui_ms": 82.084385,
+      "camera_sensor_to_ui_ms": 313.335077
+    },
+    {
+      "elapsed_ms": 23661.671137,
+      "preprocess_ms": 12.496423,
+      "inference_ms": 56.595731,
+      "postprocess_ms": 0.218231,
+      "processing_ms": 69.310385,
+      "camera_callback_to_ui_ms": 81.3475,
+      "camera_sensor_to_ui_ms": 329.222308
+    },
+    {
+      "elapsed_ms": 23748.173137,
+      "preprocess_ms": 11.798847,
+      "inference_ms": 58.666615,
+      "postprocess_ms": 0.258077,
+      "processing_ms": 70.723539,
+      "camera_callback_to_ui_ms": 79.430769,
+      "camera_sensor_to_ui_ms": 315.708885
+    },
+    {
+      "elapsed_ms": 23832.719598,
+      "preprocess_ms": 12.519038,
+      "inference_ms": 57.285115,
+      "postprocess_ms": 0.229193,
+      "processing_ms": 70.033346,
+      "camera_callback_to_ui_ms": 80.813346,
+      "camera_sensor_to_ui_ms": 333.588846
+    },
+    {
+      "elapsed_ms": 23915.846906,
+      "preprocess_ms": 12.057192,
+      "inference_ms": 55.839077,
+      "postprocess_ms": 0.234808,
+      "processing_ms": 68.131077,
+      "camera_callback_to_ui_ms": 72.708308,
+      "camera_sensor_to_ui_ms": 350.038961
+    },
+    {
+      "elapsed_ms": 24001.430175,
+      "preprocess_ms": 11.993077,
+      "inference_ms": 56.543116,
+      "postprocess_ms": 0.222115,
+      "processing_ms": 68.758308,
+      "camera_callback_to_ui_ms": 78.015346,
+      "camera_sensor_to_ui_ms": 335.618423
+    },
+    {
+      "elapsed_ms": 24086.55679,
+      "preprocess_ms": 11.800269,
+      "inference_ms": 57.272038,
+      "postprocess_ms": 0.258308,
+      "processing_ms": 69.330615,
+      "camera_callback_to_ui_ms": 79.110538,
+      "camera_sensor_to_ui_ms": 320.728576
+    },
+    {
+      "elapsed_ms": 24171.525098,
+      "preprocess_ms": 11.831154,
+      "inference_ms": 56.523615,
+      "postprocess_ms": 0.30677,
+      "processing_ms": 68.661539,
+      "camera_callback_to_ui_ms": 70.555808,
+      "camera_sensor_to_ui_ms": 339.024038
+    },
+    {
+      "elapsed_ms": 24258.186175,
+      "preprocess_ms": 12.156962,
+      "inference_ms": 56.954615,
+      "postprocess_ms": 0.296231,
+      "processing_ms": 69.407808,
+      "camera_callback_to_ui_ms": 80.574385,
+      "camera_sensor_to_ui_ms": 325.681654
+    },
+    {
+      "elapsed_ms": 24344.613598,
+      "preprocess_ms": 12.677923,
+      "inference_ms": 58.345692,
+      "postprocess_ms": 0.243808,
+      "processing_ms": 71.267423,
+      "camera_callback_to_ui_ms": 72.274077,
+      "camera_sensor_to_ui_ms": 345.440615
+    },
+    {
+      "elapsed_ms": 24437.476444,
+      "preprocess_ms": 15.422461,
+      "inference_ms": 58.561,
+      "postprocess_ms": 0.266962,
+      "processing_ms": 74.250423,
+      "camera_callback_to_ui_ms": 75.524769,
+      "camera_sensor_to_ui_ms": 338.290038
+    },
+    {
+      "elapsed_ms": 24538.529444,
+      "preprocess_ms": 13.081115,
+      "inference_ms": 61.637231,
+      "postprocess_ms": 0.272538,
+      "processing_ms": 74.990884,
+      "camera_callback_to_ui_ms": 76.222346,
+      "camera_sensor_to_ui_ms": 339.330346
+    },
+    {
+      "elapsed_ms": 24686.125675,
+      "preprocess_ms": 13.486808,
+      "inference_ms": 59.744923,
+      "postprocess_ms": 0.248654,
+      "processing_ms": 73.480385,
+      "camera_callback_to_ui_ms": 74.388423,
+      "camera_sensor_to_ui_ms": 386.923577
+    },
+    {
+      "elapsed_ms": 24777.251636,
+      "preprocess_ms": 14.482384,
+      "inference_ms": 58.187885,
+      "postprocess_ms": 0.3085,
+      "processing_ms": 72.978769,
+      "camera_callback_to_ui_ms": 82.268769,
+      "camera_sensor_to_ui_ms": 378.039346
+    },
+    {
+      "elapsed_ms": 24866.641444,
+      "preprocess_ms": 12.266,
+      "inference_ms": 54.949961,
+      "postprocess_ms": 0.244962,
+      "processing_ms": 67.460923,
+      "camera_callback_to_ui_ms": 68.971923,
+      "camera_sensor_to_ui_ms": 367.397692
+    },
+    {
+      "elapsed_ms": 24953.203597,
+      "preprocess_ms": 11.897692,
+      "inference_ms": 56.505807,
+      "postprocess_ms": 0.252731,
+      "processing_ms": 68.65623,
+      "camera_callback_to_ui_ms": 76.424884,
+      "camera_sensor_to_ui_ms": 353.965461
+    },
+    {
+      "elapsed_ms": 25041.224367,
+      "preprocess_ms": 12.756923,
+      "inference_ms": 58.558616,
+      "postprocess_ms": 0.256307,
+      "processing_ms": 71.571846,
+      "camera_callback_to_ui_ms": 83.817693,
+      "camera_sensor_to_ui_ms": 341.975616
+    },
+    {
+      "elapsed_ms": 25125.867097,
+      "preprocess_ms": 11.886962,
+      "inference_ms": 59.301461,
+      "postprocess_ms": 0.236616,
+      "processing_ms": 71.425039,
+      "camera_callback_to_ui_ms": 79.6865,
+      "camera_sensor_to_ui_ms": 326.619269
+    },
+    {
+      "elapsed_ms": 25210.232443,
+      "preprocess_ms": 12.053423,
+      "inference_ms": 58.397654,
+      "postprocess_ms": 0.237038,
+      "processing_ms": 70.688115,
+      "camera_callback_to_ui_ms": 79.854,
+      "camera_sensor_to_ui_ms": 344.310922
+    },
+    {
+      "elapsed_ms": 25306.169597,
+      "preprocess_ms": 12.42473,
+      "inference_ms": 62.249423,
+      "postprocess_ms": 0.248654,
+      "processing_ms": 74.922807,
+      "camera_callback_to_ui_ms": 75.729269,
+      "camera_sensor_to_ui_ms": 340.234384
+    },
+    {
+      "elapsed_ms": 25407.697636,
+      "preprocess_ms": 14.748347,
+      "inference_ms": 69.36823,
+      "postprocess_ms": 0.276193,
+      "processing_ms": 84.39277,
+      "camera_callback_to_ui_ms": 87.157385,
+      "camera_sensor_to_ui_ms": 375.098231
+    },
+    {
+      "elapsed_ms": 25492.959174,
+      "preprocess_ms": 13.185885,
+      "inference_ms": 58.333692,
+      "postprocess_ms": 0.228039,
+      "processing_ms": 71.747616,
+      "camera_callback_to_ui_ms": 72.653,
+      "camera_sensor_to_ui_ms": 360.349769
+    },
+    {
+      "elapsed_ms": 25587.547366,
+      "preprocess_ms": 12.460423,
+      "inference_ms": 72.105115,
+      "postprocess_ms": 0.27227,
+      "processing_ms": 84.837808,
+      "camera_callback_to_ui_ms": 86.012615,
+      "camera_sensor_to_ui_ms": 388.264576
+    },
+    {
+      "elapsed_ms": 25680.325097,
+      "preprocess_ms": 12.979577,
+      "inference_ms": 55.9805,
+      "postprocess_ms": 0.234154,
+      "processing_ms": 69.194231,
+      "camera_callback_to_ui_ms": 70.301654,
+      "camera_sensor_to_ui_ms": 381.025769
+    },
+    {
+      "elapsed_ms": 25760.07852,
+      "preprocess_ms": 12.39827,
+      "inference_ms": 57.302115,
+      "postprocess_ms": 0.225384,
+      "processing_ms": 69.925769,
+      "camera_callback_to_ui_ms": 70.761962,
+      "camera_sensor_to_ui_ms": 360.7735
+    },
+    {
+      "elapsed_ms": 25847.565174,
+      "preprocess_ms": 13.691308,
+      "inference_ms": 55.7455,
+      "postprocess_ms": 0.275308,
+      "processing_ms": 69.712116,
+      "camera_callback_to_ui_ms": 70.506923,
+      "camera_sensor_to_ui_ms": 348.240038
+    },
+    {
+      "elapsed_ms": 25926.528058,
+      "preprocess_ms": 11.979423,
+      "inference_ms": 55.696615,
+      "postprocess_ms": 0.226693,
+      "processing_ms": 67.902731,
+      "camera_callback_to_ui_ms": 68.657884,
+      "camera_sensor_to_ui_ms": 327.200576
+    },
+    {
+      "elapsed_ms": 26010.143443,
+      "preprocess_ms": 12.471615,
+      "inference_ms": 58.177039,
+      "postprocess_ms": 0.23623,
+      "processing_ms": 70.884884,
+      "camera_callback_to_ui_ms": 73.393192,
+      "camera_sensor_to_ui_ms": 310.803846
+    },
+    {
+      "elapsed_ms": 26099.471404,
+      "preprocess_ms": 12.336077,
+      "inference_ms": 62.3795,
+      "postprocess_ms": 0.275654,
+      "processing_ms": 74.991231,
+      "camera_callback_to_ui_ms": 77.679615,
+      "camera_sensor_to_ui_ms": 333.464346
+    },
+    {
+      "elapsed_ms": 26188.68052,
+      "preprocess_ms": 12.96677,
+      "inference_ms": 66.329384,
+      "postprocess_ms": 0.272423,
+      "processing_ms": 79.568577,
+      "camera_callback_to_ui_ms": 81.188577,
+      "camera_sensor_to_ui_ms": 322.667962
+    },
+    {
+      "elapsed_ms": 26296.836673,
+      "preprocess_ms": 12.317,
+      "inference_ms": 59.096307,
+      "postprocess_ms": 0.248385,
+      "processing_ms": 71.661692,
+      "camera_callback_to_ui_ms": 73.794307,
+      "camera_sensor_to_ui_ms": 364.151769
+    },
+    {
+      "elapsed_ms": 26383.098096,
+      "preprocess_ms": 12.106116,
+      "inference_ms": 57.916692,
+      "postprocess_ms": 0.2825,
+      "processing_ms": 70.305308,
+      "camera_callback_to_ui_ms": 83.132769,
+      "camera_sensor_to_ui_ms": 350.400653
+    },
+    {
+      "elapsed_ms": 26465.645135,
+      "preprocess_ms": 11.759577,
+      "inference_ms": 56.379308,
+      "postprocess_ms": 0.230808,
+      "processing_ms": 68.369693,
+      "camera_callback_to_ui_ms": 77.103231,
+      "camera_sensor_to_ui_ms": 366.275538
+    },
+    {
+      "elapsed_ms": 26578.526789,
+      "preprocess_ms": 12.465654,
+      "inference_ms": 61.14573,
+      "postprocess_ms": 0.254462,
+      "processing_ms": 73.865846,
+      "camera_callback_to_ui_ms": 75.135077,
+      "camera_sensor_to_ui_ms": 345.814
+    },
+    {
+      "elapsed_ms": 26654.430442,
+      "preprocess_ms": 12.433077,
+      "inference_ms": 56.21973,
+      "postprocess_ms": 0.246347,
+      "processing_ms": 68.899154,
+      "camera_callback_to_ui_ms": 70.003423,
+      "camera_sensor_to_ui_ms": 321.708999
+    },
+    {
+      "elapsed_ms": 26737.702942,
+      "preprocess_ms": 12.069961,
+      "inference_ms": 55.862616,
+      "postprocess_ms": 0.318192,
+      "processing_ms": 68.250769,
+      "camera_callback_to_ui_ms": 75.760692,
+      "camera_sensor_to_ui_ms": 304.969923
+    },
+    {
+      "elapsed_ms": 26827.573788,
+      "preprocess_ms": 11.747962,
+      "inference_ms": 59.375538,
+      "postprocess_ms": 0.245154,
+      "processing_ms": 71.368654,
+      "camera_callback_to_ui_ms": 80.211846,
+      "camera_sensor_to_ui_ms": 328.154846
+    },
+    {
+      "elapsed_ms": 26907.873288,
+      "preprocess_ms": 12.284962,
+      "inference_ms": 55.195307,
+      "postprocess_ms": 0.222154,
+      "processing_ms": 67.702423,
+      "camera_callback_to_ui_ms": 76.750577,
+      "camera_sensor_to_ui_ms": 308.456461
+    },
+    {
+      "elapsed_ms": 27017.357673,
+      "preprocess_ms": 12.511577,
+      "inference_ms": 55.317885,
+      "postprocess_ms": 0.227269,
+      "processing_ms": 68.056731,
+      "camera_callback_to_ui_ms": 69.083654,
+      "camera_sensor_to_ui_ms": 317.931115
+    },
+    {
+      "elapsed_ms": 27098.26775,
+      "preprocess_ms": 12.087346,
+      "inference_ms": 57.129808,
+      "postprocess_ms": 0.23523,
+      "processing_ms": 69.452384,
+      "camera_callback_to_ui_ms": 70.562077,
+      "camera_sensor_to_ui_ms": 298.836231
+    },
+    {
+      "elapsed_ms": 27181.587288,
+      "preprocess_ms": 11.96177,
+      "inference_ms": 57.19473,
+      "postprocess_ms": 0.323847,
+      "processing_ms": 69.480347,
+      "camera_callback_to_ui_ms": 70.613461,
+      "camera_sensor_to_ui_ms": 315.482961
+    },
+    {
+      "elapsed_ms": 27265.998557,
+      "preprocess_ms": 11.893961,
+      "inference_ms": 57.073616,
+      "postprocess_ms": 0.251577,
+      "processing_ms": 69.219154,
+      "camera_callback_to_ui_ms": 75.59923,
+      "camera_sensor_to_ui_ms": 299.876499
+    },
+    {
+      "elapsed_ms": 27351.390211,
+      "preprocess_ms": 12.465307,
+      "inference_ms": 56.920693,
+      "postprocess_ms": 0.23123,
+      "processing_ms": 69.61723,
+      "camera_callback_to_ui_ms": 75.744577,
+      "camera_sensor_to_ui_ms": 318.597346
+    },
+    {
+      "elapsed_ms": 27436.610788,
+      "preprocess_ms": 12.443,
+      "inference_ms": 57.278885,
+      "postprocess_ms": 0.233308,
+      "processing_ms": 69.955193,
+      "camera_callback_to_ui_ms": 81.599846,
+      "camera_sensor_to_ui_ms": 337.149923
+    },
+    {
+      "elapsed_ms": 27522.418211,
+      "preprocess_ms": 12.373807,
+      "inference_ms": 58.295231,
+      "postprocess_ms": 0.246616,
+      "processing_ms": 70.915654,
+      "camera_callback_to_ui_ms": 79.321308,
+      "camera_sensor_to_ui_ms": 322.938231
+    },
+    {
+      "elapsed_ms": 27607.956249,
+      "preprocess_ms": 12.427808,
+      "inference_ms": 58.881231,
+      "postprocess_ms": 0.221538,
+      "processing_ms": 71.530577,
+      "camera_callback_to_ui_ms": 79.768423,
+      "camera_sensor_to_ui_ms": 341.808115
+    },
+    {
+      "elapsed_ms": 27690.913172,
+      "preprocess_ms": 11.807538,
+      "inference_ms": 57.586269,
+      "postprocess_ms": 0.249231,
+      "processing_ms": 69.643038,
+      "camera_callback_to_ui_ms": 76.09423,
+      "camera_sensor_to_ui_ms": 324.752269
+    },
+    {
+      "elapsed_ms": 27775.403326,
+      "preprocess_ms": 12.028577,
+      "inference_ms": 56.717539,
+      "postprocess_ms": 0.247231,
+      "processing_ms": 68.993347,
+      "camera_callback_to_ui_ms": 80.375115,
+      "camera_sensor_to_ui_ms": 342.582615
+    },
+    {
+      "elapsed_ms": 27861.437595,
+      "preprocess_ms": 12.513577,
+      "inference_ms": 56.275192,
+      "postprocess_ms": 0.217385,
+      "processing_ms": 69.006154,
+      "camera_callback_to_ui_ms": 82.190269,
+      "camera_sensor_to_ui_ms": 328.603922
+    },
+    {
+      "elapsed_ms": 27965.616288,
+      "preprocess_ms": 11.823577,
+      "inference_ms": 55.062692,
+      "postprocess_ms": 0.21977,
+      "processing_ms": 67.106039,
+      "camera_callback_to_ui_ms": 68.221116,
+      "camera_sensor_to_ui_ms": 299.435731
+    },
+    {
+      "elapsed_ms": 28051.711557,
+      "preprocess_ms": 12.364269,
+      "inference_ms": 56.329193,
+      "postprocess_ms": 0.2405,
+      "processing_ms": 68.933962,
+      "camera_callback_to_ui_ms": 69.773116,
+      "camera_sensor_to_ui_ms": 318.865577
+    },
+    {
+      "elapsed_ms": 28132.026287,
+      "preprocess_ms": 11.889884,
+      "inference_ms": 55.376308,
+      "postprocess_ms": 0.254269,
+      "processing_ms": 67.520461,
+      "camera_callback_to_ui_ms": 71.547307,
+      "camera_sensor_to_ui_ms": 299.167345
+    },
+    {
+      "elapsed_ms": 28217.830287,
+      "preprocess_ms": 11.966116,
+      "inference_ms": 56.231769,
+      "postprocess_ms": 0.226577,
+      "processing_ms": 68.424462,
+      "camera_callback_to_ui_ms": 69.33923,
+      "camera_sensor_to_ui_ms": 318.296692
+    },
+    {
+      "elapsed_ms": 28303.792787,
+      "preprocess_ms": 11.832692,
+      "inference_ms": 58.470808,
+      "postprocess_ms": 0.223,
+      "processing_ms": 70.5265,
+      "camera_callback_to_ui_ms": 77.524615,
+      "camera_sensor_to_ui_ms": 337.587538
+    },
+    {
+      "elapsed_ms": 28388.471403,
+      "preprocess_ms": 12.499308,
+      "inference_ms": 57.238461,
+      "postprocess_ms": 0.231385,
+      "processing_ms": 69.969154,
+      "camera_callback_to_ui_ms": 77.801539,
+      "camera_sensor_to_ui_ms": 322.231231
+    },
+    {
+      "elapsed_ms": 28473.29771,
+      "preprocess_ms": 11.851846,
+      "inference_ms": 57.75527,
+      "postprocess_ms": 0.237846,
+      "processing_ms": 69.844962,
+      "camera_callback_to_ui_ms": 76.334653,
+      "camera_sensor_to_ui_ms": 340.410692
+    },
+    {
+      "elapsed_ms": 28560.831479,
+      "preprocess_ms": 12.050923,
+      "inference_ms": 60.224576,
+      "postprocess_ms": 0.229808,
+      "processing_ms": 72.505307,
+      "camera_callback_to_ui_ms": 80.179115,
+      "camera_sensor_to_ui_ms": 327.933307
+    },
+    {
+      "elapsed_ms": 28638.142249,
+      "preprocess_ms": 12.623847,
+      "inference_ms": 51.977538,
+      "postprocess_ms": 0.187923,
+      "processing_ms": 64.789308,
+      "camera_callback_to_ui_ms": 68.631808,
+      "camera_sensor_to_ui_ms": 338.572385
+    },
+    {
+      "elapsed_ms": 28715.321595,
+      "preprocess_ms": 10.287885,
+      "inference_ms": 48.709692,
+      "postprocess_ms": 0.197769,
+      "processing_ms": 59.195346,
+      "camera_callback_to_ui_ms": 60.167346,
+      "camera_sensor_to_ui_ms": 315.737962
+    },
+    {
+      "elapsed_ms": 28824.964056,
+      "preprocess_ms": 10.921039,
+      "inference_ms": 71.497423,
+      "postprocess_ms": 0.209577,
+      "processing_ms": 82.628039,
+      "camera_callback_to_ui_ms": 83.585884,
+      "camera_sensor_to_ui_ms": 358.715692
+    },
+    {
+      "elapsed_ms": 28902.073787,
+      "preprocess_ms": 10.257231,
+      "inference_ms": 45.620308,
+      "postprocess_ms": 0.201269,
+      "processing_ms": 56.078808,
+      "camera_callback_to_ui_ms": 56.998423,
+      "camera_sensor_to_ui_ms": 335.813346
+    },
+    {
+      "elapsed_ms": 28989.041518,
+      "preprocess_ms": 10.094423,
+      "inference_ms": 53.349615,
+      "postprocess_ms": 0.308116,
+      "processing_ms": 63.752154,
+      "camera_callback_to_ui_ms": 64.695885,
+      "camera_sensor_to_ui_ms": 322.774962
+    },
+    {
+      "elapsed_ms": 29087.375441,
+      "preprocess_ms": 10.473538,
+      "inference_ms": 58.104116,
+      "postprocess_ms": 0.314423,
+      "processing_ms": 68.892077,
+      "camera_callback_to_ui_ms": 70.038346,
+      "camera_sensor_to_ui_ms": 354.425308
+    },
+    {
+      "elapsed_ms": 29188.062364,
+      "preprocess_ms": 10.097731,
+      "inference_ms": 52.506615,
+      "postprocess_ms": 0.276115,
+      "processing_ms": 62.880461,
+      "camera_callback_to_ui_ms": 64.142693,
+      "camera_sensor_to_ui_ms": 355.113462
+    },
+    {
+      "elapsed_ms": 29291.238979,
+      "preprocess_ms": 11.423693,
+      "inference_ms": 69.227692,
+      "postprocess_ms": 0.336692,
+      "processing_ms": 80.988077,
+      "camera_callback_to_ui_ms": 85.679269,
+      "camera_sensor_to_ui_ms": 358.275307
+    },
+    {
+      "elapsed_ms": 29380.588633,
+      "preprocess_ms": 12.222192,
+      "inference_ms": 62.181231,
+      "postprocess_ms": 0.24073,
+      "processing_ms": 74.644153,
+      "camera_callback_to_ui_ms": 82.653693,
+      "camera_sensor_to_ui_ms": 380.958423
+    },
+    {
+      "elapsed_ms": 29462.145748,
+      "preprocess_ms": 13.085462,
+      "inference_ms": 58.669115,
+      "postprocess_ms": 0.526731,
+      "processing_ms": 72.281308,
+      "camera_callback_to_ui_ms": 76.176115,
+      "camera_sensor_to_ui_ms": 362.503423
+    },
+    {
+      "elapsed_ms": 29548.260479,
+      "preprocess_ms": 12.436077,
+      "inference_ms": 61.127462,
+      "postprocess_ms": 0.232884,
+      "processing_ms": 73.796423,
+      "camera_callback_to_ui_ms": 76.810269,
+      "camera_sensor_to_ui_ms": 348.605654
+    },
+    {
+      "elapsed_ms": 29643.026094,
+      "preprocess_ms": 12.676347,
+      "inference_ms": 65.73373,
+      "postprocess_ms": 0.233693,
+      "processing_ms": 78.64377,
+      "camera_callback_to_ui_ms": 80.015231,
+      "camera_sensor_to_ui_ms": 343.366923
+    },
+    {
+      "elapsed_ms": 29730.271325,
+      "preprocess_ms": 11.946885,
+      "inference_ms": 56.884307,
+      "postprocess_ms": 0.252885,
+      "processing_ms": 69.084077,
+      "camera_callback_to_ui_ms": 75.247769,
+      "camera_sensor_to_ui_ms": 363.942538
+    },
+    {
+      "elapsed_ms": 29821.42894,
+      "preprocess_ms": 12.837731,
+      "inference_ms": 61.599769,
+      "postprocess_ms": 0.242385,
+      "processing_ms": 74.679885,
+      "camera_callback_to_ui_ms": 86.378038,
+      "camera_sensor_to_ui_ms": 355.085384
+    },
+    {
+      "elapsed_ms": 29904.203402,
+      "preprocess_ms": 12.500346,
+      "inference_ms": 58.174962,
+      "postprocess_ms": 0.226,
+      "processing_ms": 70.901308,
+      "camera_callback_to_ui_ms": 72.029308,
+      "camera_sensor_to_ui_ms": 337.850462
+    },
+    {
+      "elapsed_ms": 29984.50644,
+      "preprocess_ms": 12.1345,
+      "inference_ms": 56.131423,
+      "postprocess_ms": 0.244,
+      "processing_ms": 68.509923,
+      "camera_callback_to_ui_ms": 71.543154,
+      "camera_sensor_to_ui_ms": 351.483384
+    },
+    {
+      "elapsed_ms": 30068.75144,
+      "preprocess_ms": 11.922038,
+      "inference_ms": 55.555154,
+      "postprocess_ms": 0.236038,
+      "processing_ms": 67.71323,
+      "camera_callback_to_ui_ms": 76.691577,
+      "camera_sensor_to_ui_ms": 335.721846
+    },
+    {
+      "elapsed_ms": 30153.199248,
+      "preprocess_ms": 11.975654,
+      "inference_ms": 55.144,
+      "postprocess_ms": 0.241538,
+      "processing_ms": 67.361192,
+      "camera_callback_to_ui_ms": 82.778039,
+      "camera_sensor_to_ui_ms": 320.1575
+    },
+    {
+      "elapsed_ms": 30239.018055,
+      "preprocess_ms": 12.087116,
+      "inference_ms": 55.317731,
+      "postprocess_ms": 0.29523,
+      "processing_ms": 67.700077,
+      "camera_callback_to_ui_ms": 81.825807,
+      "camera_sensor_to_ui_ms": 339.297076
+    },
+    {
+      "elapsed_ms": 30345.932286,
+      "preprocess_ms": 11.778462,
+      "inference_ms": 55.364346,
+      "postprocess_ms": 0.250807,
+      "processing_ms": 67.393615,
+      "camera_callback_to_ui_ms": 69.833077,
+      "camera_sensor_to_ui_ms": 312.872923
+    },
+    {
+      "elapsed_ms": 30427.072747,
+      "preprocess_ms": 12.0155,
+      "inference_ms": 56.190885,
+      "postprocess_ms": 0.278808,
+      "processing_ms": 68.485193,
+      "camera_callback_to_ui_ms": 70.449423,
+      "camera_sensor_to_ui_ms": 294.002153
+    },
+    {
+      "elapsed_ms": 30510.862863,
+      "preprocess_ms": 12.339039,
+      "inference_ms": 55.001615,
+      "postprocess_ms": 0.222077,
+      "processing_ms": 67.562731,
+      "camera_callback_to_ui_ms": 71.336116,
+      "camera_sensor_to_ui_ms": 311.123423
+    },
+    {
+      "elapsed_ms": 30597.625516,
+      "preprocess_ms": 11.737153,
+      "inference_ms": 57.608154,
+      "postprocess_ms": 0.207846,
+      "processing_ms": 69.553153,
+      "camera_callback_to_ui_ms": 74.892846,
+      "camera_sensor_to_ui_ms": 331.195538
+    },
+    {
+      "elapsed_ms": 30683.509824,
+      "preprocess_ms": 12.313115,
+      "inference_ms": 58.003577,
+      "postprocess_ms": 0.233539,
+      "processing_ms": 70.550231,
+      "camera_callback_to_ui_ms": 81.984423,
+      "camera_sensor_to_ui_ms": 317.081192
+    },
+    {
+      "elapsed_ms": 30767.237055,
+      "preprocess_ms": 11.919039,
+      "inference_ms": 56.637,
+      "postprocess_ms": 0.257153,
+      "processing_ms": 68.813192,
+      "camera_callback_to_ui_ms": 82.432808,
+      "camera_sensor_to_ui_ms": 342.470769
+    },
+    {
+      "elapsed_ms": 30860.888286,
+      "preprocess_ms": 12.873038,
+      "inference_ms": 60.799616,
+      "postprocess_ms": 0.233884,
+      "processing_ms": 73.906538,
+      "camera_callback_to_ui_ms": 91.8,
+      "camera_sensor_to_ui_ms": 336.114616
+    },
+    {
+      "elapsed_ms": 30971.512747,
+      "preprocess_ms": 13.408423,
+      "inference_ms": 59.623538,
+      "postprocess_ms": 0.248615,
+      "processing_ms": 73.280576,
+      "camera_callback_to_ui_ms": 77.965077,
+      "camera_sensor_to_ui_ms": 354.613692
+    },
+    {
+      "elapsed_ms": 31056.241208,
+      "preprocess_ms": 12.1675,
+      "inference_ms": 56.422308,
+      "postprocess_ms": 0.237538,
+      "processing_ms": 68.827346,
+      "camera_callback_to_ui_ms": 75.574538,
+      "camera_sensor_to_ui_ms": 338.654422
+    },
+    {
+      "elapsed_ms": 31144.261516,
+      "preprocess_ms": 12.531,
+      "inference_ms": 58.982192,
+      "postprocess_ms": 0.293693,
+      "processing_ms": 71.806885,
+      "camera_callback_to_ui_ms": 81.673384,
+      "camera_sensor_to_ui_ms": 359.547346
+    },
+    {
+      "elapsed_ms": 31231.331747,
+      "preprocess_ms": 12.664538,
+      "inference_ms": 60.794077,
+      "postprocess_ms": 0.244346,
+      "processing_ms": 73.702961,
+      "camera_callback_to_ui_ms": 79.373231,
+      "camera_sensor_to_ui_ms": 329.293923
+    },
+    {
+      "elapsed_ms": 31316.789901,
+      "preprocess_ms": 13.4025,
+      "inference_ms": 60.803615,
+      "postprocess_ms": 0.249346,
+      "processing_ms": 74.455461,
+      "camera_callback_to_ui_ms": 80.898462,
+      "camera_sensor_to_ui_ms": 347.623039
+    },
+    {
+      "elapsed_ms": 31395.667477,
+      "preprocess_ms": 12.096077,
+      "inference_ms": 55.890731,
+      "postprocess_ms": 0.249692,
+      "processing_ms": 68.2365,
+      "camera_callback_to_ui_ms": 70.058384,
+      "camera_sensor_to_ui_ms": 359.391615
+    },
+    {
+      "elapsed_ms": 31478.360939,
+      "preprocess_ms": 11.558346,
+      "inference_ms": 54.256577,
+      "postprocess_ms": 0.236846,
+      "processing_ms": 66.051769,
+      "camera_callback_to_ui_ms": 68.434154,
+      "camera_sensor_to_ui_ms": 341.399961
+    },
+    {
+      "elapsed_ms": 31565.629823,
+      "preprocess_ms": 11.741769,
+      "inference_ms": 56.433116,
+      "postprocess_ms": 0.23,
+      "processing_ms": 68.404885,
+      "camera_callback_to_ui_ms": 78.027499,
+      "camera_sensor_to_ui_ms": 327.992115
+    },
+    {
+      "elapsed_ms": 31649.97217,
+      "preprocess_ms": 11.447346,
+      "inference_ms": 55.942961,
+      "postprocess_ms": 0.242654,
+      "processing_ms": 67.632961,
+      "camera_callback_to_ui_ms": 81.862231,
+      "camera_sensor_to_ui_ms": 345.220654
+    },
+    {
+      "elapsed_ms": 31734.754785,
+      "preprocess_ms": 11.6,
+      "inference_ms": 55.932885,
+      "postprocess_ms": 0.238192,
+      "processing_ms": 67.771077,
+      "camera_callback_to_ui_ms": 83.813577,
+      "camera_sensor_to_ui_ms": 329.325115
+    },
+    {
+      "elapsed_ms": 31840.235285,
+      "preprocess_ms": 11.838885,
+      "inference_ms": 55.636038,
+      "postprocess_ms": 0.227231,
+      "processing_ms": 67.702154,
+      "camera_callback_to_ui_ms": 68.432846,
+      "camera_sensor_to_ui_ms": 334.126654
+    },
+    {
+      "elapsed_ms": 31921.785746,
+      "preprocess_ms": 11.693039,
+      "inference_ms": 56.079538,
+      "postprocess_ms": 0.209577,
+      "processing_ms": 67.982154,
+      "camera_callback_to_ui_ms": 72.175807,
+      "camera_sensor_to_ui_ms": 314.99873
+    },
+    {
+      "elapsed_ms": 32006.435669,
+      "preprocess_ms": 11.617,
+      "inference_ms": 55.842307,
+      "postprocess_ms": 0.253231,
+      "processing_ms": 67.712538,
+      "camera_callback_to_ui_ms": 79.138807,
+      "camera_sensor_to_ui_ms": 332.520461
+    },
+    {
+      "elapsed_ms": 32091.876131,
+      "preprocess_ms": 11.731039,
+      "inference_ms": 55.576307,
+      "postprocess_ms": 0.229616,
+      "processing_ms": 67.536962,
+      "camera_callback_to_ui_ms": 80.719577,
+      "camera_sensor_to_ui_ms": 350.852231
+    },
+    {
+      "elapsed_ms": 32204.382054,
+      "preprocess_ms": 12.965924,
+      "inference_ms": 57.033538,
+      "postprocess_ms": 0.232423,
+      "processing_ms": 70.231885,
+      "camera_callback_to_ui_ms": 71.406346,
+      "camera_sensor_to_ui_ms": 329.116038
+    },
+    {
+      "elapsed_ms": 32283.3409,
+      "preprocess_ms": 12.056231,
+      "inference_ms": 59.283308,
+      "postprocess_ms": 0.261423,
+      "processing_ms": 71.600962,
+      "camera_callback_to_ui_ms": 72.959923,
+      "camera_sensor_to_ui_ms": 340.955
+    },
+    {
+      "elapsed_ms": 32364.787631,
+      "preprocess_ms": 11.72327,
+      "inference_ms": 54.888615,
+      "postprocess_ms": 0.2365,
+      "processing_ms": 66.848385,
+      "camera_callback_to_ui_ms": 69.252077,
+      "camera_sensor_to_ui_ms": 321.724539
+    },
+    {
+      "elapsed_ms": 32448.683477,
+      "preprocess_ms": 11.937962,
+      "inference_ms": 55.486923,
+      "postprocess_ms": 0.222808,
+      "processing_ms": 67.647693,
+      "camera_callback_to_ui_ms": 79.629731,
+      "camera_sensor_to_ui_ms": 338.506885
+    },
+    {
+      "elapsed_ms": 32533.068477,
+      "preprocess_ms": 12.144192,
+      "inference_ms": 54.661615,
+      "postprocess_ms": 0.211462,
+      "processing_ms": 67.017269,
+      "camera_callback_to_ui_ms": 79.264,
+      "camera_sensor_to_ui_ms": 322.211846
+    },
+    {
+      "elapsed_ms": 32619.191284,
+      "preprocess_ms": 11.726308,
+      "inference_ms": 56.264077,
+      "postprocess_ms": 0.319192,
+      "processing_ms": 68.309577,
+      "camera_callback_to_ui_ms": 79.864961,
+      "camera_sensor_to_ui_ms": 333.319076
+    },
+    {
+      "elapsed_ms": 32704.317938,
+      "preprocess_ms": 11.629039,
+      "inference_ms": 56.735615,
+      "postprocess_ms": 0.221039,
+      "processing_ms": 68.585693,
+      "camera_callback_to_ui_ms": 83.545308,
+      "camera_sensor_to_ui_ms": 318.447384
+    },
+    {
+      "elapsed_ms": 32813.79013,
+      "preprocess_ms": 12.145077,
+      "inference_ms": 56.885962,
+      "postprocess_ms": 0.269269,
+      "processing_ms": 69.300308,
+      "camera_callback_to_ui_ms": 70.513115,
+      "camera_sensor_to_ui_ms": 319.580192
+    },
+    {
+      "elapsed_ms": 32896.733553,
+      "preprocess_ms": 12.563693,
+      "inference_ms": 55.825269,
+      "postprocess_ms": 0.208269,
+      "processing_ms": 68.597231,
+      "camera_callback_to_ui_ms": 69.317846,
+      "camera_sensor_to_ui_ms": 302.513769
+    },
+    {
+      "elapsed_ms": 32983.042553,
+      "preprocess_ms": 12.589924,
+      "inference_ms": 56.027461,
+      "postprocess_ms": 0.282923,
+      "processing_ms": 68.900308,
+      "camera_callback_to_ui_ms": 69.648115,
+      "camera_sensor_to_ui_ms": 322.151576
+    },
+    {
+      "elapsed_ms": 33064.931053,
+      "preprocess_ms": 12.490538,
+      "inference_ms": 56.687731,
+      "postprocess_ms": 0.254539,
+      "processing_ms": 69.432808,
+      "camera_callback_to_ui_ms": 71.771615,
+      "camera_sensor_to_ui_ms": 337.365115
+    },
+    {
+      "elapsed_ms": 33152.906169,
+      "preprocess_ms": 12.909115,
+      "inference_ms": 59.126846,
+      "postprocess_ms": 0.231693,
+      "processing_ms": 72.267654,
+      "camera_callback_to_ui_ms": 78.40777,
+      "camera_sensor_to_ui_ms": 325.328654
+    },
+    {
+      "elapsed_ms": 33238.059861,
+      "preprocess_ms": 12.642538,
+      "inference_ms": 61.737847,
+      "postprocess_ms": 0.220807,
+      "processing_ms": 74.601192,
+      "camera_callback_to_ui_ms": 77.9615,
+      "camera_sensor_to_ui_ms": 310.478846
+    },
+    {
+      "elapsed_ms": 33318.839899,
+      "preprocess_ms": 12.151,
+      "inference_ms": 57.486385,
+      "postprocess_ms": 0.254731,
+      "processing_ms": 69.892116,
+      "camera_callback_to_ui_ms": 74.004423,
+      "camera_sensor_to_ui_ms": 324.583961
+    },
+    {
+      "elapsed_ms": 33404.698399,
+      "preprocess_ms": 12.420269,
+      "inference_ms": 58.542615,
+      "postprocess_ms": 0.299616,
+      "processing_ms": 71.2625,
+      "camera_callback_to_ui_ms": 78.330154,
+      "camera_sensor_to_ui_ms": 343.767115
+    },
+    {
+      "elapsed_ms": 33485.000399,
+      "preprocess_ms": 12.038116,
+      "inference_ms": 54.717961,
+      "postprocess_ms": 0.234808,
+      "processing_ms": 66.990885,
+      "camera_callback_to_ui_ms": 73.737346,
+      "camera_sensor_to_ui_ms": 324.049807
+    },
+    {
+      "elapsed_ms": 33569.775168,
+      "preprocess_ms": 12.047269,
+      "inference_ms": 54.507077,
+      "postprocess_ms": 0.256269,
+      "processing_ms": 66.810615,
+      "camera_callback_to_ui_ms": 78.322692,
+      "camera_sensor_to_ui_ms": 308.833346
+    },
+    {
+      "elapsed_ms": 33656.245745,
+      "preprocess_ms": 12.233192,
+      "inference_ms": 55.696846,
+      "postprocess_ms": 0.236654,
+      "processing_ms": 68.166692,
+      "camera_callback_to_ui_ms": 76.960615,
+      "camera_sensor_to_ui_ms": 328.629692
+    },
+    {
+      "elapsed_ms": 33764.969207,
+      "preprocess_ms": 13.6445,
+      "inference_ms": 54.154423,
+      "postprocess_ms": 0.235769,
+      "processing_ms": 68.034692,
+      "camera_callback_to_ui_ms": 69.274308,
+      "camera_sensor_to_ui_ms": 304.005077
+    },
+    {
+      "elapsed_ms": 33846.07436,
+      "preprocess_ms": 13.219,
+      "inference_ms": 57.420038,
+      "postprocess_ms": 0.229808,
+      "processing_ms": 70.868846,
+      "camera_callback_to_ui_ms": 72.0885,
+      "camera_sensor_to_ui_ms": 318.429615
+    },
+    {
+      "elapsed_ms": 33926.699322,
+      "preprocess_ms": 12.07027,
+      "inference_ms": 54.366615,
+      "postprocess_ms": 0.237577,
+      "processing_ms": 66.674462,
+      "camera_callback_to_ui_ms": 71.587577,
+      "camera_sensor_to_ui_ms": 299.052538
+    },
+    {
+      "elapsed_ms": 34012.874476,
+      "preprocess_ms": 11.942962,
+      "inference_ms": 56.036115,
+      "postprocess_ms": 0.227539,
+      "processing_ms": 68.206616,
+      "camera_callback_to_ui_ms": 80.455808,
+      "camera_sensor_to_ui_ms": 318.553731
+    },
+    {
+      "elapsed_ms": 34096.964168,
+      "preprocess_ms": 12.083962,
+      "inference_ms": 54.966538,
+      "postprocess_ms": 0.233231,
+      "processing_ms": 67.283731,
+      "camera_callback_to_ui_ms": 78.131577,
+      "camera_sensor_to_ui_ms": 302.627038
+    },
+    {
+      "elapsed_ms": 34181.766745,
+      "preprocess_ms": 11.875808,
+      "inference_ms": 55.005846,
+      "postprocess_ms": 0.218346,
+      "processing_ms": 67.1,
+      "camera_callback_to_ui_ms": 78.465654,
+      "camera_sensor_to_ui_ms": 320.767231
+    },
+    {
+      "elapsed_ms": 34286.304706,
+      "preprocess_ms": 12.005039,
+      "inference_ms": 54.420307,
+      "postprocess_ms": 0.244462,
+      "processing_ms": 66.669808,
+      "camera_callback_to_ui_ms": 67.919731,
+      "camera_sensor_to_ui_ms": 325.288538
+    },
+    {
+      "elapsed_ms": 34372.118283,
+      "preprocess_ms": 12.725462,
+      "inference_ms": 56.962654,
+      "postprocess_ms": 0.2295,
+      "processing_ms": 69.917616,
+      "camera_callback_to_ui_ms": 71.910692,
+      "camera_sensor_to_ui_ms": 311.095384
+    },
+    {
+      "elapsed_ms": 34457.04986,
+      "preprocess_ms": 12.301269,
+      "inference_ms": 55.010577,
+      "postprocess_ms": 0.233269,
+      "processing_ms": 67.545115,
+      "camera_callback_to_ui_ms": 73.296808,
+      "camera_sensor_to_ui_ms": 329.355077
+    },
+    {
+      "elapsed_ms": 34541.146629,
+      "preprocess_ms": 12.349923,
+      "inference_ms": 54.895039,
+      "postprocess_ms": 0.241615,
+      "processing_ms": 67.486577,
+      "camera_callback_to_ui_ms": 68.726885,
+      "camera_sensor_to_ui_ms": 313.427615
+    },
+    {
+      "elapsed_ms": 34625.667206,
+      "preprocess_ms": 12.095961,
+      "inference_ms": 55.952962,
+      "postprocess_ms": 0.232538,
+      "processing_ms": 68.281461,
+      "camera_callback_to_ui_ms": 74.357962,
+      "camera_sensor_to_ui_ms": 331.29
+    },
+    {
+      "elapsed_ms": 34709.03936,
+      "preprocess_ms": 11.673154,
+      "inference_ms": 55.208654,
+      "postprocess_ms": 0.232192,
+      "processing_ms": 67.114,
+      "camera_callback_to_ui_ms": 76.182193,
+      "camera_sensor_to_ui_ms": 314.649769
+    },
+    {
+      "elapsed_ms": 34794.180706,
+      "preprocess_ms": 11.636461,
+      "inference_ms": 55.388731,
+      "postprocess_ms": 0.241692,
+      "processing_ms": 67.266884,
+      "camera_callback_to_ui_ms": 78.765539,
+      "camera_sensor_to_ui_ms": 333.128077
+    },
+    {
+      "elapsed_ms": 34879.242898,
+      "preprocess_ms": 11.776961,
+      "inference_ms": 55.187962,
+      "postprocess_ms": 0.259731,
+      "processing_ms": 67.224654,
+      "camera_callback_to_ui_ms": 81.709769,
+      "camera_sensor_to_ui_ms": 318.171154
+    },
+    {
+      "elapsed_ms": 34963.098552,
+      "preprocess_ms": 11.577116,
+      "inference_ms": 54.013692,
+      "postprocess_ms": 0.299077,
+      "processing_ms": 65.889885,
+      "camera_callback_to_ui_ms": 82.710385,
+      "camera_sensor_to_ui_ms": 335.362308
+    },
+    {
+      "elapsed_ms": 35049.169859,
+      "preprocess_ms": 11.512654,
+      "inference_ms": 55.326308,
+      "postprocess_ms": 0.248961,
+      "processing_ms": 67.087923,
+      "camera_callback_to_ui_ms": 83.910192,
+      "camera_sensor_to_ui_ms": 321.409461
+    },
+    {
+      "elapsed_ms": 35158.479359,
+      "preprocess_ms": 11.794154,
+      "inference_ms": 54.618769,
+      "postprocess_ms": 0.229423,
+      "processing_ms": 66.642346,
+      "camera_callback_to_ui_ms": 68.200538,
+      "camera_sensor_to_ui_ms": 330.710884
+    },
+    {
+      "elapsed_ms": 35243.064936,
+      "preprocess_ms": 11.965539,
+      "inference_ms": 55.573808,
+      "postprocess_ms": 0.2385,
+      "processing_ms": 67.777847,
+      "camera_callback_to_ui_ms": 69.01323,
+      "camera_sensor_to_ui_ms": 315.298961
+    },
+    {
+      "elapsed_ms": 35328.530167,
+      "preprocess_ms": 12.311038,
+      "inference_ms": 58.866962,
+      "postprocess_ms": 0.224269,
+      "processing_ms": 71.402269,
+      "camera_callback_to_ui_ms": 72.094731,
+      "camera_sensor_to_ui_ms": 334.0885
+    },
+    {
+      "elapsed_ms": 35417.217628,
+      "preprocess_ms": 12.0375,
+      "inference_ms": 56.049885,
+      "postprocess_ms": 0.245154,
+      "processing_ms": 68.332539,
+      "camera_callback_to_ui_ms": 69.462153,
+      "camera_sensor_to_ui_ms": 331.097846
+    },
+    {
+      "elapsed_ms": 35495.941513,
+      "preprocess_ms": 11.960193,
+      "inference_ms": 54.625384,
+      "postprocess_ms": 0.209385,
+      "processing_ms": 66.794962,
+      "camera_callback_to_ui_ms": 67.731885,
+      "camera_sensor_to_ui_ms": 343.152615
+    },
+    {
+      "elapsed_ms": 35579.754974,
+      "preprocess_ms": 12.592308,
+      "inference_ms": 54.443154,
+      "postprocess_ms": 0.239231,
+      "processing_ms": 67.274693,
+      "camera_callback_to_ui_ms": 68.406192,
+      "camera_sensor_to_ui_ms": 326.951653
+    },
+    {
+      "elapsed_ms": 35662.415167,
+      "preprocess_ms": 12.281116,
+      "inference_ms": 55.602192,
+      "postprocess_ms": 0.234961,
+      "processing_ms": 68.118269,
+      "camera_callback_to_ui_ms": 71.931731,
+      "camera_sensor_to_ui_ms": 350.832423
+    },
+    {
+      "elapsed_ms": 35746.373205,
+      "preprocess_ms": 12.301,
+      "inference_ms": 54.485,
+      "postprocess_ms": 0.226038,
+      "processing_ms": 67.012038,
+      "camera_callback_to_ui_ms": 70.748731,
+      "camera_sensor_to_ui_ms": 334.101269
+    },
+    {
+      "elapsed_ms": 35832.777782,
+      "preprocess_ms": 12.433192,
+      "inference_ms": 55.6755,
+      "postprocess_ms": 0.258462,
+      "processing_ms": 68.367154,
+      "camera_callback_to_ui_ms": 73.673,
+      "camera_sensor_to_ui_ms": 353.390923
+    },
+    {
+      "elapsed_ms": 35916.767282,
+      "preprocess_ms": 12.634577,
+      "inference_ms": 54.849308,
+      "postprocess_ms": 0.223231,
+      "processing_ms": 67.707116,
+      "camera_callback_to_ui_ms": 75.407692,
+      "camera_sensor_to_ui_ms": 336.692692
+    },
+    {
+      "elapsed_ms": 36001.499436,
+      "preprocess_ms": 12.24427,
+      "inference_ms": 54.74,
+      "postprocess_ms": 0.231577,
+      "processing_ms": 67.215847,
+      "camera_callback_to_ui_ms": 76.434654,
+      "camera_sensor_to_ui_ms": 354.312885
+    },
+    {
+      "elapsed_ms": 36086.021089,
+      "preprocess_ms": 12.122884,
+      "inference_ms": 54.2995,
+      "postprocess_ms": 0.235423,
+      "processing_ms": 66.657807,
+      "camera_callback_to_ui_ms": 77.003269,
+      "camera_sensor_to_ui_ms": 338.158461
+    },
+    {
+      "elapsed_ms": 36171.271897,
+      "preprocess_ms": 12.144154,
+      "inference_ms": 54.328,
+      "postprocess_ms": 0.303923,
+      "processing_ms": 66.776077,
+      "camera_callback_to_ui_ms": 79.919884,
+      "camera_sensor_to_ui_ms": 356.293538
+    },
+    {
+      "elapsed_ms": 36257.213359,
+      "preprocess_ms": 12.335961,
+      "inference_ms": 55.467731,
+      "postprocess_ms": 0.234885,
+      "processing_ms": 68.038577,
+      "camera_callback_to_ui_ms": 80.16727,
+      "camera_sensor_to_ui_ms": 341.549308
+    },
+    {
+      "elapsed_ms": 36343.172089,
+      "preprocess_ms": 12.393769,
+      "inference_ms": 56.368654,
+      "postprocess_ms": 0.237962,
+      "processing_ms": 69.000385,
+      "camera_callback_to_ui_ms": 83.543961,
+      "camera_sensor_to_ui_ms": 360.39023
+    },
+    {
+      "elapsed_ms": 36427.667935,
+      "preprocess_ms": 12.137808,
+      "inference_ms": 55.805115,
+      "postprocess_ms": 0.201,
+      "processing_ms": 68.143923,
+      "camera_callback_to_ui_ms": 82.937846,
+      "camera_sensor_to_ui_ms": 344.197038
+    },
+    {
+      "elapsed_ms": 36511.264781,
+      "preprocess_ms": 12.293076,
+      "inference_ms": 54.864,
+      "postprocess_ms": 0.235923,
+      "processing_ms": 67.392999,
+      "camera_callback_to_ui_ms": 81.745615,
+      "camera_sensor_to_ui_ms": 360.690499
+    },
+    {
+      "elapsed_ms": 36596.819051,
+      "preprocess_ms": 12.094346,
+      "inference_ms": 55.241461,
+      "postprocess_ms": 0.2225,
+      "processing_ms": 67.558307,
+      "camera_callback_to_ui_ms": 84.332923,
+      "camera_sensor_to_ui_ms": 345.560731
+    },
+    {
+      "elapsed_ms": 36706.360051,
+      "preprocess_ms": 12.393846,
+      "inference_ms": 54.530615,
+      "postprocess_ms": 0.239846,
+      "processing_ms": 67.164307,
+      "camera_callback_to_ui_ms": 68.393193,
+      "camera_sensor_to_ui_ms": 354.424308
+    },
+    {
+      "elapsed_ms": 36790.352474,
+      "preprocess_ms": 12.366808,
+      "inference_ms": 54.056961,
+      "postprocess_ms": 0.233077,
+      "processing_ms": 66.656846,
+      "camera_callback_to_ui_ms": 67.819423,
+      "camera_sensor_to_ui_ms": 335.091385
+    },
+    {
+      "elapsed_ms": 36869.985358,
+      "preprocess_ms": 12.403346,
+      "inference_ms": 55.7955,
+      "postprocess_ms": 0.224693,
+      "processing_ms": 68.423539,
+      "camera_callback_to_ui_ms": 70.195192,
+      "camera_sensor_to_ui_ms": 314.712269
+    },
+    {
+      "elapsed_ms": 36955.498435,
+      "preprocess_ms": 12.767153,
+      "inference_ms": 54.406693,
+      "postprocess_ms": 0.278384,
+      "processing_ms": 67.45223,
+      "camera_callback_to_ui_ms": 68.678923,
+      "camera_sensor_to_ui_ms": 333.537154
+    },
+    {
+      "elapsed_ms": 37040.308512,
+      "preprocess_ms": 12.58877,
+      "inference_ms": 55.785115,
+      "postprocess_ms": 0.214308,
+      "processing_ms": 68.588193,
+      "camera_callback_to_ui_ms": 70.137077,
+      "camera_sensor_to_ui_ms": 318.3545
+    },
+    {
+      "elapsed_ms": 37128.406512,
+      "preprocess_ms": 12.496,
+      "inference_ms": 55.049692,
+      "postprocess_ms": 0.243038,
+      "processing_ms": 67.78873,
+      "camera_callback_to_ui_ms": 68.924923,
+      "camera_sensor_to_ui_ms": 339.768192
+    },
+    {
+      "elapsed_ms": 37210.521127,
+      "preprocess_ms": 11.984231,
+      "inference_ms": 54.282346,
+      "postprocess_ms": 0.246577,
+      "processing_ms": 66.513154,
+      "camera_callback_to_ui_ms": 68.046038,
+      "camera_sensor_to_ui_ms": 355.2215
+    },
+    {
+      "elapsed_ms": 37297.97355,
+      "preprocess_ms": 12.306962,
+      "inference_ms": 54.360192,
+      "postprocess_ms": 0.238423,
+      "processing_ms": 66.905577,
+      "camera_callback_to_ui_ms": 68.087,
+      "camera_sensor_to_ui_ms": 342.654423
+    },
+    {
+      "elapsed_ms": 37383.041281,
+      "preprocess_ms": 12.154038,
+      "inference_ms": 54.688654,
+      "postprocess_ms": 0.297692,
+      "processing_ms": 67.140384,
+      "camera_callback_to_ui_ms": 68.216885,
+      "camera_sensor_to_ui_ms": 327.719885
+    },
+    {
+      "elapsed_ms": 37464.648512,
+      "preprocess_ms": 12.6165,
+      "inference_ms": 54.939,
+      "postprocess_ms": 0.238039,
+      "processing_ms": 67.793539,
+      "camera_callback_to_ui_ms": 68.8675,
+      "camera_sensor_to_ui_ms": 342.657077
+    },
+    {
+      "elapsed_ms": 37551.088665,
+      "preprocess_ms": 12.599539,
+      "inference_ms": 55.8495,
+      "postprocess_ms": 0.221346,
+      "processing_ms": 68.670385,
+      "camera_callback_to_ui_ms": 70.707038,
+      "camera_sensor_to_ui_ms": 329.078615
+    },
+    {
+      "elapsed_ms": 37634.67955,
+      "preprocess_ms": 12.334616,
+      "inference_ms": 55.233077,
+      "postprocess_ms": 0.237307,
+      "processing_ms": 67.805,
+      "camera_callback_to_ui_ms": 74.7635,
+      "camera_sensor_to_ui_ms": 346.009731
+    },
+    {
+      "elapsed_ms": 37718.407204,
+      "preprocess_ms": 12.121577,
+      "inference_ms": 54.569231,
+      "postprocess_ms": 0.206923,
+      "processing_ms": 66.897731,
+      "camera_callback_to_ui_ms": 69.903654,
+      "camera_sensor_to_ui_ms": 329.708385
+    },
+    {
+      "elapsed_ms": 37803.379896,
+      "preprocess_ms": 12.210346,
+      "inference_ms": 54.546538,
+      "postprocess_ms": 0.285077,
+      "processing_ms": 67.041961,
+      "camera_callback_to_ui_ms": 71.593615,
+      "camera_sensor_to_ui_ms": 348.024615
+    },
+    {
+      "elapsed_ms": 37889.814588,
+      "preprocess_ms": 12.664808,
+      "inference_ms": 55.237154,
+      "postprocess_ms": 0.2225,
+      "processing_ms": 68.124462,
+      "camera_callback_to_ui_ms": 74.895115,
+      "camera_sensor_to_ui_ms": 334.421115
+    },
+    {
+      "elapsed_ms": 37974.058511,
+      "preprocess_ms": 12.114077,
+      "inference_ms": 54.517808,
+      "postprocess_ms": 0.251308,
+      "processing_ms": 66.883193,
+      "camera_callback_to_ui_ms": 75.335423,
+      "camera_sensor_to_ui_ms": 352.019153
+    },
+    {
+      "elapsed_ms": 38059.317127,
+      "preprocess_ms": 12.219192,
+      "inference_ms": 55.135116,
+      "postprocess_ms": 0.282576,
+      "processing_ms": 67.636884,
+      "camera_callback_to_ui_ms": 74.291423,
+      "camera_sensor_to_ui_ms": 337.267808
+    },
+    {
+      "elapsed_ms": 38143.772434,
+      "preprocess_ms": 12.346462,
+      "inference_ms": 54.503077,
+      "postprocess_ms": 0.215615,
+      "processing_ms": 67.065154,
+      "camera_callback_to_ui_ms": 74.663077,
+      "camera_sensor_to_ui_ms": 355.043653
+    },
+    {
+      "elapsed_ms": 38229.396319,
+      "preprocess_ms": 12.560885,
+      "inference_ms": 55.468154,
+      "postprocess_ms": 0.222038,
+      "processing_ms": 68.251077,
+      "camera_callback_to_ui_ms": 76.599116,
+      "camera_sensor_to_ui_ms": 340.667615
+    },
+    {
+      "elapsed_ms": 38315.644357,
+      "preprocess_ms": 12.132269,
+      "inference_ms": 56.836424,
+      "postprocess_ms": 0.2225,
+      "processing_ms": 69.191193,
+      "camera_callback_to_ui_ms": 80.437269,
+      "camera_sensor_to_ui_ms": 360.241192
+    },
+    {
+      "elapsed_ms": 38400.373665,
+      "preprocess_ms": 12.1775,
+      "inference_ms": 54.6825,
+      "postprocess_ms": 0.241154,
+      "processing_ms": 67.101154,
+      "camera_callback_to_ui_ms": 75.495116,
+      "camera_sensor_to_ui_ms": 344.966808
+    },
+    {
+      "elapsed_ms": 38483.395742,
+      "preprocess_ms": 12.431346,
+      "inference_ms": 54.424808,
+      "postprocess_ms": 0.226769,
+      "processing_ms": 67.082923,
+      "camera_callback_to_ui_ms": 70.723308,
+      "camera_sensor_to_ui_ms": 327.971116
+    },
+    {
+      "elapsed_ms": 38568.341511,
+      "preprocess_ms": 12.202615,
+      "inference_ms": 54.253231,
+      "postprocess_ms": 0.240769,
+      "processing_ms": 66.696615,
+      "camera_callback_to_ui_ms": 75.369077,
+      "camera_sensor_to_ui_ms": 346.236769
+    },
+    {
+      "elapsed_ms": 38653.879549,
+      "preprocess_ms": 12.10727,
+      "inference_ms": 54.996653,
+      "postprocess_ms": 0.231154,
+      "processing_ms": 67.335077,
+      "camera_callback_to_ui_ms": 74.541115,
+      "camera_sensor_to_ui_ms": 365.116153
+    },
+    {
+      "elapsed_ms": 38738.268318,
+      "preprocess_ms": 12.254539,
+      "inference_ms": 54.133154,
+      "postprocess_ms": 0.229769,
+      "processing_ms": 66.617462,
+      "camera_callback_to_ui_ms": 76.776884,
+      "camera_sensor_to_ui_ms": 349.49873
+    },
+    {
+      "elapsed_ms": 38840.60528,
+      "preprocess_ms": 13.110885,
+      "inference_ms": 55.616923,
+      "postprocess_ms": 0.227038,
+      "processing_ms": 68.954846,
+      "camera_callback_to_ui_ms": 92.813808,
+      "camera_sensor_to_ui_ms": 351.82
+    },
+    {
+      "elapsed_ms": 38937.543203,
+      "preprocess_ms": 13.174693,
+      "inference_ms": 54.604961,
+      "postprocess_ms": 0.234962,
+      "processing_ms": 68.014616,
+      "camera_callback_to_ui_ms": 69.267116,
+      "camera_sensor_to_ui_ms": 315.408423
+    },
+    {
+      "elapsed_ms": 39020.732164,
+      "preprocess_ms": 12.211347,
+      "inference_ms": 54.970692,
+      "postprocess_ms": 0.229192,
+      "processing_ms": 67.411231,
+      "camera_callback_to_ui_ms": 68.623,
+      "camera_sensor_to_ui_ms": 331.926923
+    },
+    {
+      "elapsed_ms": 39104.559741,
+      "preprocess_ms": 12.534384,
+      "inference_ms": 55.270462,
+      "postprocess_ms": 0.237231,
+      "processing_ms": 68.042077,
+      "camera_callback_to_ui_ms": 69.185615,
+      "camera_sensor_to_ui_ms": 315.747077
+    },
+    {
+      "elapsed_ms": 39186.539318,
+      "preprocess_ms": 12.871154,
+      "inference_ms": 54.108,
+      "postprocess_ms": 0.230962,
+      "processing_ms": 67.210116,
+      "camera_callback_to_ui_ms": 68.397461,
+      "camera_sensor_to_ui_ms": 331.053807
+    },
+    {
+      "elapsed_ms": 39267.493164,
+      "preprocess_ms": 12.685269,
+      "inference_ms": 55.410692,
+      "postprocess_ms": 0.236192,
+      "processing_ms": 68.332153,
+      "camera_callback_to_ui_ms": 69.936923,
+      "camera_sensor_to_ui_ms": 345.334615
+    },
+    {
+      "elapsed_ms": 39354.188356,
+      "preprocess_ms": 12.38473,
+      "inference_ms": 54.846269,
+      "postprocess_ms": 0.217231,
+      "processing_ms": 67.44823,
+      "camera_callback_to_ui_ms": 68.449153,
+      "camera_sensor_to_ui_ms": 332.025115
+    },
+    {
+      "elapsed_ms": 39441.879126,
+      "preprocess_ms": 12.122616,
+      "inference_ms": 55.907654,
+      "postprocess_ms": 0.224884,
+      "processing_ms": 68.255154,
+      "camera_callback_to_ui_ms": 69.365693,
+      "camera_sensor_to_ui_ms": 353.041346
+    },
+    {
+      "elapsed_ms": 39521.115702,
+      "preprocess_ms": 12.052192,
+      "inference_ms": 54.984346,
+      "postprocess_ms": 0.226308,
+      "processing_ms": 67.262846,
+      "camera_callback_to_ui_ms": 68.411961,
+      "camera_sensor_to_ui_ms": 332.263807
+    },
+    {
+      "elapsed_ms": 39605.465895,
+      "preprocess_ms": 11.995808,
+      "inference_ms": 54.626538,
+      "postprocess_ms": 0.211616,
+      "processing_ms": 66.833962,
+      "camera_callback_to_ui_ms": 72.198654,
+      "camera_sensor_to_ui_ms": 349.939346
+    },
+    {
+      "elapsed_ms": 39690.570972,
+      "preprocess_ms": 12.239346,
+      "inference_ms": 54.611923,
+      "postprocess_ms": 0.2415,
+      "processing_ms": 67.092769,
+      "camera_callback_to_ui_ms": 82.933077,
+      "camera_sensor_to_ui_ms": 335.0375
+    },
+    {
+      "elapsed_ms": 39799.729279,
+      "preprocess_ms": 12.397692,
+      "inference_ms": 54.833077,
+      "postprocess_ms": 0.214038,
+      "processing_ms": 67.444807,
+      "camera_callback_to_ui_ms": 68.487615,
+      "camera_sensor_to_ui_ms": 310.850615
+    },
+    {
+      "elapsed_ms": 39879.12701,
+      "preprocess_ms": 12.729077,
+      "inference_ms": 55.657423,
+      "postprocess_ms": 0.2685,
+      "processing_ms": 68.655,
+      "camera_callback_to_ui_ms": 73.833269,
+      "camera_sensor_to_ui_ms": 323.582423
+    },
+    {
+      "elapsed_ms": 39962.399548,
+      "preprocess_ms": 12.115538,
+      "inference_ms": 54.524539,
+      "postprocess_ms": 0.216077,
+      "processing_ms": 66.856154,
+      "camera_callback_to_ui_ms": 76.896038,
+      "camera_sensor_to_ui_ms": 340.180769
+    },
+    {
+      "elapsed_ms": 40048.034548,
+      "preprocess_ms": 12.312269,
+      "inference_ms": 55.117847,
+      "postprocess_ms": 0.230846,
+      "processing_ms": 67.660962,
+      "camera_callback_to_ui_ms": 80.788307,
+      "camera_sensor_to_ui_ms": 325.792923
+    },
+    {
+      "elapsed_ms": 40132.883817,
+      "preprocess_ms": 12.457462,
+      "inference_ms": 54.513692,
+      "postprocess_ms": 0.221731,
+      "processing_ms": 67.192885,
+      "camera_callback_to_ui_ms": 78.623692,
+      "camera_sensor_to_ui_ms": 343.981038
+    },
+    {
+      "elapsed_ms": 40217.580548,
+      "preprocess_ms": 12.176384,
+      "inference_ms": 54.925654,
+      "postprocess_ms": 0.247,
+      "processing_ms": 67.349038,
+      "camera_callback_to_ui_ms": 79.296731,
+      "camera_sensor_to_ui_ms": 328.668115
+    },
+    {
+      "elapsed_ms": 40304.259048,
+      "preprocess_ms": 13.239346,
+      "inference_ms": 54.976923,
+      "postprocess_ms": 0.221962,
+      "processing_ms": 68.438231,
+      "camera_callback_to_ui_ms": 83.228,
+      "camera_sensor_to_ui_ms": 348.676346
+    },
+    {
+      "elapsed_ms": 40388.650663,
+      "preprocess_ms": 12.210461,
+      "inference_ms": 55.4535,
+      "postprocess_ms": 0.22877,
+      "processing_ms": 67.892731,
+      "camera_callback_to_ui_ms": 78.357077,
+      "camera_sensor_to_ui_ms": 366.398846
+    },
+    {
+      "elapsed_ms": 40473.968586,
+      "preprocess_ms": 12.417847,
+      "inference_ms": 55.379,
+      "postprocess_ms": 0.223038,
+      "processing_ms": 68.019885,
+      "camera_callback_to_ui_ms": 81.7375,
+      "camera_sensor_to_ui_ms": 351.704461
+    },
+    {
+      "elapsed_ms": 40557.928279,
+      "preprocess_ms": 12.428961,
+      "inference_ms": 54.481193,
+      "postprocess_ms": 0.233653,
+      "processing_ms": 67.143807,
+      "camera_callback_to_ui_ms": 77.185462,
+      "camera_sensor_to_ui_ms": 335.651769
+    },
+    {
+      "elapsed_ms": 40643.779279,
+      "preprocess_ms": 12.591038,
+      "inference_ms": 55.348192,
+      "postprocess_ms": 0.228731,
+      "processing_ms": 68.167961,
+      "camera_callback_to_ui_ms": 77.613154,
+      "camera_sensor_to_ui_ms": 354.830423
+    },
+    {
+      "elapsed_ms": 40728.150009,
+      "preprocess_ms": 12.154692,
+      "inference_ms": 54.559654,
+      "postprocess_ms": 0.22273,
+      "processing_ms": 66.937076,
+      "camera_callback_to_ui_ms": 73.887654,
+      "camera_sensor_to_ui_ms": 339.173307
+    },
+    {
+      "elapsed_ms": 40813.201778,
+      "preprocess_ms": 12.366654,
+      "inference_ms": 54.612385,
+      "postprocess_ms": 0.250884,
+      "processing_ms": 67.229923,
+      "camera_callback_to_ui_ms": 70.081807,
+      "camera_sensor_to_ui_ms": 357.576461
+    },
+    {
+      "elapsed_ms": 40899.359432,
+      "preprocess_ms": 12.697076,
+      "inference_ms": 54.9515,
+      "postprocess_ms": 0.301308,
+      "processing_ms": 67.949884,
+      "camera_callback_to_ui_ms": 69.853269,
+      "camera_sensor_to_ui_ms": 343.723884
+    },
+    {
+      "elapsed_ms": 40984.536894,
+      "preprocess_ms": 12.284039,
+      "inference_ms": 55.027923,
+      "postprocess_ms": 0.239654,
+      "processing_ms": 67.551616,
+      "camera_callback_to_ui_ms": 68.935346,
+      "camera_sensor_to_ui_ms": 362.2295
+    },
+    {
+      "elapsed_ms": 41069.296047,
+      "preprocess_ms": 12.621077,
+      "inference_ms": 55.375462,
+      "postprocess_ms": 0.237115,
+      "processing_ms": 68.233654,
+      "camera_callback_to_ui_ms": 71.352384,
+      "camera_sensor_to_ui_ms": 346.966692
+    },
+    {
+      "elapsed_ms": 41152.955701,
+      "preprocess_ms": 12.279692,
+      "inference_ms": 54.594692,
+      "postprocess_ms": 0.238962,
+      "processing_ms": 67.113346,
+      "camera_callback_to_ui_ms": 71.860423,
+      "camera_sensor_to_ui_ms": 330.624423
+    },
+    {
+      "elapsed_ms": 41239.201163,
+      "preprocess_ms": 12.501653,
+      "inference_ms": 55.465077,
+      "postprocess_ms": 0.274808,
+      "processing_ms": 68.241538,
+      "camera_callback_to_ui_ms": 74.859577,
+      "camera_sensor_to_ui_ms": 350.200962
+    },
+    {
+      "elapsed_ms": 41322.967201,
+      "preprocess_ms": 12.09,
+      "inference_ms": 54.884,
+      "postprocess_ms": 0.231731,
+      "processing_ms": 67.205731,
+      "camera_callback_to_ui_ms": 74.358808,
+      "camera_sensor_to_ui_ms": 333.958615
+    },
+    {
+      "elapsed_ms": 41408.54724,
+      "preprocess_ms": 12.389307,
+      "inference_ms": 55.063423,
+      "postprocess_ms": 0.226462,
+      "processing_ms": 67.679192,
+      "camera_callback_to_ui_ms": 76.426462,
+      "camera_sensor_to_ui_ms": 352.854616
+    },
+    {
+      "elapsed_ms": 41493.176278,
+      "preprocess_ms": 12.272577,
+      "inference_ms": 54.944423,
+      "postprocess_ms": 0.236461,
+      "processing_ms": 67.453461,
+      "camera_callback_to_ui_ms": 76.859654,
+      "camera_sensor_to_ui_ms": 337.477769
+    },
+    {
+      "elapsed_ms": 41578.188239,
+      "preprocess_ms": 12.133077,
+      "inference_ms": 55.397423,
+      "postprocess_ms": 0.21277,
+      "processing_ms": 67.74327,
+      "camera_callback_to_ui_ms": 73.569961,
+      "camera_sensor_to_ui_ms": 355.825922
+    },
+    {
+      "elapsed_ms": 41663.932162,
+      "preprocess_ms": 12.277116,
+      "inference_ms": 55.641115,
+      "postprocess_ms": 0.228885,
+      "processing_ms": 68.147116,
+      "camera_callback_to_ui_ms": 77.252461,
+      "camera_sensor_to_ui_ms": 341.555422
+    },
+    {
+      "elapsed_ms": 41748.023701,
+      "preprocess_ms": 12.010692,
+      "inference_ms": 55.171539,
+      "postprocess_ms": 0.220423,
+      "processing_ms": 67.402654,
+      "camera_callback_to_ui_ms": 78.670154,
+      "camera_sensor_to_ui_ms": 358.979577
+    },
+    {
+      "elapsed_ms": 41833.800316,
+      "preprocess_ms": 12.122269,
+      "inference_ms": 55.6155,
+      "postprocess_ms": 0.243808,
+      "processing_ms": 67.981577,
+      "camera_callback_to_ui_ms": 81.423538,
+      "camera_sensor_to_ui_ms": 344.743769
+    },
+    {
+      "elapsed_ms": 41946.743816,
+      "preprocess_ms": 14.699039,
+      "inference_ms": 54.096346,
+      "postprocess_ms": 0.310615,
+      "processing_ms": 69.106,
+      "camera_callback_to_ui_ms": 70.687038,
+      "camera_sensor_to_ui_ms": 314.335192
+    },
+    {
+      "elapsed_ms": 42024.842239,
+      "preprocess_ms": 12.814731,
+      "inference_ms": 54.810461,
+      "postprocess_ms": 0.244077,
+      "processing_ms": 67.869269,
+      "camera_callback_to_ui_ms": 68.844961,
+      "camera_sensor_to_ui_ms": 325.767384
+    },
+    {
+      "elapsed_ms": 42110.65297,
+      "preprocess_ms": 12.143039,
+      "inference_ms": 54.549192,
+      "postprocess_ms": 0.235577,
+      "processing_ms": 66.927808,
+      "camera_callback_to_ui_ms": 68.163154,
+      "camera_sensor_to_ui_ms": 311.563885
+    },
+    {
+      "elapsed_ms": 42198.372777,
+      "preprocess_ms": 12.163,
+      "inference_ms": 54.376077,
+      "postprocess_ms": 0.232115,
+      "processing_ms": 66.771192,
+      "camera_callback_to_ui_ms": 68.184923,
+      "camera_sensor_to_ui_ms": 332.617538
+    },
+    {
+      "elapsed_ms": 42286.279931,
+      "preprocess_ms": 13.031769,
+      "inference_ms": 54.212577,
+      "postprocess_ms": 0.244308,
+      "processing_ms": 67.488654,
+      "camera_callback_to_ui_ms": 68.800423,
+      "camera_sensor_to_ui_ms": 320.513153
+    },
+    {
+      "elapsed_ms": 42367.954585,
+      "preprocess_ms": 12.197038,
+      "inference_ms": 54.785731,
+      "postprocess_ms": 0.236539,
+      "processing_ms": 67.219308,
+      "camera_callback_to_ui_ms": 68.454731,
+      "camera_sensor_to_ui_ms": 335.5105
+    },
+    {
+      "elapsed_ms": 42451.780508,
+      "preprocess_ms": 12.821693,
+      "inference_ms": 54.629423,
+      "postprocess_ms": 0.241692,
+      "processing_ms": 67.692808,
+      "camera_callback_to_ui_ms": 68.527885,
+      "camera_sensor_to_ui_ms": 319.322615
+    },
+    {
+      "elapsed_ms": 42536.864354,
+      "preprocess_ms": 12.066077,
+      "inference_ms": 54.1605,
+      "postprocess_ms": 0.230385,
+      "processing_ms": 66.456962,
+      "camera_callback_to_ui_ms": 67.608808,
+      "camera_sensor_to_ui_ms": 337.740615
+    },
+    {
+      "elapsed_ms": 42618.644854,
+      "preprocess_ms": 11.780077,
+      "inference_ms": 54.71,
+      "postprocess_ms": 0.239038,
+      "processing_ms": 66.729115,
+      "camera_callback_to_ui_ms": 67.916308,
+      "camera_sensor_to_ui_ms": 319.506884
+    },
+    {
+      "elapsed_ms": 42704.908969,
+      "preprocess_ms": 11.888115,
+      "inference_ms": 54.40327,
+      "postprocess_ms": 0.23323,
+      "processing_ms": 66.524615,
+      "camera_callback_to_ui_ms": 67.713077,
+      "camera_sensor_to_ui_ms": 339.103922
+    },
+    {
+      "elapsed_ms": 42787.965969,
+      "preprocess_ms": 11.853461,
+      "inference_ms": 54.940577,
+      "postprocess_ms": 0.246962,
+      "processing_ms": 67.041,
+      "camera_callback_to_ui_ms": 68.223653,
+      "camera_sensor_to_ui_ms": 322.15223
+    },
+    {
+      "elapsed_ms": 42872.308931,
+      "preprocess_ms": 11.791346,
+      "inference_ms": 55.532731,
+      "postprocess_ms": 0.218538,
+      "processing_ms": 67.542615,
+      "camera_callback_to_ui_ms": 68.447077,
+      "camera_sensor_to_ui_ms": 306.487308
+    },
+    {
+      "elapsed_ms": 42994.892508,
+      "preprocess_ms": 11.658538,
+      "inference_ms": 58.468847,
+      "postprocess_ms": 0.294269,
+      "processing_ms": 70.421654,
+      "camera_callback_to_ui_ms": 71.578385,
+      "camera_sensor_to_ui_ms": 329.064885
+    },
+    {
+      "elapsed_ms": 43075.982354,
+      "preprocess_ms": 12.716885,
+      "inference_ms": 55.801269,
+      "postprocess_ms": 0.244038,
+      "processing_ms": 68.762192,
+      "camera_callback_to_ui_ms": 75.3525,
+      "camera_sensor_to_ui_ms": 306.8005
+    },
+    {
+      "elapsed_ms": 43158.727777,
+      "preprocess_ms": 11.774692,
+      "inference_ms": 54.816346,
+      "postprocess_ms": 0.248154,
+      "processing_ms": 66.839192,
+      "camera_callback_to_ui_ms": 77.043539,
+      "camera_sensor_to_ui_ms": 331.192192
+    },
+    {
+      "elapsed_ms": 43243.424623,
+      "preprocess_ms": 11.753,
+      "inference_ms": 54.728346,
+      "postprocess_ms": 0.229654,
+      "processing_ms": 66.711,
+      "camera_callback_to_ui_ms": 83.700115,
+      "camera_sensor_to_ui_ms": 323.777038
+    },
+    {
+      "elapsed_ms": 43328.7462,
+      "preprocess_ms": 12.01227,
+      "inference_ms": 54.672384,
+      "postprocess_ms": 0.254308,
+      "processing_ms": 66.938962,
+      "camera_callback_to_ui_ms": 83.745308,
+      "camera_sensor_to_ui_ms": 341.975231
+    },
+    {
+      "elapsed_ms": 43435.397738,
+      "preprocess_ms": 12.145308,
+      "inference_ms": 54.419038,
+      "postprocess_ms": 0.284231,
+      "processing_ms": 66.848577,
+      "camera_callback_to_ui_ms": 67.993192,
+      "camera_sensor_to_ui_ms": 289.408615
+    },
+    {
+      "elapsed_ms": 43518.184584,
+      "preprocess_ms": 12.688769,
+      "inference_ms": 56.0595,
+      "postprocess_ms": 0.265154,
+      "processing_ms": 69.013423,
+      "camera_callback_to_ui_ms": 70.2215,
+      "camera_sensor_to_ui_ms": 288.418923
+    },
+    {
+      "elapsed_ms": 43601.561007,
+      "preprocess_ms": 12.135692,
+      "inference_ms": 55.588808,
+      "postprocess_ms": 0.226077,
+      "processing_ms": 67.950577,
+      "camera_callback_to_ui_ms": 75.509461,
+      "camera_sensor_to_ui_ms": 287.995538
+    },
+    {
+      "elapsed_ms": 43685.62093,
+      "preprocess_ms": 12.258962,
+      "inference_ms": 54.551846,
+      "postprocess_ms": 0.244462,
+      "processing_ms": 67.05527,
+      "camera_callback_to_ui_ms": 80.446077,
+      "camera_sensor_to_ui_ms": 288.303423
+    },
+    {
+      "elapsed_ms": 43771.965738,
+      "preprocess_ms": 12.285423,
+      "inference_ms": 55.715231,
+      "postprocess_ms": 0.288692,
+      "processing_ms": 68.289346,
+      "camera_callback_to_ui_ms": 85.234808,
+      "camera_sensor_to_ui_ms": 290.871
+    },
+    {
+      "elapsed_ms": 43882.948776,
+      "preprocess_ms": 13.599884,
+      "inference_ms": 56.504423,
+      "postprocess_ms": 0.308193,
+      "processing_ms": 70.4125,
+      "camera_callback_to_ui_ms": 71.448115,
+      "camera_sensor_to_ui_ms": 276.183346
+    },
+    {
+      "elapsed_ms": 43961.789353,
+      "preprocess_ms": 12.653961,
+      "inference_ms": 55.968193,
+      "postprocess_ms": 0.265,
+      "processing_ms": 68.887154,
+      "camera_callback_to_ui_ms": 70.415615,
+      "camera_sensor_to_ui_ms": 271.245077
+    },
+    {
+      "elapsed_ms": 44044.956353,
+      "preprocess_ms": 12.438846,
+      "inference_ms": 56.452923,
+      "postprocess_ms": 0.265654,
+      "processing_ms": 69.157423,
+      "camera_callback_to_ui_ms": 72.550231,
+      "camera_sensor_to_ui_ms": 270.639423
+    },
+    {
+      "elapsed_ms": 44129.239853,
+      "preprocess_ms": 12.661154,
+      "inference_ms": 55.463846,
+      "postprocess_ms": 0.255039,
+      "processing_ms": 68.380039,
+      "camera_callback_to_ui_ms": 73.977038,
+      "camera_sensor_to_ui_ms": 271.147692
+    },
+    {
+      "elapsed_ms": 44213.902891,
+      "preprocess_ms": 12.480654,
+      "inference_ms": 55.234885,
+      "postprocess_ms": 0.268653,
+      "processing_ms": 67.984192,
+      "camera_callback_to_ui_ms": 74.485961,
+      "camera_sensor_to_ui_ms": 272.027807
+    },
+    {
+      "elapsed_ms": 44299.190353,
+      "preprocess_ms": 12.061346,
+      "inference_ms": 56.311538,
+      "postprocess_ms": 0.320039,
+      "processing_ms": 68.692923,
+      "camera_callback_to_ui_ms": 82.388385,
+      "camera_sensor_to_ui_ms": 273.536462
+    },
+    {
+      "elapsed_ms": 44384.12666,
+      "preprocess_ms": 12.097924,
+      "inference_ms": 56.122076,
+      "postprocess_ms": 0.247116,
+      "processing_ms": 68.467116,
+      "camera_callback_to_ui_ms": 78.96523,
+      "camera_sensor_to_ui_ms": 274.699499
+    },
+    {
+      "elapsed_ms": 44468.522122,
+      "preprocess_ms": 12.217192,
+      "inference_ms": 55.299885,
+      "postprocess_ms": 0.253884,
+      "processing_ms": 67.770961,
+      "camera_callback_to_ui_ms": 74.973115,
+      "camera_sensor_to_ui_ms": 275.323308
+    },
+    {
+      "elapsed_ms": 44554.195853,
+      "preprocess_ms": 12.171269,
+      "inference_ms": 56.225846,
+      "postprocess_ms": 0.241269,
+      "processing_ms": 68.638384,
+      "camera_callback_to_ui_ms": 76.9345,
+      "camera_sensor_to_ui_ms": 277.2185
+    },
+    {
+      "elapsed_ms": 44638.353468,
+      "preprocess_ms": 12.730347,
+      "inference_ms": 54.843923,
+      "postprocess_ms": 0.24,
+      "processing_ms": 67.81427,
+      "camera_callback_to_ui_ms": 72.955461,
+      "camera_sensor_to_ui_ms": 277.5915
+    },
+    {
+      "elapsed_ms": 44726.573968,
+      "preprocess_ms": 12.504653,
+      "inference_ms": 57.455654,
+      "postprocess_ms": 0.300039,
+      "processing_ms": 70.260346,
+      "camera_callback_to_ui_ms": 80.060154,
+      "camera_sensor_to_ui_ms": 282.038038
+    },
+    {
+      "elapsed_ms": 44820.075083,
+      "preprocess_ms": 13.269923,
+      "inference_ms": 60.856154,
+      "postprocess_ms": 0.248769,
+      "processing_ms": 74.374846,
+      "camera_callback_to_ui_ms": 75.17373,
+      "camera_sensor_to_ui_ms": 291.761269
+    },
+    {
+      "elapsed_ms": 44920.359891,
+      "preprocess_ms": 13.761192,
+      "inference_ms": 75.246077,
+      "postprocess_ms": 0.256962,
+      "processing_ms": 89.264231,
+      "camera_callback_to_ui_ms": 97.7695,
+      "camera_sensor_to_ui_ms": 350.152231
+    },
+    {
+      "elapsed_ms": 45005.653198,
+      "preprocess_ms": 14.336423,
+      "inference_ms": 62.769846,
+      "postprocess_ms": 0.239269,
+      "processing_ms": 77.345538,
+      "camera_callback_to_ui_ms": 82.66973,
+      "camera_sensor_to_ui_ms": 351.673922
+    },
+    {
+      "elapsed_ms": 45084.762622,
+      "preprocess_ms": 12.970808,
+      "inference_ms": 54.228807,
+      "postprocess_ms": 0.2445,
+      "processing_ms": 67.444115,
+      "camera_callback_to_ui_ms": 68.847654,
+      "camera_sensor_to_ui_ms": 346.995385
+    },
+    {
+      "elapsed_ms": 45165.594506,
+      "preprocess_ms": 12.574884,
+      "inference_ms": 54.702808,
+      "postprocess_ms": 0.241038,
+      "processing_ms": 67.51873,
+      "camera_callback_to_ui_ms": 69.644577,
+      "camera_sensor_to_ui_ms": 344.064692
+    },
+    {
+      "elapsed_ms": 45250.454891,
+      "preprocess_ms": 12.517539,
+      "inference_ms": 54.854,
+      "postprocess_ms": 0.261654,
+      "processing_ms": 67.633193,
+      "camera_callback_to_ui_ms": 71.067231,
+      "camera_sensor_to_ui_ms": 345.146923
+    },
+    {
+      "elapsed_ms": 45336.594929,
+      "preprocess_ms": 13.107577,
+      "inference_ms": 54.738038,
+      "postprocess_ms": 0.24727,
+      "processing_ms": 68.092885,
+      "camera_callback_to_ui_ms": 70.757654,
+      "camera_sensor_to_ui_ms": 305.623423
+    },
+    {
+      "elapsed_ms": 45420.796467,
+      "preprocess_ms": 12.594962,
+      "inference_ms": 54.520231,
+      "postprocess_ms": 0.258577,
+      "processing_ms": 67.37377,
+      "camera_callback_to_ui_ms": 69.969576,
+      "camera_sensor_to_ui_ms": 306.03723
+    },
+    {
+      "elapsed_ms": 45504.859621,
+      "preprocess_ms": 12.131962,
+      "inference_ms": 54.750653,
+      "postprocess_ms": 0.267731,
+      "processing_ms": 67.150346,
+      "camera_callback_to_ui_ms": 78.197577,
+      "camera_sensor_to_ui_ms": 306.32723
+    },
+    {
+      "elapsed_ms": 45591.79739,
+      "preprocess_ms": 12.434384,
+      "inference_ms": 54.78727,
+      "postprocess_ms": 0.245884,
+      "processing_ms": 67.467538,
+      "camera_callback_to_ui_ms": 85.907615,
+      "camera_sensor_to_ui_ms": 309.489961
+    },
+    {
+      "elapsed_ms": 45702.244044,
+      "preprocess_ms": 12.514616,
+      "inference_ms": 55.213615,
+      "postprocess_ms": 0.259346,
+      "processing_ms": 67.987577,
+      "camera_callback_to_ui_ms": 69.460384,
+      "camera_sensor_to_ui_ms": 294.268769
+    },
+    {
+      "elapsed_ms": 45828.254429,
+      "preprocess_ms": 13.758654,
+      "inference_ms": 56.902269,
+      "postprocess_ms": 0.257077,
+      "processing_ms": 70.918,
+      "camera_callback_to_ui_ms": 72.031885,
+      "camera_sensor_to_ui_ms": 297.927462
+    },
+    {
+      "elapsed_ms": 45914.859313,
+      "preprocess_ms": 11.967884,
+      "inference_ms": 56.435192,
+      "postprocess_ms": 0.237462,
+      "processing_ms": 68.640538,
+      "camera_callback_to_ui_ms": 75.015307,
+      "camera_sensor_to_ui_ms": 304.0575
+    },
+    {
+      "elapsed_ms": 45998.229582,
+      "preprocess_ms": 11.820539,
+      "inference_ms": 55.179038,
+      "postprocess_ms": 0.240308,
+      "processing_ms": 67.239885,
+      "camera_callback_to_ui_ms": 77.203461,
+      "camera_sensor_to_ui_ms": 306.962615
+    },
+    {
+      "elapsed_ms": 46083.977967,
+      "preprocess_ms": 11.843615,
+      "inference_ms": 56.247154,
+      "postprocess_ms": 0.254846,
+      "processing_ms": 68.345615,
+      "camera_callback_to_ui_ms": 78.148923,
+      "camera_sensor_to_ui_ms": 312.234384
+    },
+    {
+      "elapsed_ms": 46167.443659,
+      "preprocess_ms": 11.521231,
+      "inference_ms": 54.957154,
+      "postprocess_ms": 0.243539,
+      "processing_ms": 66.721924,
+      "camera_callback_to_ui_ms": 78.233769,
+      "camera_sensor_to_ui_ms": 315.234961
+    },
+    {
+      "elapsed_ms": 46252.960159,
+      "preprocess_ms": 11.615961,
+      "inference_ms": 55.404962,
+      "postprocess_ms": 0.243462,
+      "processing_ms": 67.264385,
+      "camera_callback_to_ui_ms": 84.373538,
+      "camera_sensor_to_ui_ms": 320.281192
+    },
+    {
+      "elapsed_ms": 46360.433428,
+      "preprocess_ms": 13.916384,
+      "inference_ms": 54.53577,
+      "postprocess_ms": 0.23273,
+      "processing_ms": 68.684884,
+      "camera_callback_to_ui_ms": 69.829538,
+      "camera_sensor_to_ui_ms": 307.054961
+    },
+    {
+      "elapsed_ms": 46441.889621,
+      "preprocess_ms": 11.609346,
+      "inference_ms": 56.078269,
+      "postprocess_ms": 0.233808,
+      "processing_ms": 67.921423,
+      "camera_callback_to_ui_ms": 72.401808,
+      "camera_sensor_to_ui_ms": 304.936693
+    },
+    {
+      "elapsed_ms": 46525.19512,
+      "preprocess_ms": 11.924038,
+      "inference_ms": 55.06177,
+      "postprocess_ms": 0.236692,
+      "processing_ms": 67.2225,
+      "camera_callback_to_ui_ms": 74.355153,
+      "camera_sensor_to_ui_ms": 321.570076
+    },
+    {
+      "elapsed_ms": 46610.449428,
+      "preprocess_ms": 12.136808,
+      "inference_ms": 54.898807,
+      "postprocess_ms": 0.23027,
+      "processing_ms": 67.265885,
+      "camera_callback_to_ui_ms": 77.483769,
+      "camera_sensor_to_ui_ms": 340.148846
+    },
+    {
+      "elapsed_ms": 46695.884236,
+      "preprocess_ms": 12.441,
+      "inference_ms": 55.461192,
+      "postprocess_ms": 0.236346,
+      "processing_ms": 68.138538,
+      "camera_callback_to_ui_ms": 79.166116,
+      "camera_sensor_to_ui_ms": 315.574385
+    },
+    {
+      "elapsed_ms": 46780.096159,
+      "preprocess_ms": 11.885961,
+      "inference_ms": 55.006923,
+      "postprocess_ms": 0.245154,
+      "processing_ms": 67.138038,
+      "camera_callback_to_ui_ms": 80.551269,
+      "camera_sensor_to_ui_ms": 333.118615
+    },
+    {
+      "elapsed_ms": 46886.18012,
+      "preprocess_ms": 12.415846,
+      "inference_ms": 55.690346,
+      "postprocess_ms": 0.232654,
+      "processing_ms": 68.338846,
+      "camera_callback_to_ui_ms": 69.46623,
+      "camera_sensor_to_ui_ms": 305.854346
+    },
+    {
+      "elapsed_ms": 46967.20862,
+      "preprocess_ms": 12.159384,
+      "inference_ms": 54.512577,
+      "postprocess_ms": 0.288,
+      "processing_ms": 66.959961,
+      "camera_callback_to_ui_ms": 72.056423,
+      "camera_sensor_to_ui_ms": 320.209153
+    },
+    {
+      "elapsed_ms": 47052.274582,
+      "preprocess_ms": 12.031154,
+      "inference_ms": 55.216884,
+      "postprocess_ms": 0.231193,
+      "processing_ms": 67.479231,
+      "camera_callback_to_ui_ms": 73.329577,
+      "camera_sensor_to_ui_ms": 305.265346
+    },
+    {
+      "elapsed_ms": 47137.677274,
+      "preprocess_ms": 12.025077,
+      "inference_ms": 55.318384,
+      "postprocess_ms": 0.243577,
+      "processing_ms": 67.587038,
+      "camera_callback_to_ui_ms": 74.519077,
+      "camera_sensor_to_ui_ms": 320.650269
+    },
+    {
+      "elapsed_ms": 47221.848543,
+      "preprocess_ms": 11.887885,
+      "inference_ms": 54.697615,
+      "postprocess_ms": 0.235192,
+      "processing_ms": 66.820692,
+      "camera_callback_to_ui_ms": 72.290538,
+      "camera_sensor_to_ui_ms": 338.153307
+    },
+    {
+      "elapsed_ms": 47307.70862,
+      "preprocess_ms": 12.693346,
+      "inference_ms": 54.816038,
+      "postprocess_ms": 0.236885,
+      "processing_ms": 67.746269,
+      "camera_callback_to_ui_ms": 76.026923,
+      "camera_sensor_to_ui_ms": 323.994077
+    },
+    {
+      "elapsed_ms": 47395.13312,
+      "preprocess_ms": 12.0045,
+      "inference_ms": 56.190885,
+      "postprocess_ms": 0.231384,
+      "processing_ms": 68.426769,
+      "camera_callback_to_ui_ms": 83.041385,
+      "camera_sensor_to_ui_ms": 344.760961
+    },
+    {
+      "elapsed_ms": 47477.751312,
+      "preprocess_ms": 11.903577,
+      "inference_ms": 55.589538,
+      "postprocess_ms": 0.232616,
+      "processing_ms": 67.725731,
+      "camera_callback_to_ui_ms": 81.666038,
+      "camera_sensor_to_ui_ms": 327.365038
+    },
+    {
+      "elapsed_ms": 47562.023735,
+      "preprocess_ms": 11.958346,
+      "inference_ms": 55.123385,
+      "postprocess_ms": 0.228077,
+      "processing_ms": 67.309808,
+      "camera_callback_to_ui_ms": 83.329923,
+      "camera_sensor_to_ui_ms": 344.967538
+    },
+    {
+      "elapsed_ms": 47665.296697,
+      "preprocess_ms": 11.995692,
+      "inference_ms": 54.527346,
+      "postprocess_ms": 0.245192,
+      "processing_ms": 66.76823,
+      "camera_callback_to_ui_ms": 67.968923,
+      "camera_sensor_to_ui_ms": 314.893846
+    },
+    {
+      "elapsed_ms": 47749.542273,
+      "preprocess_ms": 12.070577,
+      "inference_ms": 54.8165,
+      "postprocess_ms": 0.213846,
+      "processing_ms": 67.100923,
+      "camera_callback_to_ui_ms": 71.133461,
+      "camera_sensor_to_ui_ms": 299.127999
+    },
+    {
+      "elapsed_ms": 47834.266504,
+      "preprocess_ms": 11.770461,
+      "inference_ms": 55.193423,
+      "postprocess_ms": 0.255154,
+      "processing_ms": 67.219038,
+      "camera_callback_to_ui_ms": 71.857654,
+      "camera_sensor_to_ui_ms": 317.184769
+    },
+    {
+      "elapsed_ms": 47920.769196,
+      "preprocess_ms": 11.483462,
+      "inference_ms": 55.909884,
+      "postprocess_ms": 0.220231,
+      "processing_ms": 67.613577,
+      "camera_callback_to_ui_ms": 73.276692,
+      "camera_sensor_to_ui_ms": 303.672999
+    },
+    {
+      "elapsed_ms": 48003.77185,
+      "preprocess_ms": 11.813307,
+      "inference_ms": 54.867347,
+      "postprocess_ms": 0.224077,
+      "processing_ms": 66.904731,
+      "camera_callback_to_ui_ms": 73.839654,
+      "camera_sensor_to_ui_ms": 320.001884
+    },
+    {
+      "elapsed_ms": 48088.923927,
+      "preprocess_ms": 11.678692,
+      "inference_ms": 55.344731,
+      "postprocess_ms": 0.241154,
+      "processing_ms": 67.264577,
+      "camera_callback_to_ui_ms": 75.621769,
+      "camera_sensor_to_ui_ms": 338.47623
+    },
+    {
+      "elapsed_ms": 48173.313619,
+      "preprocess_ms": 11.54523,
+      "inference_ms": 54.647654,
+      "postprocess_ms": 0.244462,
+      "processing_ms": 66.437346,
+      "camera_callback_to_ui_ms": 77.687692,
+      "camera_sensor_to_ui_ms": 339.299269
+    },
+    {
+      "elapsed_ms": 48259.47935,
+      "preprocess_ms": 12.301346,
+      "inference_ms": 54.942192,
+      "postprocess_ms": 0.244039,
+      "processing_ms": 67.487577,
+      "camera_callback_to_ui_ms": 80.280577,
+      "camera_sensor_to_ui_ms": 358.350154
+    },
+    {
+      "elapsed_ms": 48345.861311,
+      "preprocess_ms": 12.276846,
+      "inference_ms": 55.968769,
+      "postprocess_ms": 0.228077,
+      "processing_ms": 68.473692,
+      "camera_callback_to_ui_ms": 84.055076,
+      "camera_sensor_to_ui_ms": 327.394422
+    },
+    {
+      "elapsed_ms": 48430.247081,
+      "preprocess_ms": 11.968,
+      "inference_ms": 56.003884,
+      "postprocess_ms": 0.253385,
+      "processing_ms": 68.225269,
+      "camera_callback_to_ui_ms": 83.085039,
+      "camera_sensor_to_ui_ms": 328.005077
+    },
+    {
+      "elapsed_ms": 48514.001619,
+      "preprocess_ms": 11.786692,
+      "inference_ms": 54.899,
+      "postprocess_ms": 0.254308,
+      "processing_ms": 66.94,
+      "camera_callback_to_ui_ms": 80.950884,
+      "camera_sensor_to_ui_ms": 327.97
+    },
+    {
+      "elapsed_ms": 48621.979196,
+      "preprocess_ms": 12.339,
+      "inference_ms": 54.146115,
+      "postprocess_ms": 0.256808,
+      "processing_ms": 66.741923,
+      "camera_callback_to_ui_ms": 68.324769,
+      "camera_sensor_to_ui_ms": 310.296808
+    },
+    {
+      "elapsed_ms": 48705.989504,
+      "preprocess_ms": 12.592308,
+      "inference_ms": 54.214577,
+      "postprocess_ms": 0.242923,
+      "processing_ms": 67.049808,
+      "camera_callback_to_ui_ms": 68.265654,
+      "camera_sensor_to_ui_ms": 310.5235
+    },
+    {
+      "elapsed_ms": 48789.96758,
+      "preprocess_ms": 12.426038,
+      "inference_ms": 54.568,
+      "postprocess_ms": 0.252,
+      "processing_ms": 67.246038,
+      "camera_callback_to_ui_ms": 68.145923,
+      "camera_sensor_to_ui_ms": 310.728692
+    },
+    {
+      "elapsed_ms": 48876.11985,
+      "preprocess_ms": 12.828808,
+      "inference_ms": 54.20523,
+      "postprocess_ms": 0.258308,
+      "processing_ms": 67.292346,
+      "camera_callback_to_ui_ms": 68.505385,
+      "camera_sensor_to_ui_ms": 313.098808
+    },
+    {
+      "elapsed_ms": 48973.46485,
+      "preprocess_ms": 12.352,
+      "inference_ms": 55.032462,
+      "postprocess_ms": 0.266692,
+      "processing_ms": 67.651154,
+      "camera_callback_to_ui_ms": 82.003731,
+      "camera_sensor_to_ui_ms": 326.66727
+    },
+    {
+      "elapsed_ms": 49059.449734,
+      "preprocess_ms": 12.533962,
+      "inference_ms": 55.623423,
+      "postprocess_ms": 0.245654,
+      "processing_ms": 68.403039,
+      "camera_callback_to_ui_ms": 84.959731,
+      "camera_sensor_to_ui_ms": 328.875654
+    },
+    {
+      "elapsed_ms": 49167.742619,
+      "preprocess_ms": 13.466038,
+      "inference_ms": 54.4255,
+      "postprocess_ms": 0.260231,
+      "processing_ms": 68.151769,
+      "camera_callback_to_ui_ms": 69.733808,
+      "camera_sensor_to_ui_ms": 311.5055
+    },
+    {
+      "elapsed_ms": 49249.213811,
+      "preprocess_ms": 12.389885,
+      "inference_ms": 54.335769,
+      "postprocess_ms": 0.226962,
+      "processing_ms": 66.952616,
+      "camera_callback_to_ui_ms": 68.031423,
+      "camera_sensor_to_ui_ms": 309.198923
+    },
+    {
+      "elapsed_ms": 49336.572195,
+      "preprocess_ms": 12.464269,
+      "inference_ms": 55.349962,
+      "postprocess_ms": 0.255,
+      "processing_ms": 68.069231,
+      "camera_callback_to_ui_ms": 69.251692,
+      "camera_sensor_to_ui_ms": 312.766538
+    },
+    {
+      "elapsed_ms": 49416.445234,
+      "preprocess_ms": 12.529077,
+      "inference_ms": 55.823077,
+      "postprocess_ms": 0.257269,
+      "processing_ms": 68.609423,
+      "camera_callback_to_ui_ms": 70.056731,
+      "camera_sensor_to_ui_ms": 308.870923
+    },
+    {
+      "elapsed_ms": 49502.43158,
+      "preprocess_ms": 12.506885,
+      "inference_ms": 55.037192,
+      "postprocess_ms": 0.262346,
+      "processing_ms": 67.806423,
+      "camera_callback_to_ui_ms": 69.744539,
+      "camera_sensor_to_ui_ms": 311.080846
+    },
+    {
+      "elapsed_ms": 49586.075118,
+      "preprocess_ms": 12.641962,
+      "inference_ms": 55.369846,
+      "postprocess_ms": 0.244308,
+      "processing_ms": 68.256116,
+      "camera_callback_to_ui_ms": 72.393154,
+      "camera_sensor_to_ui_ms": 310.949576
+    },
+    {
+      "elapsed_ms": 49670.585541,
+      "preprocess_ms": 12.430154,
+      "inference_ms": 54.797961,
+      "postprocess_ms": 0.250615,
+      "processing_ms": 67.47873,
+      "camera_callback_to_ui_ms": 71.204192,
+      "camera_sensor_to_ui_ms": 311.68073
+    },
+    {
+      "elapsed_ms": 49756.597234,
+      "preprocess_ms": 13.347346,
+      "inference_ms": 54.580461,
+      "postprocess_ms": 0.257616,
+      "processing_ms": 68.185423,
+      "camera_callback_to_ui_ms": 74.181654,
+      "camera_sensor_to_ui_ms": 313.912731
+    },
+    {
+      "elapsed_ms": 49841.36231,
+      "preprocess_ms": 12.521615,
+      "inference_ms": 55.266192,
+      "postprocess_ms": 0.254731,
+      "processing_ms": 68.042538,
+      "camera_callback_to_ui_ms": 74.296461,
+      "camera_sensor_to_ui_ms": 314.898576
+    },
+    {
+      "elapsed_ms": 49927.537772,
+      "preprocess_ms": 12.430808,
+      "inference_ms": 56.938154,
+      "postprocess_ms": 0.257538,
+      "processing_ms": 69.6265,
+      "camera_callback_to_ui_ms": 79.087692,
+      "camera_sensor_to_ui_ms": 317.302385
+    },
+    {
+      "elapsed_ms": 50010.90831,
+      "preprocess_ms": 12.574115,
+      "inference_ms": 54.908385,
+      "postprocess_ms": 0.266308,
+      "processing_ms": 67.748808,
+      "camera_callback_to_ui_ms": 70.234923,
+      "camera_sensor_to_ui_ms": 316.896076
+    },
+    {
+      "elapsed_ms": 50096.028541,
+      "preprocess_ms": 12.462885,
+      "inference_ms": 55.315115,
+      "postprocess_ms": 0.260038,
+      "processing_ms": 68.038038,
+      "camera_callback_to_ui_ms": 70.943846,
+      "camera_sensor_to_ui_ms": 318.239461
+    },
+    {
+      "elapsed_ms": 50180.729002,
+      "preprocess_ms": 12.543885,
+      "inference_ms": 54.977,
+      "postprocess_ms": 0.252654,
+      "processing_ms": 67.773539,
+      "camera_callback_to_ui_ms": 73.591269,
+      "camera_sensor_to_ui_ms": 319.16523
+    },
+    {
+      "elapsed_ms": 50265.572195,
+      "preprocess_ms": 12.537077,
+      "inference_ms": 54.639923,
+      "postprocess_ms": 0.274308,
+      "processing_ms": 67.451308,
+      "camera_callback_to_ui_ms": 74.670539,
+      "camera_sensor_to_ui_ms": 320.227692
+    },
+    {
+      "elapsed_ms": 50350.836887,
+      "preprocess_ms": 12.547769,
+      "inference_ms": 54.84127,
+      "postprocess_ms": 0.255577,
+      "processing_ms": 67.644616,
+      "camera_callback_to_ui_ms": 78.153,
+      "camera_sensor_to_ui_ms": 321.718038
+    },
+    {
+      "elapsed_ms": 50437.109656,
+      "preprocess_ms": 12.476461,
+      "inference_ms": 56.019962,
+      "postprocess_ms": 0.269692,
+      "processing_ms": 68.766115,
+      "camera_callback_to_ui_ms": 82.400307,
+      "camera_sensor_to_ui_ms": 324.212653
+    },
+    {
+      "elapsed_ms": 50520.662118,
+      "preprocess_ms": 12.50423,
+      "inference_ms": 55.014616,
+      "postprocess_ms": 0.269692,
+      "processing_ms": 67.788538,
+      "camera_callback_to_ui_ms": 80.625731,
+      "camera_sensor_to_ui_ms": 323.980039
+    },
+    {
+      "elapsed_ms": 50605.682425,
+      "preprocess_ms": 12.439346,
+      "inference_ms": 55.258231,
+      "postprocess_ms": 0.264923,
+      "processing_ms": 67.9625,
+      "camera_callback_to_ui_ms": 82.332846,
+      "camera_sensor_to_ui_ms": 325.230846
+    },
+    {
+      "elapsed_ms": 50690.862194,
+      "preprocess_ms": 12.775077,
+      "inference_ms": 54.854577,
+      "postprocess_ms": 0.263346,
+      "processing_ms": 67.893,
+      "camera_callback_to_ui_ms": 78.658653,
+      "camera_sensor_to_ui_ms": 326.63523
+    },
+    {
+      "elapsed_ms": 50775.532964,
+      "preprocess_ms": 12.396192,
+      "inference_ms": 54.668731,
+      "postprocess_ms": 0.298846,
+      "processing_ms": 67.363769,
+      "camera_callback_to_ui_ms": 80.018,
+      "camera_sensor_to_ui_ms": 327.526962
+    },
+    {
+      "elapsed_ms": 50862.299233,
+      "preprocess_ms": 13.350115,
+      "inference_ms": 55.409808,
+      "postprocess_ms": 0.264462,
+      "processing_ms": 69.024385,
+      "camera_callback_to_ui_ms": 84.950808,
+      "camera_sensor_to_ui_ms": 330.519692
+    },
+    {
+      "elapsed_ms": 50978.568079,
+      "preprocess_ms": 12.362539,
+      "inference_ms": 54.426461,
+      "postprocess_ms": 0.254077,
+      "processing_ms": 67.043077,
+      "camera_callback_to_ui_ms": 77.773962,
+      "camera_sensor_to_ui_ms": 321.124154
+    },
+    {
+      "elapsed_ms": 51065.427963,
+      "preprocess_ms": 13.177807,
+      "inference_ms": 55.256731,
+      "postprocess_ms": 0.227615,
+      "processing_ms": 68.662153,
+      "camera_callback_to_ui_ms": 80.003038,
+      "camera_sensor_to_ui_ms": 324.202653
+    },
+    {
+      "elapsed_ms": 51148.952425,
+      "preprocess_ms": 11.983423,
+      "inference_ms": 55.023384,
+      "postprocess_ms": 0.258423,
+      "processing_ms": 67.26523,
+      "camera_callback_to_ui_ms": 75.508346,
+      "camera_sensor_to_ui_ms": 323.950115
+    },
+    {
+      "elapsed_ms": 51235.101348,
+      "preprocess_ms": 11.768,
+      "inference_ms": 56.186961,
+      "postprocess_ms": 0.290692,
+      "processing_ms": 68.245653,
+      "camera_callback_to_ui_ms": 79.134731,
+      "camera_sensor_to_ui_ms": 326.322423
+    },
+    {
+      "elapsed_ms": 51319.979502,
+      "preprocess_ms": 11.763231,
+      "inference_ms": 56.201846,
+      "postprocess_ms": 0.243846,
+      "processing_ms": 68.208923,
+      "camera_callback_to_ui_ms": 83.726039,
+      "camera_sensor_to_ui_ms": 327.419539
+    },
+    {
+      "elapsed_ms": 51427.132309,
+      "preprocess_ms": 12.087,
+      "inference_ms": 56.158884,
+      "postprocess_ms": 0.316923,
+      "processing_ms": 68.562807,
+      "camera_callback_to_ui_ms": 69.560884,
+      "camera_sensor_to_ui_ms": 308.910461
+    },
+    {
+      "elapsed_ms": 51512.322655,
+      "preprocess_ms": 12.140423,
+      "inference_ms": 54.560731,
+      "postprocess_ms": 0.248961,
+      "processing_ms": 66.950115,
+      "camera_callback_to_ui_ms": 67.901461,
+      "camera_sensor_to_ui_ms": 310.325384
+    },
+    {
+      "elapsed_ms": 51638.863425,
+      "preprocess_ms": 13.017807,
+      "inference_ms": 57.051077,
+      "postprocess_ms": 0.25127,
+      "processing_ms": 70.320154,
+      "camera_callback_to_ui_ms": 71.371693,
+      "camera_sensor_to_ui_ms": 311.194962
+    },
+    {
+      "elapsed_ms": 51715.210732,
+      "preprocess_ms": 12.179039,
+      "inference_ms": 54.256231,
+      "postprocess_ms": 0.252692,
+      "processing_ms": 66.687962,
+      "camera_callback_to_ui_ms": 67.748077,
+      "camera_sensor_to_ui_ms": 303.750538
+    },
+    {
+      "elapsed_ms": 51795.576847,
+      "preprocess_ms": 12.123769,
+      "inference_ms": 55.065808,
+      "postprocess_ms": 0.234269,
+      "processing_ms": 67.423846,
+      "camera_callback_to_ui_ms": 70.226923,
+      "camera_sensor_to_ui_ms": 300.35623
+    },
+    {
+      "elapsed_ms": 51879.954386,
+      "preprocess_ms": 12.3285,
+      "inference_ms": 54.696346,
+      "postprocess_ms": 0.266577,
+      "processing_ms": 67.291423,
+      "camera_callback_to_ui_ms": 76.484077,
+      "camera_sensor_to_ui_ms": 300.956615
+    },
+    {
+      "elapsed_ms": 51966.060001,
+      "preprocess_ms": 12.245808,
+      "inference_ms": 55.911577,
+      "postprocess_ms": 0.243961,
+      "processing_ms": 68.401346,
+      "camera_callback_to_ui_ms": 81.738961,
+      "camera_sensor_to_ui_ms": 303.279538
+    },
+    {
+      "elapsed_ms": 52071.99127,
+      "preprocess_ms": 12.310654,
+      "inference_ms": 54.943923,
+      "postprocess_ms": 0.249077,
+      "processing_ms": 67.503654,
+      "camera_callback_to_ui_ms": 68.672423,
+      "camera_sensor_to_ui_ms": 283.531384
+    },
+    {
+      "elapsed_ms": 52153.008924,
+      "preprocess_ms": 12.217846,
+      "inference_ms": 55.406308,
+      "postprocess_ms": 0.253192,
+      "processing_ms": 67.877346,
+      "camera_callback_to_ui_ms": 73.371923,
+      "camera_sensor_to_ui_ms": 280.789807
+    },
+    {
+      "elapsed_ms": 52237.225732,
+      "preprocess_ms": 12.280269,
+      "inference_ms": 54.950923,
+      "postprocess_ms": 0.243577,
+      "processing_ms": 67.474769,
+      "camera_callback_to_ui_ms": 79.129923,
+      "camera_sensor_to_ui_ms": 281.231539
+    },
+    {
+      "elapsed_ms": 52350.297924,
+      "preprocess_ms": 14.165346,
+      "inference_ms": 56.812346,
+      "postprocess_ms": 0.243116,
+      "processing_ms": 71.220808,
+      "camera_callback_to_ui_ms": 72.718769,
+      "camera_sensor_to_ui_ms": 268.622731
+    },
+    {
+      "elapsed_ms": 52429.834462,
+      "preprocess_ms": 12.248461,
+      "inference_ms": 55.864577,
+      "postprocess_ms": 0.249269,
+      "processing_ms": 68.362307,
+      "camera_callback_to_ui_ms": 69.272576,
+      "camera_sensor_to_ui_ms": 264.397499
+    },
+    {
+      "elapsed_ms": 52511.48677,
+      "preprocess_ms": 12.334923,
+      "inference_ms": 54.14077,
+      "postprocess_ms": 0.263576,
+      "processing_ms": 66.739269,
+      "camera_callback_to_ui_ms": 67.831269,
+      "camera_sensor_to_ui_ms": 262.267538
+    },
+    {
+      "elapsed_ms": 52597.862193,
+      "preprocess_ms": 12.619385,
+      "inference_ms": 55.022307,
+      "postprocess_ms": 0.253154,
+      "processing_ms": 67.894846,
+      "camera_callback_to_ui_ms": 69.0035,
+      "camera_sensor_to_ui_ms": 264.860231
+    },
+    {
+      "elapsed_ms": 52686.256808,
+      "preprocess_ms": 12.652808,
+      "inference_ms": 54.6475,
+      "postprocess_ms": 0.249115,
+      "processing_ms": 67.549423,
+      "camera_callback_to_ui_ms": 69.230423,
+      "camera_sensor_to_ui_ms": 269.481961
+    },
+    {
+      "elapsed_ms": 52766.407808,
+      "preprocess_ms": 12.440385,
+      "inference_ms": 54.094846,
+      "postprocess_ms": 0.2525,
+      "processing_ms": 66.787731,
+      "camera_callback_to_ui_ms": 67.910961,
+      "camera_sensor_to_ui_ms": 265.861153
+    },
+    {
+      "elapsed_ms": 52851.249962,
+      "preprocess_ms": 12.599192,
+      "inference_ms": 55.236731,
+      "postprocess_ms": 0.2675,
+      "processing_ms": 68.103423,
+      "camera_callback_to_ui_ms": 69.441461,
+      "camera_sensor_to_ui_ms": 266.928423
+    },
+    {
+      "elapsed_ms": 52939.663693,
+      "preprocess_ms": 12.420692,
+      "inference_ms": 55.120847,
+      "postprocess_ms": 0.243038,
+      "processing_ms": 67.784577,
+      "camera_callback_to_ui_ms": 68.836346,
+      "camera_sensor_to_ui_ms": 271.561962
+    },
+    {
+      "elapsed_ms": 53021.066385,
+      "preprocess_ms": 12.265,
+      "inference_ms": 54.479961,
+      "postprocess_ms": 0.246808,
+      "processing_ms": 66.991769,
+      "camera_callback_to_ui_ms": 68.377654,
+      "camera_sensor_to_ui_ms": 269.189115
+    },
+    {
+      "elapsed_ms": 53105.957077,
+      "preprocess_ms": 12.104847,
+      "inference_ms": 55.345307,
+      "postprocess_ms": 0.233269,
+      "processing_ms": 67.683423,
+      "camera_callback_to_ui_ms": 68.9655,
+      "camera_sensor_to_ui_ms": 270.304961
+    },
+    {
+      "elapsed_ms": 53193.2955,
+      "preprocess_ms": 12.187115,
+      "inference_ms": 55.160231,
+      "postprocess_ms": 0.251384,
+      "processing_ms": 67.59873,
+      "camera_callback_to_ui_ms": 68.60223,
+      "camera_sensor_to_ui_ms": 273.853192
+    },
+    {
+      "elapsed_ms": 53280.372962,
+      "preprocess_ms": 11.929693,
+      "inference_ms": 54.852346,
+      "postprocess_ms": 0.270307,
+      "processing_ms": 67.052346,
+      "camera_callback_to_ui_ms": 68.566923,
+      "camera_sensor_to_ui_ms": 277.166346
+    },
+    {
+      "elapsed_ms": 53358.963077,
+      "preprocess_ms": 11.800231,
+      "inference_ms": 55.371846,
+      "postprocess_ms": 0.217538,
+      "processing_ms": 67.389615,
+      "camera_callback_to_ui_ms": 74.6705,
+      "camera_sensor_to_ui_ms": 271.980384
+    },
+    {
+      "elapsed_ms": 53445.585692,
+      "preprocess_ms": 11.742923,
+      "inference_ms": 57.109346,
+      "postprocess_ms": 0.235962,
+      "processing_ms": 69.088231,
+      "camera_callback_to_ui_ms": 78.753076,
+      "camera_sensor_to_ui_ms": 274.823461
+    },
+    {
+      "elapsed_ms": 53527.626846,
+      "preprocess_ms": 11.771846,
+      "inference_ms": 54.388154,
+      "postprocess_ms": 0.220269,
+      "processing_ms": 66.380269,
+      "camera_callback_to_ui_ms": 72.111692,
+      "camera_sensor_to_ui_ms": 273.0885
+    },
+    {
+      "elapsed_ms": 53614.360808,
+      "preprocess_ms": 11.773231,
+      "inference_ms": 55.833154,
+      "postprocess_ms": 0.235961,
+      "processing_ms": 67.842346,
+      "camera_callback_to_ui_ms": 79.695693,
+      "camera_sensor_to_ui_ms": 276.044308
+    },
+    {
+      "elapsed_ms": 53698.677654,
+      "preprocess_ms": 11.780385,
+      "inference_ms": 54.705961,
+      "postprocess_ms": 0.215231,
+      "processing_ms": 66.701577,
+      "camera_callback_to_ui_ms": 78.913231,
+      "camera_sensor_to_ui_ms": 276.585269
+    },
+    {
+      "elapsed_ms": 53784.129192,
+      "preprocess_ms": 11.740269,
+      "inference_ms": 55.909461,
+      "postprocess_ms": 0.216885,
+      "processing_ms": 67.866615,
+      "camera_callback_to_ui_ms": 80.766769,
+      "camera_sensor_to_ui_ms": 278.258192
+    },
+    {
+      "elapsed_ms": 53888.485884,
+      "preprocess_ms": 14.038269,
+      "inference_ms": 54.293347,
+      "postprocess_ms": 0.219884,
+      "processing_ms": 68.5515,
+      "camera_callback_to_ui_ms": 69.604423,
+      "camera_sensor_to_ui_ms": 281.933922
+    },
+    {
+      "elapsed_ms": 53970.735807,
+      "preprocess_ms": 11.831308,
+      "inference_ms": 55.387038,
+      "postprocess_ms": 0.22477,
+      "processing_ms": 67.443116,
+      "camera_callback_to_ui_ms": 77.228269,
+      "camera_sensor_to_ui_ms": 297.068461
+    },
+    {
+      "elapsed_ms": 54055.781961,
+      "preprocess_ms": 11.876885,
+      "inference_ms": 55.228385,
+      "postprocess_ms": 0.228115,
+      "processing_ms": 67.333385,
+      "camera_callback_to_ui_ms": 81.555038,
+      "camera_sensor_to_ui_ms": 314.995038
+    },
+    {
+      "elapsed_ms": 54166.427346,
+      "preprocess_ms": 14.197077,
+      "inference_ms": 54.64727,
+      "postprocess_ms": 0.229576,
+      "processing_ms": 69.073923,
+      "camera_callback_to_ui_ms": 70.531654,
+      "camera_sensor_to_ui_ms": 324.948538
+    },
+    {
+      "elapsed_ms": 54247.039153,
+      "preprocess_ms": 12.413231,
+      "inference_ms": 55.626077,
+      "postprocess_ms": 0.268769,
+      "processing_ms": 68.308077,
+      "camera_callback_to_ui_ms": 69.088269,
+      "camera_sensor_to_ui_ms": 338.447961
+    },
+    {
+      "elapsed_ms": 54365.328269,
+      "preprocess_ms": 12.466385,
+      "inference_ms": 56.825846,
+      "postprocess_ms": 0.236423,
+      "processing_ms": 69.528654,
+      "camera_callback_to_ui_ms": 70.843923,
+      "camera_sensor_to_ui_ms": 314.178
+    },
+    {
+      "elapsed_ms": 54448.13373,
+      "preprocess_ms": 12.628077,
+      "inference_ms": 55.797308,
+      "postprocess_ms": 0.206269,
+      "processing_ms": 68.631654,
+      "camera_callback_to_ui_ms": 73.671884,
+      "camera_sensor_to_ui_ms": 313.202307
+    },
+    {
+      "elapsed_ms": 54531.614153,
+      "preprocess_ms": 12.263923,
+      "inference_ms": 54.493115,
+      "postprocess_ms": 0.235923,
+      "processing_ms": 66.992961,
+      "camera_callback_to_ui_ms": 77.35223,
+      "camera_sensor_to_ui_ms": 312.905461
+    },
+    {
+      "elapsed_ms": 54617.045807,
+      "preprocess_ms": 12.137231,
+      "inference_ms": 55.145192,
+      "postprocess_ms": 0.228308,
+      "processing_ms": 67.510731,
+      "camera_callback_to_ui_ms": 79.238538,
+      "camera_sensor_to_ui_ms": 314.562307
+    },
+    {
+      "elapsed_ms": 54701.483038,
+      "preprocess_ms": 12.126423,
+      "inference_ms": 54.645423,
+      "postprocess_ms": 0.234462,
+      "processing_ms": 67.006308,
+      "camera_callback_to_ui_ms": 82.581039,
+      "camera_sensor_to_ui_ms": 315.217192
+    },
+    {
+      "elapsed_ms": 54786.259153,
+      "preprocess_ms": 12.172884,
+      "inference_ms": 54.297693,
+      "postprocess_ms": 0.239192,
+      "processing_ms": 66.709769,
+      "camera_callback_to_ui_ms": 80.193961,
+      "camera_sensor_to_ui_ms": 316.218269
+    },
+    {
+      "elapsed_ms": 54872.223115,
+      "preprocess_ms": 12.917808,
+      "inference_ms": 54.701,
+      "postprocess_ms": 0.233807,
+      "processing_ms": 67.852615,
+      "camera_callback_to_ui_ms": 80.449308,
+      "camera_sensor_to_ui_ms": 318.409616
+    },
+    {
+      "elapsed_ms": 54957.874614,
+      "preprocess_ms": 12.146923,
+      "inference_ms": 56.184577,
+      "postprocess_ms": 0.218962,
+      "processing_ms": 68.550462,
+      "camera_callback_to_ui_ms": 83.654692,
+      "camera_sensor_to_ui_ms": 320.286307
+    },
+    {
+      "elapsed_ms": 55068.546576,
+      "preprocess_ms": 12.395423,
+      "inference_ms": 54.664192,
+      "postprocess_ms": 0.238731,
+      "processing_ms": 67.298346,
+      "camera_callback_to_ui_ms": 69.760692,
+      "camera_sensor_to_ui_ms": 305.287615
+    },
+    {
+      "elapsed_ms": 55147.28523,
+      "preprocess_ms": 12.463308,
+      "inference_ms": 54.367153,
+      "postprocess_ms": 0.313808,
+      "processing_ms": 67.144269,
+      "camera_callback_to_ui_ms": 68.427769,
+      "camera_sensor_to_ui_ms": 300.247462
+    },
+    {
+      "elapsed_ms": 55244.008653,
+      "preprocess_ms": 12.245423,
+      "inference_ms": 55.048962,
+      "postprocess_ms": 0.220115,
+      "processing_ms": 67.5145,
+      "camera_callback_to_ui_ms": 74.609885,
+      "camera_sensor_to_ui_ms": 313.195846
+    },
+    {
+      "elapsed_ms": 55323.523383,
+      "preprocess_ms": 12.662077,
+      "inference_ms": 54.364193,
+      "postprocess_ms": 0.251,
+      "processing_ms": 67.27727,
+      "camera_callback_to_ui_ms": 68.447769,
+      "camera_sensor_to_ui_ms": 308.934807
+    },
+    {
+      "elapsed_ms": 55401.420422,
+      "preprocess_ms": 12.310308,
+      "inference_ms": 54.50573,
+      "postprocess_ms": 0.237347,
+      "processing_ms": 67.053385,
+      "camera_callback_to_ui_ms": 68.065808,
+      "camera_sensor_to_ui_ms": 303.048231
+    },
+    {
+      "elapsed_ms": 55486.34146,
+      "preprocess_ms": 12.468308,
+      "inference_ms": 55.280038,
+      "postprocess_ms": 0.244808,
+      "processing_ms": 67.993154,
+      "camera_callback_to_ui_ms": 75.640077,
+      "camera_sensor_to_ui_ms": 304.191615
+    },
+    {
+      "elapsed_ms": 55569.161268,
+      "preprocess_ms": 12.181654,
+      "inference_ms": 55.334653,
+      "postprocess_ms": 0.227577,
+      "processing_ms": 67.743884,
+      "camera_callback_to_ui_ms": 75.237308,
+      "camera_sensor_to_ui_ms": 303.238731
+    },
+    {
+      "elapsed_ms": 55654.183537,
+      "preprocess_ms": 12.656462,
+      "inference_ms": 54.897461,
+      "postprocess_ms": 0.225192,
+      "processing_ms": 67.779115,
+      "camera_callback_to_ui_ms": 75.647885,
+      "camera_sensor_to_ui_ms": 304.484231
+    },
+    {
+      "elapsed_ms": 55740.015922,
+      "preprocess_ms": 12.630653,
+      "inference_ms": 55.447424,
+      "postprocess_ms": 0.224576,
+      "processing_ms": 68.302653,
+      "camera_callback_to_ui_ms": 77.681885,
+      "camera_sensor_to_ui_ms": 306.537539
+    },
+    {
+      "elapsed_ms": 55825.782383,
+      "preprocess_ms": 12.189731,
+      "inference_ms": 57.093769,
+      "postprocess_ms": 0.227538,
+      "processing_ms": 69.511038,
+      "camera_callback_to_ui_ms": 82.017769,
+      "camera_sensor_to_ui_ms": 308.526884
+    },
+    {
+      "elapsed_ms": 55911.145921,
+      "preprocess_ms": 12.241731,
+      "inference_ms": 54.934423,
+      "postprocess_ms": 0.293615,
+      "processing_ms": 67.469769,
+      "camera_callback_to_ui_ms": 79.292884,
+      "camera_sensor_to_ui_ms": 310.114961
+    },
+    {
+      "elapsed_ms": 56019.331075,
+      "preprocess_ms": 13.744,
+      "inference_ms": 54.228423,
+      "postprocess_ms": 0.289577,
+      "processing_ms": 68.262,
+      "camera_callback_to_ui_ms": 69.621538,
+      "camera_sensor_to_ui_ms": 292.629692
+    },
+    {
+      "elapsed_ms": 56099.506344,
+      "preprocess_ms": 12.624885,
+      "inference_ms": 54.783769,
+      "postprocess_ms": 0.224538,
+      "processing_ms": 67.633192,
+      "camera_callback_to_ui_ms": 68.701538,
+      "camera_sensor_to_ui_ms": 289.021884
+    },
+    {
+      "elapsed_ms": 56181.505614,
+      "preprocess_ms": 12.379115,
+      "inference_ms": 55.4165,
+      "postprocess_ms": 0.224192,
+      "processing_ms": 68.019807,
+      "camera_callback_to_ui_ms": 70.143962,
+      "camera_sensor_to_ui_ms": 287.255231
+    },
+    {
+      "elapsed_ms": 56266.141767,
+      "preprocess_ms": 12.089116,
+      "inference_ms": 55.499,
+      "postprocess_ms": 0.233884,
+      "processing_ms": 67.822,
+      "camera_callback_to_ui_ms": 71.401807,
+      "camera_sensor_to_ui_ms": 288.115692
+    },
+    {
+      "elapsed_ms": 56350.527037,
+      "preprocess_ms": 12.189423,
+      "inference_ms": 54.816116,
+      "postprocess_ms": 0.245231,
+      "processing_ms": 67.25077,
+      "camera_callback_to_ui_ms": 78.497654,
+      "camera_sensor_to_ui_ms": 288.723923
+    },
+    {
+      "elapsed_ms": 56462.018652,
+      "preprocess_ms": 12.580384,
+      "inference_ms": 58.123539,
+      "postprocess_ms": 0.232846,
+      "processing_ms": 70.936769,
+      "camera_callback_to_ui_ms": 71.921308,
+      "camera_sensor_to_ui_ms": 274.546808
+    },
+    {
+      "elapsed_ms": 56541.253998,
+      "preprocess_ms": 12.143346,
+      "inference_ms": 55.256884,
+      "postprocess_ms": 0.240231,
+      "processing_ms": 67.640461,
+      "camera_callback_to_ui_ms": 68.437577,
+      "camera_sensor_to_ui_ms": 270.005731
+    },
+    {
+      "elapsed_ms": 56621.818806,
+      "preprocess_ms": 11.74327,
+      "inference_ms": 54.524038,
+      "postprocess_ms": 0.229308,
+      "processing_ms": 66.496616,
+      "camera_callback_to_ui_ms": 70.477347,
+      "camera_sensor_to_ui_ms": 266.779462
+    },
+    {
+      "elapsed_ms": 56707.474652,
+      "preprocess_ms": 12.209846,
+      "inference_ms": 54.683154,
+      "postprocess_ms": 0.250077,
+      "processing_ms": 67.143077,
+      "camera_callback_to_ui_ms": 75.26177,
+      "camera_sensor_to_ui_ms": 268.671462
+    },
+    {
+      "elapsed_ms": 56792.363998,
+      "preprocess_ms": 12.331807,
+      "inference_ms": 54.46027,
+      "postprocess_ms": 0.221076,
+      "processing_ms": 67.013153,
+      "camera_callback_to_ui_ms": 80.068923,
+      "camera_sensor_to_ui_ms": 269.785039
+    },
+    {
+      "elapsed_ms": 56908.282152,
+      "preprocess_ms": 12.627808,
+      "inference_ms": 54.261769,
+      "postprocess_ms": 0.234462,
+      "processing_ms": 67.124039,
+      "camera_callback_to_ui_ms": 80.675924,
+      "camera_sensor_to_ui_ms": 260.040885
+    },
+    {
+      "elapsed_ms": 57013.934767,
+      "preprocess_ms": 12.516962,
+      "inference_ms": 54.964923,
+      "postprocess_ms": 0.237,
+      "processing_ms": 67.718885,
+      "camera_callback_to_ui_ms": 70.165462,
+      "camera_sensor_to_ui_ms": 244.989846
+    },
+    {
+      "elapsed_ms": 57099.087844,
+      "preprocess_ms": 12.581846,
+      "inference_ms": 54.484269,
+      "postprocess_ms": 0.243923,
+      "processing_ms": 67.310038,
+      "camera_callback_to_ui_ms": 78.974193,
+      "camera_sensor_to_ui_ms": 249.655539
+    },
+    {
+      "elapsed_ms": 57184.220613,
+      "preprocess_ms": 12.214731,
+      "inference_ms": 54.922,
+      "postprocess_ms": 0.227077,
+      "processing_ms": 67.363808,
+      "camera_callback_to_ui_ms": 81.677346,
+      "camera_sensor_to_ui_ms": 254.335346
+    },
+    {
+      "elapsed_ms": 57268.699574,
+      "preprocess_ms": 12.305923,
+      "inference_ms": 54.569384,
+      "postprocess_ms": 0.243039,
+      "processing_ms": 67.118346,
+      "camera_callback_to_ui_ms": 82.529884,
+      "camera_sensor_to_ui_ms": 258.334615
+    },
+    {
+      "elapsed_ms": 57353.663113,
+      "preprocess_ms": 12.200692,
+      "inference_ms": 54.613154,
+      "postprocess_ms": 0.233154,
+      "processing_ms": 67.047,
+      "camera_callback_to_ui_ms": 83.876039,
+      "camera_sensor_to_ui_ms": 262.839269
+    },
+    {
+      "elapsed_ms": 57438.992574,
+      "preprocess_ms": 12.350385,
+      "inference_ms": 55.030154,
+      "postprocess_ms": 0.297231,
+      "processing_ms": 67.67777,
+      "camera_callback_to_ui_ms": 81.827884,
+      "camera_sensor_to_ui_ms": 267.695307
+    },
+    {
+      "elapsed_ms": 57523.660036,
+      "preprocess_ms": 12.427769,
+      "inference_ms": 54.497154,
+      "postprocess_ms": 0.221,
+      "processing_ms": 67.145923,
+      "camera_callback_to_ui_ms": 76.540077,
+      "camera_sensor_to_ui_ms": 271.896731
+    },
+    {
+      "elapsed_ms": 57598.278228,
+      "preprocess_ms": 11.353423,
+      "inference_ms": 45.545423,
+      "postprocess_ms": 0.2035,
+      "processing_ms": 57.102346,
+      "camera_callback_to_ui_ms": 70.043769,
+      "camera_sensor_to_ui_ms": 266.035923
+    },
+    {
+      "elapsed_ms": 57673.821343,
+      "preprocess_ms": 10.322923,
+      "inference_ms": 48.960961,
+      "postprocess_ms": 0.201654,
+      "processing_ms": 59.485538,
+      "camera_callback_to_ui_ms": 60.058769,
+      "camera_sensor_to_ui_ms": 261.115346
+    },
+    {
+      "elapsed_ms": 57762.109651,
+      "preprocess_ms": 11.592346,
+      "inference_ms": 49.728077,
+      "postprocess_ms": 0.293654,
+      "processing_ms": 61.614077,
+      "camera_callback_to_ui_ms": 63.537231,
+      "camera_sensor_to_ui_ms": 268.934769
+    },
+    {
+      "elapsed_ms": 57845.874497,
+      "preprocess_ms": 10.744,
+      "inference_ms": 47.025038,
+      "postprocess_ms": 0.205846,
+      "processing_ms": 57.974884,
+      "camera_callback_to_ui_ms": 58.856,
+      "camera_sensor_to_ui_ms": 272.226692
+    },
+    {
+      "elapsed_ms": 57929.088574,
+      "preprocess_ms": 10.400923,
+      "inference_ms": 50.135346,
+      "postprocess_ms": 0.211731,
+      "processing_ms": 60.748,
+      "camera_callback_to_ui_ms": 61.417423,
+      "camera_sensor_to_ui_ms": 274.968692
+    },
+    {
+      "elapsed_ms": 58010.097305,
+      "preprocess_ms": 10.694308,
+      "inference_ms": 48.252038,
+      "postprocess_ms": 0.234346,
+      "processing_ms": 59.180692,
+      "camera_callback_to_ui_ms": 60.627308,
+      "camera_sensor_to_ui_ms": 275.515885
+    },
+    {
+      "elapsed_ms": 58087.445074,
+      "preprocess_ms": 10.920846,
+      "inference_ms": 46.7555,
+      "postprocess_ms": 0.211154,
+      "processing_ms": 57.8875,
+      "camera_callback_to_ui_ms": 58.608539,
+      "camera_sensor_to_ui_ms": 272.391692
+    },
+    {
+      "elapsed_ms": 58172.125958,
+      "preprocess_ms": 11.370077,
+      "inference_ms": 48.186039,
+      "postprocess_ms": 0.278115,
+      "processing_ms": 59.834231,
+      "camera_callback_to_ui_ms": 60.717577,
+      "camera_sensor_to_ui_ms": 276.603269
+    },
+    {
+      "elapsed_ms": 58252.772689,
+      "preprocess_ms": 10.570308,
+      "inference_ms": 47.309538,
+      "postprocess_ms": 0.221193,
+      "processing_ms": 58.101039,
+      "camera_callback_to_ui_ms": 58.868769,
+      "camera_sensor_to_ui_ms": 276.777654
+    },
+    {
+      "elapsed_ms": 58334.44115,
+      "preprocess_ms": 10.488962,
+      "inference_ms": 44.8785,
+      "postprocess_ms": 0.205192,
+      "processing_ms": 55.572654,
+      "camera_callback_to_ui_ms": 56.492769,
+      "camera_sensor_to_ui_ms": 277.978653
+    },
+    {
+      "elapsed_ms": 58423.883497,
+      "preprocess_ms": 11.644654,
+      "inference_ms": 45.667884,
+      "postprocess_ms": 0.200308,
+      "processing_ms": 57.512846,
+      "camera_callback_to_ui_ms": 58.912693,
+      "camera_sensor_to_ui_ms": 286.950154
+    },
+    {
+      "elapsed_ms": 58526.212766,
+      "preprocess_ms": 11.57577,
+      "inference_ms": 46.59173,
+      "postprocess_ms": 0.191,
+      "processing_ms": 58.3585,
+      "camera_callback_to_ui_ms": 72.242193,
+      "camera_sensor_to_ui_ms": 308.807423
+    },
+    {
+      "elapsed_ms": 58628.609727,
+      "preprocess_ms": 12.609577,
+      "inference_ms": 56.821192,
+      "postprocess_ms": 0.239308,
+      "processing_ms": 69.670077,
+      "camera_callback_to_ui_ms": 88.949615,
+      "camera_sensor_to_ui_ms": 330.737692
+    },
+    {
+      "elapsed_ms": 58731.931612,
+      "preprocess_ms": 12.444692,
+      "inference_ms": 55.604423,
+      "postprocess_ms": 0.241462,
+      "processing_ms": 68.290577,
+      "camera_callback_to_ui_ms": 70.881039,
+      "camera_sensor_to_ui_ms": 313.345769
+    },
+    {
+      "elapsed_ms": 58815.302304,
+      "preprocess_ms": 12.300923,
+      "inference_ms": 54.418538,
+      "postprocess_ms": 0.289731,
+      "processing_ms": 67.009192,
+      "camera_callback_to_ui_ms": 70.304038,
+      "camera_sensor_to_ui_ms": 316.254615
+    },
+    {
+      "elapsed_ms": 58901.337573,
+      "preprocess_ms": 12.466885,
+      "inference_ms": 55.150269,
+      "postprocess_ms": 0.251577,
+      "processing_ms": 67.868731,
+      "camera_callback_to_ui_ms": 74.356038,
+      "camera_sensor_to_ui_ms": 321.8185
+    },
+    {
+      "elapsed_ms": 58986.024458,
+      "preprocess_ms": 12.286116,
+      "inference_ms": 55.009654,
+      "postprocess_ms": 0.242269,
+      "processing_ms": 67.538039,
+      "camera_callback_to_ui_ms": 77.137654,
+      "camera_sensor_to_ui_ms": 326.035769
+    },
+    {
+      "elapsed_ms": 59070.097573,
+      "preprocess_ms": 12.157307,
+      "inference_ms": 54.517577,
+      "postprocess_ms": 0.241693,
+      "processing_ms": 66.916577,
+      "camera_callback_to_ui_ms": 77.888192,
+      "camera_sensor_to_ui_ms": 329.636923
+    },
+    {
+      "elapsed_ms": 59156.054765,
+      "preprocess_ms": 12.309153,
+      "inference_ms": 55.413808,
+      "postprocess_ms": 0.224308,
+      "processing_ms": 67.947269,
+      "camera_callback_to_ui_ms": 83.255423,
+      "camera_sensor_to_ui_ms": 335.124576
+    },
+    {
+      "elapsed_ms": 59258.202688,
+      "preprocess_ms": 12.578577,
+      "inference_ms": 47.519923,
+      "postprocess_ms": 0.192808,
+      "processing_ms": 60.291308,
+      "camera_callback_to_ui_ms": 61.164115,
+      "camera_sensor_to_ui_ms": 316.561346
+    },
+    {
+      "elapsed_ms": 59344.663034,
+      "preprocess_ms": 10.656307,
+      "inference_ms": 49.126077,
+      "postprocess_ms": 0.223,
+      "processing_ms": 60.005384,
+      "camera_callback_to_ui_ms": 60.777192,
+      "camera_sensor_to_ui_ms": 322.545384
+    },
+    {
+      "elapsed_ms": 59427.959765,
+      "preprocess_ms": 11.1745,
+      "inference_ms": 47.483346,
+      "postprocess_ms": 0.215346,
+      "processing_ms": 58.873192,
+      "camera_callback_to_ui_ms": 59.51,
+      "camera_sensor_to_ui_ms": 325.385769
+    },
+    {
+      "elapsed_ms": 59526.713803,
+      "preprocess_ms": 10.55673,
+      "inference_ms": 53.868693,
+      "postprocess_ms": 0.208692,
+      "processing_ms": 64.634115,
+      "camera_callback_to_ui_ms": 72.89323,
+      "camera_sensor_to_ui_ms": 343.667307
+    },
+    {
+      "elapsed_ms": 59595.246765,
+      "preprocess_ms": 10.506692,
+      "inference_ms": 46.886538,
+      "postprocess_ms": 0.196577,
+      "processing_ms": 57.589807,
+      "camera_callback_to_ui_ms": 58.173962,
+      "camera_sensor_to_ui_ms": 331.735692
+    },
+    {
+      "elapsed_ms": 59672.240457,
+      "preprocess_ms": 10.775885,
+      "inference_ms": 46.804692,
+      "postprocess_ms": 0.197231,
+      "processing_ms": 57.777808,
+      "camera_callback_to_ui_ms": 59.375346,
+      "camera_sensor_to_ui_ms": 288.021115
+    },
+    {
+      "elapsed_ms": 59766.876149,
+      "preprocess_ms": 11.0735,
+      "inference_ms": 45.621923,
+      "postprocess_ms": 0.387,
+      "processing_ms": 57.082423,
+      "camera_callback_to_ui_ms": 71.537923,
+      "camera_sensor_to_ui_ms": 302.185807
+    },
+    {
+      "elapsed_ms": 59852.118688,
+      "preprocess_ms": 10.671962,
+      "inference_ms": 47.700269,
+      "postprocess_ms": 0.204,
+      "processing_ms": 58.576231,
+      "camera_callback_to_ui_ms": 70.3195,
+      "camera_sensor_to_ui_ms": 306.962
+    },
+    {
+      "elapsed_ms": 59936.795726,
+      "preprocess_ms": 10.606461,
+      "inference_ms": 46.658231,
+      "postprocess_ms": 0.2055,
+      "processing_ms": 57.470192,
+      "camera_callback_to_ui_ms": 74.881961,
+      "camera_sensor_to_ui_ms": 311.167576
+    },
+    {
+      "elapsed_ms": 60022.140803,
+      "preprocess_ms": 10.553346,
+      "inference_ms": 47.153116,
+      "postprocess_ms": 0.191076,
+      "processing_ms": 57.897538,
+      "camera_callback_to_ui_ms": 80.5755,
+      "camera_sensor_to_ui_ms": 316.039384
+    },
+    {
+      "elapsed_ms": 60123.522726,
+      "preprocess_ms": 10.332769,
+      "inference_ms": 45.604923,
+      "postprocess_ms": 0.189269,
+      "processing_ms": 56.126961,
+      "camera_callback_to_ui_ms": 57.160808,
+      "camera_sensor_to_ui_ms": 296.721961
+    },
+    {
+      "elapsed_ms": 60205.680534,
+      "preprocess_ms": 11.121231,
+      "inference_ms": 46.065808,
+      "postprocess_ms": 0.204269,
+      "processing_ms": 57.391308,
+      "camera_callback_to_ui_ms": 58.671462,
+      "camera_sensor_to_ui_ms": 298.408154
+    },
+    {
+      "elapsed_ms": 60287.279264,
+      "preprocess_ms": 10.407154,
+      "inference_ms": 44.908077,
+      "postprocess_ms": 0.2075,
+      "processing_ms": 55.522731,
+      "camera_callback_to_ui_ms": 56.747153,
+      "camera_sensor_to_ui_ms": 299.540807
+    },
+    {
+      "elapsed_ms": 60370.014418,
+      "preprocess_ms": 12.070923,
+      "inference_ms": 45.907923,
+      "postprocess_ms": 0.194115,
+      "processing_ms": 58.172961,
+      "camera_callback_to_ui_ms": 59.093115,
+      "camera_sensor_to_ui_ms": 301.797192
+    },
+    {
+      "elapsed_ms": 60451.273072,
+      "preprocess_ms": 10.601423,
+      "inference_ms": 45.37627,
+      "postprocess_ms": 0.269923,
+      "processing_ms": 56.247616,
+      "camera_callback_to_ui_ms": 57.267654,
+      "camera_sensor_to_ui_ms": 302.588461
+    },
+    {
+      "elapsed_ms": 60539.533803,
+      "preprocess_ms": 11.554769,
+      "inference_ms": 46.193885,
+      "postprocess_ms": 0.222846,
+      "processing_ms": 57.9715,
+      "camera_callback_to_ui_ms": 63.539077,
+      "camera_sensor_to_ui_ms": 310.376577
+    }
+  ],
+  "telemetry": [
+    {
+      "elapsed_since_start_ms": 8.166346,
+      "pss_kib": 69811,
+      "thermal_status": "light"
+    },
+    {
+      "elapsed_since_start_ms": 6727.779572,
+      "pss_kib": 138006,
+      "thermal_status": "light"
+    },
+    {
+      "elapsed_since_start_ms": 11740.555492,
+      "pss_kib": 155523,
+      "thermal_status": "light"
+    },
+    {
+      "elapsed_since_start_ms": 16765.944142,
+      "pss_kib": 149021,
+      "thermal_status": "light"
+    },
+    {
+      "elapsed_since_start_ms": 21786.595677,
+      "pss_kib": 164276,
+      "thermal_status": "light"
+    },
+    {
+      "elapsed_since_start_ms": 26797.38225,
+      "pss_kib": 179966,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 31812.973516,
+      "pss_kib": 198132,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 36825.57182,
+      "pss_kib": 160727,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 41838.108239,
+      "pss_kib": 177043,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 46850.587274,
+      "pss_kib": 193361,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 51862.341078,
+      "pss_kib": 209586,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 56888.776498,
+      "pss_kib": 226693,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 61902.999263,
+      "pss_kib": 187203,
+      "thermal_status": "moderate"
+    },
+    {
+      "elapsed_since_start_ms": 62293.645455,
+      "pss_kib": 188603,
+      "thermal_status": "moderate"
+    }
+  ],
+  "peak_sampled_pss_kib": 226693,
+  "peak_thermal_status": "moderate",
+  "last_frame_width": 480,
+  "last_frame_height": 640,
+  "last_frame_detections": [
+    {
+      "class_id": 63,
+      "class": "laptop",
+      "confidence": 0.9377584457397461,
+      "normalized_xyxy": [
+        0.51827645,
+        0.0015604377,
+        1,
+        0.48232365
+      ]
+    }
+  ],
+  "app_version": "0.2.1",
+  "decision_average_ms": 0.7306109538904899,
+  "spoken_alerts": [
+    {
+      "elapsed_since_start_ms": 2141.43667,
+      "track_id": 1,
+      "class_id": 63,
+      "image_direction": 1,
+      "phrase_ar": "حاسوب محمول في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 14213.43667,
+      "track_id": 1,
+      "class_id": 63,
+      "image_direction": 1,
+      "phrase_ar": "حاسوب محمول في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 20543.43667,
+      "track_id": 5,
+      "class_id": 39,
+      "image_direction": 1,
+      "phrase_ar": "زجاجة في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 26318.43667,
+      "track_id": 7,
+      "class_id": 63,
+      "image_direction": 1,
+      "phrase_ar": "حاسوب محمول في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 32623.43667,
+      "track_id": 7,
+      "class_id": 63,
+      "image_direction": 2,
+      "phrase_ar": "حاسوب محمول على اليمين",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 44633.43667,
+      "track_id": 12,
+      "class_id": 63,
+      "image_direction": 1,
+      "phrase_ar": "حاسوب محمول في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 47465.43667,
+      "track_id": 15,
+      "class_id": 60,
+      "image_direction": 1,
+      "phrase_ar": "طاولة طعام في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 53270.43667,
+      "track_id": 21,
+      "class_id": 39,
+      "image_direction": 1,
+      "phrase_ar": "زجاجة في المنتصف",
+      "still_image": false
+    },
+    {
+      "elapsed_since_start_ms": 56003.43667,
+      "track_id": 32,
+      "class_id": 63,
+      "image_direction": 2,
+      "phrase_ar": "حاسوب محمول على اليمين",
+      "still_image": false
+    }
+  ]
+}
