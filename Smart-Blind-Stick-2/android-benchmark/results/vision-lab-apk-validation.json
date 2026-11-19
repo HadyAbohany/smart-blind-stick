@@ -1,0 +1,20 @@
+{
+  "apk": "SBS-Vision-Lab-v0.4.0-arm64-debug.apk",
+  "bytes": 85283576,
+  "sha256": "04ee8d37c1d657e1f0a0603670ce9a261293c756fc164152bcbd9a984c178751",
+  "package": "eg.sbs.visionlab",
+  "native_abi": "arm64-v8a",
+  "offline_manifest": true,
+  "signature_verified": true,
+  "zip_16k_alignment": true,
+  "elf_load_alignment": {
+    "libarcore_sdk_c.so": 16384,
+    "libarcore_sdk_jni.so": 16384,
+    "libc++_shared.so": 16384,
+    "libsbs_qwen.so": 16384,
+    "libonnxruntime.so": 16384,
+    "libonnxruntime4j_jni.so": 16384
+  },
+  "model_manifest_matches_apk": true,
+  "native_jni_entrypoints_verified": true
+}

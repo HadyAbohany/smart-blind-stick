@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "llama_commit": "0a76757469ea94ad5f88d14e18cc7370b9931f99",
+  "qwen_revision": "52d6c8ffea26cc873ac5ad116f8631268d7eb503",
+  "depth_revision": "8078d68a9c75a972131914f6afd0c1723be0da7f",
+  "downloads": [
+    {
+      "file": "Qwen3VL-2B-Instruct-Q4_K_M.gguf",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct-GGUF/resolve/52d6c8ffea26cc873ac5ad116f8631268d7eb503/Qwen3VL-2B-Instruct-Q4_K_M.gguf",
+      "sha256": "089d75c52f4b7ffc56ba998ffc50aae89fcafc755f9e7208aacca281dca6c2ae",
+      "bytes": 1107409952,
+      "model_pack": true
+    },
+    {
+      "file": "mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct-GGUF/resolve/52d6c8ffea26cc873ac5ad116f8631268d7eb503/mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf",
+      "sha256": "f9a68fabba69c3b81e153367b2c7521030b0fa8bb0de400c9599c8e6725f9c82",
+      "bytes": 445053216,
+      "model_pack": true
+    },
+    {
+      "file": "yoloe-26n-seg.pt",
+      "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26n-seg.pt",
+      "sha256": "1741c1f8da3cea47e2c01829c334a50dc0b9bbd05e685b90a3ce84fae32c8c1b",
+      "bytes": 11710443,
+      "model_pack": false
+    },
+    {
+      "file": "mobileclip2_b.ts",
+      "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/mobileclip2_b.ts",
+      "sha256": "35d7f213e4d75f38514e4656ad3cb91158bd33e3805d8ac349f23b186f66982f",
+      "bytes": 253794476,
+      "model_pack": false
+    },
+    {
+      "file": "depth-hf/config.json",
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/config.json",
+      "sha256": "0b1d9fc591693d16b864249a9cfcf5264c8c00be999c1643fa1c64dc105d55f8",
+      "bytes": 1063,
+      "model_pack": false
+    },
+    {
+      "file": "depth-hf/preprocessor_config.json",
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/preprocessor_config.json",
+      "sha256": "533b16a60445d7cab5086d39b45f92be45624b977972c62d5984d93e98366063",
+      "bytes": 437,
+      "model_pack": false
+    },
+    {
+      "file": "depth-hf/model.safetensors",
+      "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf/resolve/8078d68a9c75a972131914f6afd0c1723be0da7f/model.safetensors",
+      "sha256": "e990eb82fbf11b05b7813261196a2b841bdcf5a05f64396724a8987fa90504a3",
+      "bytes": 99173660,
+      "model_pack": false
+    },
+    {
+      "file": "llama-source.tar.gz",
+      "url": "https://codeload.github.com/ggml-org/llama.cpp/tar.gz/0a76757469ea94ad5f88d14e18cc7370b9931f99",
+      "sha256": "975f7d0e2f2b3df0a42a4279346f213f830d3fcd4c8adc6fd52d77092d89e6fe",
+      "bytes": 39034279,
+      "model_pack": false
+    },
+    {
+      "file": "reference/bus.jpg",
+      "url": "https://ultralytics.com/images/bus.jpg",
+      "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "bytes": 137419,
+      "model_pack": false
+    }
+  ]
+}

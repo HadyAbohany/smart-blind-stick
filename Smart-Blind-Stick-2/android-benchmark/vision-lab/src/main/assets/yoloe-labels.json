@@ -1,0 +1,566 @@
+{
+  "profile": "room-v1",
+  "output_layout": "end2end",
+  "labels": [
+    {
+      "en": "person",
+      "ar": "شخص"
+    },
+    {
+      "en": "bicycle",
+      "ar": "دراجة"
+    },
+    {
+      "en": "car",
+      "ar": "سيارة"
+    },
+    {
+      "en": "motorcycle",
+      "ar": "دراجة نارية"
+    },
+    {
+      "en": "airplane",
+      "ar": "طائرة"
+    },
+    {
+      "en": "bus",
+      "ar": "حافلة"
+    },
+    {
+      "en": "train",
+      "ar": "قطار"
+    },
+    {
+      "en": "truck",
+      "ar": "شاحنة"
+    },
+    {
+      "en": "boat",
+      "ar": "قارب"
+    },
+    {
+      "en": "traffic light",
+      "ar": "إشارة مرور"
+    },
+    {
+      "en": "fire hydrant",
+      "ar": "صنبور إطفاء"
+    },
+    {
+      "en": "stop sign",
+      "ar": "علامة قف"
+    },
+    {
+      "en": "parking meter",
+      "ar": "عداد انتظار"
+    },
+    {
+      "en": "bench",
+      "ar": "مقعد"
+    },
+    {
+      "en": "bird",
+      "ar": "طائر"
+    },
+    {
+      "en": "cat",
+      "ar": "قطة"
+    },
+    {
+      "en": "dog",
+      "ar": "كلب"
+    },
+    {
+      "en": "horse",
+      "ar": "حصان"
+    },
+    {
+      "en": "sheep",
+      "ar": "خروف"
+    },
+    {
+      "en": "cow",
+      "ar": "بقرة"
+    },
+    {
+      "en": "elephant",
+      "ar": "فيل"
+    },
+    {
+      "en": "bear",
+      "ar": "دب"
+    },
+    {
+      "en": "zebra",
+      "ar": "حمار وحشي"
+    },
+    {
+      "en": "giraffe",
+      "ar": "زرافة"
+    },
+    {
+      "en": "backpack",
+      "ar": "حقيبة ظهر"
+    },
+    {
+      "en": "umbrella",
+      "ar": "مظلة"
+    },
+    {
+      "en": "handbag",
+      "ar": "حقيبة يد"
+    },
+    {
+      "en": "tie",
+      "ar": "ربطة عنق"
+    },
+    {
+      "en": "suitcase",
+      "ar": "حقيبة سفر"
+    },
+    {
+      "en": "frisbee",
+      "ar": "قرص طائر"
+    },
+    {
+      "en": "skis",
+      "ar": "زلاجات"
+    },
+    {
+      "en": "snowboard",
+      "ar": "لوح تزلج على الثلج"
+    },
+    {
+      "en": "sports ball",
+      "ar": "كرة"
+    },
+    {
+      "en": "kite",
+      "ar": "طائرة ورقية"
+    },
+    {
+      "en": "baseball bat",
+      "ar": "مضرب بيسبول"
+    },
+    {
+      "en": "baseball glove",
+      "ar": "قفاز بيسبول"
+    },
+    {
+      "en": "skateboard",
+      "ar": "لوح تزلج"
+    },
+    {
+      "en": "surfboard",
+      "ar": "لوح ركوب أمواج"
+    },
+    {
+      "en": "tennis racket",
+      "ar": "مضرب تنس"
+    },
+    {
+      "en": "bottle",
+      "ar": "زجاجة"
+    },
+    {
+      "en": "wine glass",
+      "ar": "كأس"
+    },
+    {
+      "en": "cup",
+      "ar": "كوب"
+    },
+    {
+      "en": "fork",
+      "ar": "شوكة"
+    },
+    {
+      "en": "knife",
+      "ar": "سكين"
+    },
+    {
+      "en": "spoon",
+      "ar": "ملعقة"
+    },
+    {
+      "en": "bowl",
+      "ar": "وعاء"
+    },
+    {
+      "en": "banana",
+      "ar": "موز"
+    },
+    {
+      "en": "apple",
+      "ar": "تفاح"
+    },
+    {
+      "en": "sandwich",
+      "ar": "شطيرة"
+    },
+    {
+      "en": "orange",
+      "ar": "برتقال"
+    },
+    {
+      "en": "broccoli",
+      "ar": "بروكلي"
+    },
+    {
+      "en": "carrot",
+      "ar": "جزر"
+    },
+    {
+      "en": "hot dog",
+      "ar": "شطيرة سجق"
+    },
+    {
+      "en": "pizza",
+      "ar": "بيتزا"
+    },
+    {
+      "en": "donut",
+      "ar": "كعكة محلاة"
+    },
+    {
+      "en": "cake",
+      "ar": "كعكة"
+    },
+    {
+      "en": "chair",
+      "ar": "كرسي"
+    },
+    {
+      "en": "couch",
+      "ar": "أريكة"
+    },
+    {
+      "en": "potted plant",
+      "ar": "نبات في أصيص"
+    },
+    {
+      "en": "bed",
+      "ar": "سرير"
+    },
+    {
+      "en": "dining table",
+      "ar": "طاولة طعام"
+    },
+    {
+      "en": "toilet",
+      "ar": "مرحاض"
+    },
+    {
+      "en": "tv",
+      "ar": "تلفاز"
+    },
+    {
+      "en": "laptop",
+      "ar": "حاسوب محمول"
+    },
+    {
+      "en": "mouse",
+      "ar": "فأرة حاسوب"
+    },
+    {
+      "en": "remote",
+      "ar": "جهاز تحكم"
+    },
+    {
+      "en": "keyboard",
+      "ar": "لوحة مفاتيح"
+    },
+    {
+      "en": "cell phone",
+      "ar": "هاتف محمول"
+    },
+    {
+      "en": "microwave",
+      "ar": "ميكروويف"
+    },
+    {
+      "en": "oven",
+      "ar": "فرن"
+    },
+    {
+      "en": "toaster",
+      "ar": "محمصة"
+    },
+    {
+      "en": "sink",
+      "ar": "حوض"
+    },
+    {
+      "en": "refrigerator",
+      "ar": "ثلاجة"
+    },
+    {
+      "en": "book",
+      "ar": "كتاب"
+    },
+    {
+      "en": "clock",
+      "ar": "ساعة"
+    },
+    {
+      "en": "vase",
+      "ar": "مزهرية"
+    },
+    {
+      "en": "scissors",
+      "ar": "مقص"
+    },
+    {
+      "en": "teddy bear",
+      "ar": "دب لعبة"
+    },
+    {
+      "en": "hair drier",
+      "ar": "مجفف شعر"
+    },
+    {
+      "en": "toothbrush",
+      "ar": "فرشاة أسنان"
+    },
+    {
+      "en": "door",
+      "ar": "باب"
+    },
+    {
+      "en": "window",
+      "ar": "شباك"
+    },
+    {
+      "en": "wardrobe",
+      "ar": "دولاب"
+    },
+    {
+      "en": "cabinet",
+      "ar": "خزانة"
+    },
+    {
+      "en": "drawer",
+      "ar": "درج"
+    },
+    {
+      "en": "desk",
+      "ar": "مكتب"
+    },
+    {
+      "en": "bookshelf",
+      "ar": "مكتبة"
+    },
+    {
+      "en": "ceiling fan",
+      "ar": "مروحة سقف"
+    },
+    {
+      "en": "air conditioner",
+      "ar": "تكييف"
+    },
+    {
+      "en": "mirror",
+      "ar": "مراية"
+    },
+    {
+      "en": "lamp",
+      "ar": "مصباح"
+    },
+    {
+      "en": "light switch",
+      "ar": "مفتاح إضاءة"
+    },
+    {
+      "en": "power socket",
+      "ar": "مقبس كهرباء"
+    },
+    {
+      "en": "door handle",
+      "ar": "مقبض باب"
+    },
+    {
+      "en": "key",
+      "ar": "مفتاح"
+    },
+    {
+      "en": "headphones",
+      "ar": "سماعة رأس"
+    },
+    {
+      "en": "phone charger",
+      "ar": "شاحن موبايل"
+    },
+    {
+      "en": "extension cable",
+      "ar": "وصلة كهرباء"
+    },
+    {
+      "en": "pillow",
+      "ar": "مخدة"
+    },
+    {
+      "en": "blanket",
+      "ar": "بطانية"
+    },
+    {
+      "en": "curtain",
+      "ar": "ستارة"
+    },
+    {
+      "en": "carpet",
+      "ar": "سجادة"
+    },
+    {
+      "en": "shoe",
+      "ar": "حذاء"
+    },
+    {
+      "en": "slipper",
+      "ar": "شبشب"
+    },
+    {
+      "en": "tissue box",
+      "ar": "علبة مناديل"
+    },
+    {
+      "en": "washing machine",
+      "ar": "غسالة"
+    },
+    {
+      "en": "dishwasher",
+      "ar": "غسالة أطباق"
+    },
+    {
+      "en": "water dispenser",
+      "ar": "مبرد مياه"
+    },
+    {
+      "en": "trash can",
+      "ar": "سلة مهملات"
+    },
+    {
+      "en": "bucket",
+      "ar": "جردل"
+    },
+    {
+      "en": "mop",
+      "ar": "مساحة"
+    },
+    {
+      "en": "broom",
+      "ar": "مقشة"
+    },
+    {
+      "en": "staircase",
+      "ar": "سلم"
+    },
+    {
+      "en": "handrail",
+      "ar": "درابزين"
+    },
+    {
+      "en": "cardboard box",
+      "ar": "صندوق كرتون"
+    },
+    {
+      "en": "basket",
+      "ar": "سبت"
+    },
+    {
+      "en": "shopping bag",
+      "ar": "كيس تسوق"
+    },
+    {
+      "en": "iron",
+      "ar": "مكواة"
+    },
+    {
+      "en": "ironing board",
+      "ar": "طاولة كي"
+    },
+    {
+      "en": "radiator",
+      "ar": "دفاية"
+    },
+    {
+      "en": "electric fan",
+      "ar": "مروحة"
+    },
+    {
+      "en": "shower",
+      "ar": "دش"
+    },
+    {
+      "en": "bathtub",
+      "ar": "بانيو"
+    },
+    {
+      "en": "towel",
+      "ar": "فوطة"
+    },
+    {
+      "en": "soap dispenser",
+      "ar": "عبوة صابون"
+    },
+    {
+      "en": "dish rack",
+      "ar": "حامل أطباق"
+    },
+    {
+      "en": "pot",
+      "ar": "حلة"
+    },
+    {
+      "en": "frying pan",
+      "ar": "طاسة"
+    },
+    {
+      "en": "kettle",
+      "ar": "غلاية"
+    },
+    {
+      "en": "rice cooker",
+      "ar": "حلة كهرباء"
+    },
+    {
+      "en": "vacuum cleaner",
+      "ar": "مكنسة كهربائية"
+    },
+    {
+      "en": "remote control",
+      "ar": "ريموت"
+    },
+    {
+      "en": "printer",
+      "ar": "طابعة"
+    },
+    {
+      "en": "computer monitor",
+      "ar": "شاشة كمبيوتر"
+    },
+    {
+      "en": "router",
+      "ar": "راوتر"
+    },
+    {
+      "en": "water jug",
+      "ar": "إبريق مياه"
+    },
+    {
+      "en": "laundry basket",
+      "ar": "سلة غسيل"
+    },
+    {
+      "en": "shelf",
+      "ar": "رف"
+    },
+    {
+      "en": "bedside table",
+      "ar": "كومود"
+    },
+    {
+      "en": "fire extinguisher",
+      "ar": "طفاية حريق"
+    }
+  ]
+}

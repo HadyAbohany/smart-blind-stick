@@ -5,3 +5,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = 'SmartBlindStickBenchmark'
 include ':app'
+// Keep the tested application build independent of the experimental native/AR toolchain.
+if (providers.gradleProperty('visionLab').orNull == 'true') include ':vision-lab'

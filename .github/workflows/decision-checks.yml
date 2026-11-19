@@ -21,6 +21,8 @@ jobs:
           java-version: '17'
       - name: Run production policy checks and golden CSV replay
         run: sh Smart-Blind-Stick-2/android-benchmark/tools/run_decision_checks.sh
+      - name: Check vision geometry, depth quality and caption boundaries
+        run: sh Smart-Blind-Stick-2/android-benchmark/tools/run_vision_checks.sh
       - name: Install audio decoder
         run: |
           sudo apt-get update -qq

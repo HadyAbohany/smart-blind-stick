@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-19",
+  "phone_tested": false,
+  "original_app_source_modified": false,
+  "original_version": "0.3.1",
+  "lab_version": "0.4.0-lab",
+  "pure_java_checks": 47,
+  "original_decision_checks": 30125,
+  "original_csv_expectations": 68,
+  "original_report_replay": "passed",
+  "desktop_native_qwen": {
+    "llama_commit": "0a76757469ea94ad5f88d14e18cc7370b9931f99",
+    "real_inference": true,
+    "reference": "public Ultralytics bus.jpg",
+    "caption": "الصورة تُظهر رجلين يقفان بجانب مركبة نقل مدنية، ورجل ثالث يسير على الرصيف. يقف الرجلان بجانب المركبة، ورجل ثالث يسير على الرصيف.",
+    "preload_canceled_request_check": "passed",
+    "backend": "CPU, two threads",
+    "max_image_tokens": 256,
+    "context": 2048,
+    "max_generated_tokens": 128
+  },
+  "pending_physical_checks": [
+    "ARCore availability and raw confidence on A35",
+    "RGB/depth rotation and alignment on camera",
+    "metric distance error against measured ground truth",
+    "Qwen A35 latency, memory and temperature",
+    "offline Arabic TTS and speech completion",
+    "camera lifecycle and interruption on physical phone"
+  ]
+}
