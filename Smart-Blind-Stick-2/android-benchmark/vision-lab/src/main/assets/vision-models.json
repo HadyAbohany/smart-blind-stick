@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "models": [
+    {
+      "role": "yoloe",
+      "file": "yoloe-room-320.onnx",
+      "bytes": 11099014,
+      "sha256": "21858414393cfa76a48bd90c11ce2e13c0ddc619ead5d339cb7402ca4bd0eb31"
+    },
+    {
+      "role": "metric_depth",
+      "file": "depth-anything-v2-metric-indoor-small.onnx",
+      "bytes": 99102562,
+      "sha256": "5e58b641b2b609318ba35644d19c834cd34e3586100d4cab3c4df1a295858314"
+    },
+    {
+      "role": "qwen",
+      "file": "Qwen3VL-2B-Instruct-Q4_K_M.gguf",
+      "bytes": 1107409952,
+      "sha256": "089d75c52f4b7ffc56ba998ffc50aae89fcafc755f9e7208aacca281dca6c2ae"
+    },
+    {
+      "role": "qwen_vision",
+      "file": "mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf",
+      "bytes": 445053216,
+      "sha256": "f9a68fabba69c3b81e153367b2c7521030b0fa8bb0de400c9599c8e6725f9c82"
+    }
+  ]
+}

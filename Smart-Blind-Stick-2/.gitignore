@@ -9,3 +9,9 @@ __pycache__/
 *_ncnn_model/
 *.apk
 *.jks
+model-packs/
+.vision-deps/
+*.gguf
+*.safetensors
+*.partial
+.cxx/
