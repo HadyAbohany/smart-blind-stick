@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import subprocess
 import time
-from prepare_vision_lab import verify_pack
+from prepare_vision_lab import verify_pack, sha
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = 'eg.sbs.visionlab'
@@ -20,6 +20,9 @@ def main():
     verify_pack()
     if not args.apk.is_file():
         parser.error('Build/copy the lab APK first')
+    reviewed = json.loads((ROOT / 'results/vision-lab-apk-validation.json').read_text())
+    if reviewed['package'] != PACKAGE or sha(args.apk) != reviewed['sha256']:
+        parser.error('APK differs from the verified lab build; run tools/verify_vision_apk.py first')
     def adb(*parts, capture=False):
         return subprocess.run([args.adb, '-s', args.serial, *parts], check=True, text=True,
                               stdout=subprocess.PIPE if capture else None).stdout
